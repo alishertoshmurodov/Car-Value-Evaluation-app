@@ -54,13 +54,16 @@ function chooseType(e) {
         inputBlockEL.append(calcMethodInputBlock);
     } else {
         calcMethodInputBlock.remove();
+        calcMethodSelect.value = 'none';
         firstMethodContainer.remove();
+        secondMethodContainer.remove();
     }
 }
 
 chooseType();
 
 calcTypeEl.addEventListener('change', chooseType);
+
 
 
 // 
@@ -228,23 +231,182 @@ analogCarPriceSetting4Input.setAttribute('type', 'number');
 analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSetting4Input);
 
 
-
-function Method(e) {
-    if (calcMethodSelect.value == '1-usul') {
-        inputBlockEL.append(firstMethodContainer);
-    } else {
-        firstMethodContainer.remove();
-    }
-}
-
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
 firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box);
+
+
+s
+
+
+// Turdosh avtotransport vositasining narxi, so'm
+
+const secondMethodBox = document.createElement('div');
+secondMethodBox.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel = document.createElement('label');
+secondMethodLabel.textContent = "Turdosh avtotransport vositasining narxi, so'm";
+secondMethodLabel.setAttribute('for', 'Turdosh-transport-narxi');
+
+const secondMethodInput = document.createElement('input');
+secondMethodInput.setAttribute('id', 'Turdosh-transport-narxi');
+secondMethodInput.setAttribute('name', 'Turdosh-transport-narxi');
+secondMethodInput.setAttribute('type', 'number');
+
+secondMethodBox.append(secondMethodLabel, secondMethodInput);
+
+
+// Qo'shilgan qiymat solig'i stavkasi
+
+const secondMethodBox2 = document.createElement('div');
+secondMethodBox2.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel2 = document.createElement('label');
+secondMethodLabel2.textContent = "Qo'shilgan qiymat solig'i stavkasi";
+secondMethodLabel2.setAttribute('for', 'Qushilgan-soliq-stavkasi');
+
+const secondMethodInput2 = document.createElement('input');
+secondMethodInput2.setAttribute('id', 'Qushilgan-soliq-stavkasi');
+secondMethodInput2.setAttribute('name', 'Qushilgan-soliq-stavkasi');
+secondMethodInput2.setAttribute('type', 'number');
+
+secondMethodBox2.append(secondMethodLabel2, secondMethodInput2);
+
+
+// Foyda solig'i stavkasi 
+
+const secondMethodBox3 = document.createElement('div');
+secondMethodBox3.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel3 = document.createElement('label');
+secondMethodLabel3.textContent = "Foyda solig'i stavkasi ";
+secondMethodLabel3.setAttribute('for', 'Fovda-soligi-stavkasi');
+
+const secondMethodInput3 = document.createElement('input');
+secondMethodInput3.setAttribute('id', 'Foyda-soligi-stavkasi');
+secondMethodInput3.setAttribute('name', 'Foyda-soligi-stavkasi');
+secondMethodInput3.setAttribute('type', 'number');
+
+secondMethodBox3.append(secondMethodLabel3, secondMethodInput3);
+
+
+// Rentabellik ko`rsatkichi
+
+const secondMethodBox4 = document.createElement('div');
+secondMethodBox4.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel4 = document.createElement('label');
+secondMethodLabel4.textContent = "Rentabellik ko`rsatkichi";
+secondMethodLabel4.setAttribute('for', 'Rentabellik-ko`rsatkichi');
+
+const secondMethodInput4 = document.createElement('input');
+secondMethodInput4.setAttribute('id', 'Rentabellik-ko`rsatkichi');
+secondMethodInput4.setAttribute('name', 'Rentabellik-ko`rsatkichi');
+secondMethodInput4.setAttribute('type', 'number');
+
+secondMethodBox4.append(secondMethodLabel4, secondMethodInput4);
+
+
+// Baholanayotgan avtotransport vositasining asosiy tavsif ko'rsatkichi
+
+const secondMethodBox5 = document.createElement('div');
+secondMethodBox5.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel5 = document.createElement('label');
+secondMethodLabel5.textContent = "Baholanayotgan avtotransport vositasining asosiy tavsif ko'rsatkichi";
+secondMethodLabel5.setAttribute('for', 'asosiy-tavsif-ko`rsatkichi');
+
+const secondMethodInput5 = document.createElement('input');
+secondMethodInput5.setAttribute('id', 'asosiy-tavsif-ko`rsatkichi');
+secondMethodInput5.setAttribute('name', 'asosiy-tavsif-ko`rsatkichi');
+secondMethodInput5.setAttribute('type', 'number');
+
+secondMethodBox5.append(secondMethodLabel5, secondMethodInput5);
+
+
+// Turdosh avtotransport vositasining asosiy tavsif ko'rsatkichi
+
+const secondMethodBox6 = document.createElement('div');
+secondMethodBox6.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel6 = document.createElement('label');
+secondMethodLabel6.textContent = "Turdosh avtotransport vositasining asosiy tavsif ko'rsatkichi";
+secondMethodLabel6.setAttribute('for', 'turdosh-asosiy-tavsif-ko`rsatkichi');
+
+const secondMethodInput6 = document.createElement('input');
+secondMethodInput6.setAttribute('id', 'turdosh-asosiy-tavsif-ko`rsatkichi');
+secondMethodInput6.setAttribute('name', 'turdosh-asosiy-tavsif-ko`rsatkichi');
+secondMethodInput6.setAttribute('type', 'number');
+
+secondMethodBox6.append(secondMethodLabel6, secondMethodInput6);
+
+
+// Baholanayotgan avtotransport vositasini ishlab chiqarishning turkumligi koeffitsiyenti
+
+const secondMethodBox7 = document.createElement('div');
+secondMethodBox7.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel7 = document.createElement('label');
+secondMethodLabel7.textContent = "Baholanayotgan avtotransport vositasini ishlab chiqarishning turkumligi koeffitsiyenti";
+secondMethodLabel7.setAttribute('for', 'avto-turkumligi-koeffitsiyenti');
+
+const secondMethodInput7 = document.createElement('input');
+secondMethodInput7.setAttribute('id', 'avto-turkumligi-koeffitsiyenti');
+secondMethodInput7.setAttribute('name', 'avto-turkumligi-koeffitsiyenti');
+secondMethodInput7.setAttribute('type', 'number');
+
+secondMethodBox7.append(secondMethodLabel7, secondMethodInput7);
+
+
+// Turdosh avtotransport vositasini ishlab chiqarishning turkumligi koeffitsiyenti 
+
+const secondMethodBox8 = document.createElement('div');
+secondMethodBox8.setAttribute('class', 'app-container__input-option')
+
+const secondMethodLabel8 = document.createElement('label');
+secondMethodLabel8.textContent = "Turdosh avtotransport vositasini ishlab chiqarishning turkumligi koeffitsiyenti ";
+secondMethodLabel8.setAttribute('for', 'turdosh-avto-turkumligi-koeffitsiyenti');
+
+const secondMethodInput8 = document.createElement('input');
+secondMethodInput8.setAttribute('id', 'turdosh-avto-turkumligi-koeffitsiyenti');
+secondMethodInput8.setAttribute('name', 'turdosh-avto-turkumligi-koeffitsiyenti');
+secondMethodInput8.setAttribute('type', 'number');
+
+secondMethodBox8.append(secondMethodLabel8, secondMethodInput8);
+
+
+
+
+const secondMethodContainer = document.createElement('div');
+secondMethodContainer.setAttribute('class', 'app-container__input-block');
+secondMethodContainer.append(secondMethodBox, secondMethodBox2, secondMethodBox3, secondMethodBox4, secondMethodBox5, secondMethodBox6, secondMethodBox7, secondMethodBox8);
+
+
+
+// 
+// 3-usul
+// 
+
+
+
+function Method(e) {
+    chooseType();
+    if (calcMethodSelect.value == '1-usul') {
+        inputBlockEL.append(firstMethodContainer);
+        secondMethodContainer.remove()
+    }
+    else if (calcMethodSelect.value == '2-usul') {
+        inputBlockEL.append(secondMethodContainer);
+        firstMethodContainer.remove();
+    }
+    else {
+        firstMethodContainer.remove();
+        secondMethodContainer.remove();
+    }
+}
 
 calcMethodSelect.addEventListener('change', Method);
 
 Method();
 
-
-// 2-usul
 
