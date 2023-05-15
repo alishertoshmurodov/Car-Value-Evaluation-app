@@ -25,6 +25,10 @@ calcMethodSelect.setAttribute('name', 'calculation-method');
 calcMethodSelect.setAttribute('id', 'calculation-method');
 calcMethodSelect.setAttribute('class', 'app-container__select');
 
+const calcMethodOption0 = document.createElement('option');
+calcMethodOption0.setAttribute('value', 'none');
+calcMethodOption0.textContent = 'Usulni tanlang';
+
 const calcMethodOption1 = document.createElement('option');
 calcMethodOption1.setAttribute('value', '1-usul');
 calcMethodOption1.textContent = '1.Amashtirish usuli';
@@ -41,13 +45,16 @@ const calcMethodOption4 = document.createElement('option');
 calcMethodOption4.setAttribute('value', '4-usul');
 calcMethodOption4.textContent = '4.Qiymatni indeksatsiyalash usuli';
 
-calcMethodSelect.append(calcMethodOption1, calcMethodOption2, calcMethodOption3, calcMethodOption4);
+calcMethodSelect.append(calcMethodOption0, calcMethodOption1, calcMethodOption2, calcMethodOption3, calcMethodOption4);
 calcMethodInputBlock.append(calcMethodLabel, calcMethodSelect);
 
 
 function chooseType(e) {
     if (calcTypeEl.value.toLowerCase() == 'tiklanish-hisobi'.toLowerCase()) {
         inputBlockEL.append(calcMethodInputBlock);
+    } else {
+        calcMethodInputBlock.remove();
+        firstMethodContainer.remove();
     }
 }
 
@@ -187,8 +194,42 @@ analogCarPriceSetting2Input.setAttribute('type', 'number');
 analogCarPriceSetting2Box.append(analogCarPriceSetting2Label, analogCarPriceSetting2Input);
 
 
+// 3
 
-function firstMethod(e) {
+const analogCarPriceSetting3Box = document.createElement('div');
+analogCarPriceSetting3Box.setAttribute('class', 'app-container__input-option')
+
+const analogCarPriceSetting3Label = document.createElement('label');
+analogCarPriceSetting3Label.textContent = "Analog-ob'yektning joylashgan joyiga qarab tuzatish, so'm";
+analogCarPriceSetting3Label.setAttribute('for', 'Analog-transport-narxiga-tuzatish-3');
+
+const analogCarPriceSetting3Input = document.createElement('input');
+analogCarPriceSetting3Input.setAttribute('id', 'Analog-transport-narxiga-tuzatish-3');
+analogCarPriceSetting3Input.setAttribute('name', 'Analog-transport-narxiga-tuzatish-3');
+analogCarPriceSetting3Input.setAttribute('type', 'number');
+
+analogCarPriceSetting3Box.append(analogCarPriceSetting3Label, analogCarPriceSetting3Input);
+
+
+// 4
+
+const analogCarPriceSetting4Box = document.createElement('div');
+analogCarPriceSetting4Box.setAttribute('class', 'app-container__input-option')
+
+const analogCarPriceSetting4Label = document.createElement('label');
+analogCarPriceSetting4Label.textContent = "Narxlar o'zgarishi dinamikasini hisobga olib tuzatish, so'm";
+analogCarPriceSetting4Label.setAttribute('for', 'Analog-transport-narxiga-tuzatish-4');
+
+const analogCarPriceSetting4Input = document.createElement('input');
+analogCarPriceSetting4Input.setAttribute('id', 'Analog-transport-narxiga-tuzatish-4');
+analogCarPriceSetting4Input.setAttribute('name', 'Analog-transport-narxiga-tuzatish-4');
+analogCarPriceSetting4Input.setAttribute('type', 'number');
+
+analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSetting4Input);
+
+
+
+function Method(e) {
     if (calcMethodSelect.value == '1-usul') {
         inputBlockEL.append(firstMethodContainer);
     } else {
@@ -198,11 +239,11 @@ function firstMethod(e) {
 
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
-firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box);
+firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box);
 
-calcMethodSelect.addEventListener('change', firstMethod);
+calcMethodSelect.addEventListener('change', Method);
 
-firstMethod();
+Method();
 
 
 // 2-usul
