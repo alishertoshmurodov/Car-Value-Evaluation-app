@@ -236,7 +236,7 @@ firstMethodContainer.setAttribute('class', 'app-container__input-block');
 firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box);
 
 
-s
+
 
 
 // Turdosh avtotransport vositasining narxi, so'm
