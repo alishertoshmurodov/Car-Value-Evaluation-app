@@ -57,6 +57,8 @@ function chooseType(e) {
         calcMethodSelect.value = 'none';
         firstMethodContainer.remove();
         secondMethodContainer.remove();
+        thirdMethodContainer.remove();
+        fourthMethodContainer.remove();
     }
 }
 
@@ -388,20 +390,172 @@ secondMethodContainer.append(secondMethodBox, secondMethodBox2, secondMethodBox3
 // 
 
 
+// Butlovchi usel va agreganlarining nomi 
+
+const thirdMethodBox = document.createElement('div');
+thirdMethodBox.setAttribute('class', 'app-container__input-option')
+
+const thirdMethodLabel = document.createElement('label');
+thirdMethodLabel.textContent = "Butlovchi usel va agreganlarining nomi";
+thirdMethodLabel.setAttribute('for', 'Butlovchi-usel-agreganlarining nomi');
+
+const thirdMethodInput = document.createElement('input');
+thirdMethodInput.setAttribute('id', 'Butlovchi-usel-agreganlarining nomi');
+thirdMethodInput.setAttribute('name', 'Butlovchi-usel-agreganlarining nomi');
+thirdMethodInput.setAttribute('type', 'text');
+
+thirdMethodBox.append(thirdMethodLabel, thirdMethodInput);
+
+
+// Butlovchi usel va agreganlarining narxi, so'm
+
+const thirdMethodBox2 = document.createElement('div');
+thirdMethodBox2.setAttribute('class', 'app-container__input-option')
+
+const thirdMethodLabel2 = document.createElement('label');
+thirdMethodLabel2.textContent = "Butlovchi usel va agreganlarining narxi, so'm";
+thirdMethodLabel2.setAttribute('for', 'Butlovchi-usel-agreganlarining nomi');
+
+const thirdMethodInput2 = document.createElement('input');
+thirdMethodInput2.setAttribute('id', 'Butlovchi-usel-agreganlarining-narxi');
+thirdMethodInput2.setAttribute('name', 'Butlovchi-usel-agreganlarining-narxi');
+thirdMethodInput2.setAttribute('type', 'number');
+
+thirdMethodBox2.append(thirdMethodLabel2, thirdMethodInput2);
+
+
+// Tayyorlovchining o'z xarajatlari, so'm
+
+const thirdMethodBox3 = document.createElement('div');
+thirdMethodBox3.setAttribute('class', 'app-container__input-option')
+
+const thirdMethodLabel3 = document.createElement('label');
+thirdMethodLabel3.textContent = "Tayyorlovchining o'z xarajatlari, so'm";
+thirdMethodLabel3.setAttribute('for', 'Tayyorlovchining-xarajatlari');
+
+const thirdMethodInput3 = document.createElement('input');
+thirdMethodInput3.setAttribute('id', 'Tayyorlovchining-xarajatlari');
+thirdMethodInput3.setAttribute('name', 'Tayyorlovchining-xarajatlari');
+thirdMethodInput3.setAttribute('type', 'number');
+
+thirdMethodBox3.append(thirdMethodLabel3, thirdMethodInput3);
+
+
+// Foyda solig'i stavkasi
+
+const thirdMethodBox4 = document.createElement('div');
+thirdMethodBox4.setAttribute('class', 'app-container__input-option')
+
+const thirdMethodLabel4 = document.createElement('label');
+thirdMethodLabel4.textContent = "Foyda solig'i stavkasi";
+thirdMethodLabel4.setAttribute('for', 'Foyda-soligi-stavkasi');
+
+const thirdMethodInput4 = document.createElement('input');
+thirdMethodInput4.setAttribute('id', 'Foyda-soligi-stavkasi');
+thirdMethodInput4.setAttribute('name', 'Foyda-soligi-stavkasi');
+thirdMethodInput4.setAttribute('type', 'number');
+
+thirdMethodBox4.append(thirdMethodLabel4, thirdMethodInput4);
+
+
+// Rentabellik ko'rsatkichi
+
+const thirdMethodBox5 = document.createElement('div');
+thirdMethodBox5.setAttribute('class', 'app-container__input-option')
+
+const thirdMethodLabel5 = document.createElement('label');
+thirdMethodLabel5.textContent = "Rentabellik ko'rsatkichi";
+thirdMethodLabel5.setAttribute('for', 'Rentabellik korsatkichi');
+
+const thirdMethodInput5 = document.createElement('input');
+thirdMethodInput5.setAttribute('id', 'Rentabellik korsatkichi');
+thirdMethodInput5.setAttribute('name', 'Rentabellik korsatkichi');
+thirdMethodInput5.setAttribute('type', 'number');
+
+thirdMethodBox5.append(thirdMethodLabel5, thirdMethodInput5);
+
+
+const thirdMethodContainer = document.createElement('div');
+thirdMethodContainer.setAttribute('class', 'app-container__input-block');
+thirdMethodContainer.append(thirdMethodBox, thirdMethodBox2, thirdMethodBox3, thirdMethodBox4, thirdMethodBox5);
+
+
+// 
+// 4-usul
+// 
+
+
+// Avtotransport vositasining bazaviy qiymati, so'm 
+
+const fourthMethodBox = document.createElement('div');
+fourthMethodBox.setAttribute('class', 'app-container__input-option')
+
+const fourthMethodLabel = document.createElement('label');
+fourthMethodLabel.textContent = "Avtotransport vositasining bazaviy qiymati, so'm";
+fourthMethodLabel.setAttribute('for', 'Avto-bazaviy-qiymati');
+
+const fourthMethodInput = document.createElement('input');
+fourthMethodInput.setAttribute('id', 'Avto-bazaviy-qiymati');
+fourthMethodInput.setAttribute('name', 'Avto-bazaviy-qiymati');
+fourthMethodInput.setAttribute('type', 'number');
+
+fourthMethodBox.append(fourthMethodLabel, fourthMethodInput);
+
+
+// Narxlarning qimmatlashuvi indekslari 
+
+const fourthMethodBox2 = document.createElement('div');
+fourthMethodBox2.setAttribute('class', 'app-container__input-option')
+
+const fourthMethodLabel2 = document.createElement('label');
+fourthMethodLabel2.textContent = "Narxlarning qimmatlashuvi indekslari";
+fourthMethodLabel2.setAttribute('for', 'Narxlarning-qimmatlashuvi-indekslari ');
+
+const fourthMethodInput2 = document.createElement('input');
+fourthMethodInput2.setAttribute('id', 'Narxlarning-qimmatlashuvi-indekslari ');
+fourthMethodInput2.setAttribute('name', 'Narxlarning-qimmatlashuvi-indekslari ');
+fourthMethodInput2.setAttribute('type', 'number');
+
+fourthMethodBox2.append(fourthMethodLabel2, fourthMethodInput2);
+
+
+
+const fourthMethodContainer = document.createElement('div');
+fourthMethodContainer.setAttribute('class', 'app-container__input-block');
+fourthMethodContainer.append(fourthMethodBox, fourthMethodBox2);
+
 
 function Method(e) {
     chooseType();
     if (calcMethodSelect.value == '1-usul') {
         inputBlockEL.append(firstMethodContainer);
         secondMethodContainer.remove()
+        thirdMethodContainer.remove();
+        fourthMethodContainer.remove();
     }
     else if (calcMethodSelect.value == '2-usul') {
         inputBlockEL.append(secondMethodContainer);
         firstMethodContainer.remove();
+        thirdMethodContainer.remove();
+        fourthMethodContainer.remove();
+    }
+    else if (calcMethodSelect.value == '3-usul') {
+        inputBlockEL.append(thirdMethodContainer);
+        firstMethodContainer.remove();
+        secondMethodContainer.remove();
+        fourthMethodContainer.remove();
+    }
+    else if (calcMethodSelect.value == '4-usul') {
+        inputBlockEL.append(fourthMethodContainer);
+        firstMethodContainer.remove();
+        secondMethodContainer.remove();
+        thirdMethodContainer.remove();
     }
     else {
         firstMethodContainer.remove();
         secondMethodContainer.remove();
+        thirdMethodContainer.remove();
+        fourthMethodContainer.remove();
     }
 }
 
