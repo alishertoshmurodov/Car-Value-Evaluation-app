@@ -49,11 +49,17 @@ function chooseType(e) {
     if (calcTypeEl.value.toLowerCase() == 'tiklanish-hisobi'.toLowerCase()) {
         inputBlockEL.append(calcMethodInputBlock);
     }
+    else{
+        calcMethodInputBlock.remove(); 
+        firstMethodContainer.remove(); 
+    }
 }
 
-chooseType();
+
+chooseType(); 
 
 calcTypeEl.addEventListener('change', chooseType);
+// calcTypeEl.addEventListener('change', chooseType2);
 
 
 // 
@@ -203,6 +209,14 @@ firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBo
 calcMethodSelect.addEventListener('change', firstMethod);
 
 firstMethod();
+
+function removeFuncOpt1(e) {
+    if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
+         firstMethodContainer.remove();
+    }
+ }
+ removeFuncOpt1();
+calcTypeEl.addEventListener('change', removeFuncOpt1);
 
 
 // 2-usul
