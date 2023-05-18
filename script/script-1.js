@@ -60,11 +60,17 @@ function chooseType(e) {
         thirdMethodContainer.remove();
         fourthMethodContainer.remove();
     }
+    else{
+        calcMethodInputBlock.remove(); 
+        firstMethodContainer.remove(); 
+    }
 }
 
-chooseType();
+
+chooseType(); 
 
 calcTypeEl.addEventListener('change', chooseType);
+// calcTypeEl.addEventListener('change', chooseType2);
 
 
 
@@ -236,6 +242,14 @@ analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSett
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
 firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box);
+
+function removeFuncOpt1(e) {
+    if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
+         firstMethodContainer.remove();
+    }
+ }
+ removeFuncOpt1();
+calcTypeEl.addEventListener('change', removeFuncOpt1);
 
 
 
