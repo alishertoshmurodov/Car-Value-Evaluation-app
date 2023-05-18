@@ -60,10 +60,6 @@ function chooseType(e) {
         thirdMethodContainer.remove();
         fourthMethodContainer.remove();
     }
-    else{
-        calcMethodInputBlock.remove(); 
-        firstMethodContainer.remove(); 
-    }
 }
 
 
