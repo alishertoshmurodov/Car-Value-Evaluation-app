@@ -46,11 +46,14 @@ body {
 .app-container__input-option label {
     font-weight: 700;
     letter-spacing: 1px;
+    font-size: 1.4rem;
 }
 
 .app-container__select, .app-container__input-option input {
     padding: 15px 10px;
     font-size: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .app-container__calculate-btn {

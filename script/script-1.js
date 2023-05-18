@@ -238,7 +238,9 @@ firstMethodContainer.setAttribute('class', 'app-container__input-block');
 firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box);
 
 
-
+// 
+// 2-usul
+// 
 
 
 // Turdosh avtotransport vositasining narxi, so'm
@@ -562,5 +564,12 @@ function Method(e) {
 calcMethodSelect.addEventListener('change', Method);
 
 Method();
+
+
+
+/*  ---------  */
+/*  Hisoblash  */ 
+/*  ---------  */
+
 
 
