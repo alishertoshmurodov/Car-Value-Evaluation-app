@@ -296,7 +296,21 @@ calcMethodSelect2.addEventListener('change', fifthMethod);
 fifthMethod();
 
 //formula
+// function omegaFunc() {
+//     if (explCarTypeEl.value == explCarTypeOption1) {
+        
+//     }
+//     else {
+           
+//     }
 
+// }
+
+// omegaFunc();
+// calcTypeEl.addEventListener('change', omegaFunc);
+
+// const omega = 0.07 * explCarAgeInput.value + 0.0035 * explCarDestInput
+// explCarInputEski.value = 100(1 - Math.pow(e, -omega))
 
 /****************************************************************** */
 /****************************************************************** */
@@ -500,5 +514,27 @@ sixthMethod();
 
 //formula
 
+////////////////////////
 
+
+
+// const removeContainer = document.createElement('div');
+// removeContainer.setAttribute('class', 'app-container__input-block');
+// removeContainer.append(calcMethodInputBlock2);
+
+function chooseTypeFinished() {
+    if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
+        inputBlockEL.append(calcMethodInputBlock2);
+    }
+    else {
+        calcMethodInputBlock2.remove();
+        fourthMethodContainer.remove();
+        fifthMethodContainer.remove();
+        sixthMethodContainer.remove();
+    }
+    
+}
+calcTypeEl.addEventListener('change', chooseTypeFinished);
+
+chooseTypeFinished();
 
