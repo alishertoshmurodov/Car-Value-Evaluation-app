@@ -139,15 +139,15 @@ SumUpElPriceBoxEski.append(SumUpElPriceLabelEski, SumUpElPriceInputEski);
 
 function fourthMethod(e) {
     if (calcMethodSelect2.value == '4-usul') {
-        inputBlockEL.append(fourthMethodContainer);
+        inputBlockEL.append(fourthMethodContainer2);
     } else {
-        fourthMethodContainer.remove();
+        fourthMethodContainer2.remove();
     }
 }
 
-const fourthMethodContainer = document.createElement('div');
-fourthMethodContainer.setAttribute('class', 'app-container__input-block');
-fourthMethodContainer.append(SumUpElNameBox, SumUpElPriceBox, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxSoni, SumUpElPriceBoxEski);
+const fourthMethodContainer2 = document.createElement('div');
+fourthMethodContainer2.setAttribute('class', 'app-container__input-block');
+fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxSoni, SumUpElPriceBoxEski);
 
 calcMethodSelect2.addEventListener('change', fourthMethod);
 
@@ -155,7 +155,7 @@ fourthMethod();
 
 function removeFuncOpt(e) {
     if (calcTypeEl.value.toLowerCase() == 'tiklanish-hisobi'.toLowerCase()) {
-        fourthMethodContainer.remove();
+        fourthMethodContainer2.remove();
     }
 }
 removeFuncOpt();
@@ -528,7 +528,7 @@ function chooseTypeFinished() {
     }
     else {
         calcMethodInputBlock2.remove();
-        fourthMethodContainer.remove();
+        fourthMethodContainer2.remove();
         fifthMethodContainer.remove();
         sixthMethodContainer.remove();
     }
