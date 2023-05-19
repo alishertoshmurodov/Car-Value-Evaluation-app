@@ -532,7 +532,7 @@ function chooseTypeFinished() {
         fifthMethodContainer.remove();
         sixthMethodContainer.remove();
     }
-
+    
 }
 calcTypeEl.addEventListener('change', chooseTypeFinished);
 
