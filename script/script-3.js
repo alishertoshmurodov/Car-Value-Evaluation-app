@@ -528,7 +528,7 @@ function chooseTypeFinished() {
     }
     else {
         calcMethodInputBlock2.remove();
-        fourthMethodContainer.remove();
+        fourthMethodContainer2.remove();
         fifthMethodContainer.remove();
         sixthMethodContainer.remove();
     }
