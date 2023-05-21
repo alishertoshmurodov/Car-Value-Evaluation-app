@@ -1,5 +1,131 @@
 // Aziz
 
+
+/* -------- */
+/* 1-3 usul */
+/* -------- */
+
+const firstMethod01Box = document.createElement('div');
+firstMethod01Box.setAttribute('class', 'app-container__input-option')
+
+const firstMethod01Label = document.createElement('label');
+firstMethod01Label.textContent = 'Asosiy parametrlarning aksplutatsiyaga qadar qiymati';
+firstMethod01Label.setAttribute('for', 'ekputatsiyaga-qadar-qiymat');
+
+const firstMethod01Input = document.createElement('input');
+firstMethod01Input.setAttribute('id', 'ekputatsiyaga-qadar-qiymat');
+firstMethod01Input.setAttribute('name', 'ekputatsiyaga-qadar-qiymat');
+firstMethod01Input.setAttribute('type', 'number');
+
+firstMethod01Box.append(firstMethod01Label, firstMethod01Input);
+
+
+const firstMethod02Box = document.createElement('div');
+firstMethod02Box.setAttribute('class', 'app-container__input-option')
+
+const firstMethod02Label = document.createElement('label');
+firstMethod02Label.textContent = 'Asosiy parametirlarning baholash paytidagi qiymati';
+firstMethod02Label.setAttribute('for', 'baholash-paytidagi-qiymati');
+
+const firstMethod02Input = document.createElement('input');
+firstMethod02Input.setAttribute('id', 'baholash-paytidagi-qiymatiti');
+firstMethod02Input.setAttribute('name', 'baholash-paytidagi-qiymatiti');
+firstMethod02Input.setAttribute('type', 'number')
+
+firstMethod02Box.append(firstMethod02Label, firstMethod02Input);
+
+
+const firstMethod03Box = document.createElement('div');
+firstMethod03Box.setAttribute('class', 'app-container__input-option')
+
+const firstMethod03Label = document.createElement('label');
+firstMethod03Label.textContent = "Asosiy parametirlarning baholash obyektiga tasir kuchini tavsiflovchi daraja ko'rsatkichi (0.6 - 0.8)";
+firstMethod03Label.setAttribute('for', 'baholash-daraja-korsatkichi');
+
+const firstMethod03Input = document.createElement('input');
+firstMethod03Input.setAttribute('id', 'baholash-daraja-korsatkichi');
+firstMethod03Input.setAttribute('name', 'baholash-daraja-korsatkichi');
+firstMethod03Input.setAttribute('type', 'number')
+
+firstMethod02Box.append(firstMethod02Label, firstMethod02Input);
+
+// 
+
+const secondMethod01Box = document.createElement('div');
+secondMethod01Box.setAttribute('class', 'app-container__input-option')
+
+const secondMethod01Label = document.createElement('label');
+secondMethod01Label.textContent = 'Baholanayotgan avtotransport vositasining baholash sanasidagi samarali yoshi (ishlagan vaqti)';
+secondMethod01Label.setAttribute('for', 'samarali-yoshi');
+
+const secondMethod01Input = document.createElement('input');
+secondMethod01Input.setAttribute('id', 'samarali-yoshi');
+secondMethod01Input.setAttribute('name', 'samarali-yoshi');
+secondMethod01Input.setAttribute('type', 'number');
+
+secondMethod01Box.append(secondMethod01Label, secondMethod01Input);
+
+
+const secondMethod02Box = document.createElement('div');
+secondMethod02Box.setAttribute('class', 'app-container__input-option')
+
+const secondMethod02Label = document.createElement('label');
+secondMethod02Label.textContent = "Hisobdan chiqarish yoki kapital ta'mirlashgacha normativ xizmati muddati(ishlagan vaqti)";
+secondMethod02Label.setAttribute('for', 'xizmat-muddati');
+
+const secondMethod02Input = document.createElement('input');
+secondMethod02Input.setAttribute('id', 'xizmat-muddati');
+secondMethod02Input.setAttribute('name', 'xizmat-muddati');
+secondMethod02Input.setAttribute('type', 'number');
+
+secondMethod02Box.append(secondMethod02Label, secondMethod02Input);
+
+const secondMethod03Box = document.createElement('div');
+secondMethod03Box.setAttribute('class', 'app-container__input-option')
+
+const secondMethod03Label = document.createElement('label');
+secondMethod03Label.textContent = 'Qoldiq xizmati muddati(ishlagan vaqti)';
+secondMethod03Label.setAttribute('for', 'qoldiq-xizmat-muddati');
+
+const secondMethod03Input = document.createElement('input');
+secondMethod03Input.setAttribute('id', 'qoldiq-xizmat-muddati');
+secondMethod03Input.setAttribute('name', 'qoldiq-xizmat-muddati');
+secondMethod03Input.setAttribute('type', 'number');
+
+secondMethod03Box.append(secondMethod03Label, secondMethod03Input);
+
+// 
+
+const thirdMethod01Box = document.createElement('div');
+thirdMethod01Box.setAttribute('class', 'app-container__input-option')
+
+const thirdMethod01Label = document.createElement('label');
+thirdMethod01Label.textContent = "Baholanayotgan avtotransport vositasining eskirishini bartaraf etish uchun talab qilinadigan tamirlash qiymati, so'm"
+thirdMethod01Label.setAttribute('for', 'tamirlash-qiymati');
+
+const thirdMethod01Input = document.createElement('input');
+thirdMethod01Input.setAttribute('id', 'tamirlash-qiymati');
+thirdMethod01Input.setAttribute('name', 'tamirlash-qiymati');
+thirdMethod01Input.setAttribute('type', 'number');
+
+thirdMethod01Box.append(thirdMethod01Label, thirdMethod01Input);
+
+
+const thirdMethod02Box = document.createElement('div');
+thirdMethod02Box.setAttribute('class', 'app-container__input-option')
+
+const thirdMethod02Label = document.createElement('label');
+thirdMethod02Label.textContent = "Yangi analog qiymati"
+thirdMethod02Label.setAttribute('for', 'yangi-anolog-qiymati');
+
+const thirdMethod02Input = document.createElement('input');
+thirdMethod02Input.setAttribute('id', 'yangi-anolog-qiymati');
+thirdMethod02Input.setAttribute('name', 'yangi-anolog-qiymati');
+thirdMethod02Input.setAttribute('type', 'number');
+
+thirdMethod02Box.append(thirdMethod02Label, thirdMethod02Input);
+
+
 //4-usul O'rtacha o'lchangan eskirish usuli
 
 const calcMethodInputBlock2 = document.createElement('div');
@@ -14,6 +140,18 @@ calcMethodSelect2.setAttribute('name', 'calculation-method');
 calcMethodSelect2.setAttribute('id', 'calculation-method');
 calcMethodSelect2.setAttribute('class', 'app-container__select');
 
+const calcMethodOption01 = document.createElement('option');
+calcMethodOption01.setAttribute('value', '1-usul');
+calcMethodOption01.textContent = "1.Asosiy parametrning yomonlashuvi usuli";
+
+const calcMethodOption02 = document.createElement('option');
+calcMethodOption02.setAttribute('value', '2-usul');
+calcMethodOption02.textContent = "2.Normativ eskirish usuli";
+
+const calcMethodOption03 = document.createElement('option');
+calcMethodOption03.setAttribute('value', '3-usul');
+calcMethodOption03.textContent = "3.Jismoniy eskirishni aniqlashning to'g'ridan-to'g'ri usuli";
+
 const calcMethodOption44 = document.createElement('option');
 calcMethodOption44.setAttribute('value', '4-usul');
 calcMethodOption44.textContent = "4.O'rtacha o'lchangan eskirish usuli";
@@ -26,7 +164,7 @@ const calcMethodOption6 = document.createElement('option');
 calcMethodOption6.setAttribute('value', '6-usul');
 calcMethodOption6.textContent = "6.Ekspert-tahliliy usul";
 
-calcMethodSelect2.append(calcMethodOption44, calcMethodOption5, calcMethodOption6);
+calcMethodSelect2.append(calcMethodOption01, calcMethodOption02, calcMethodOption03, calcMethodOption44, calcMethodOption5, calcMethodOption6);
 calcMethodInputBlock2.append(calcMethodLabel2, calcMethodSelect2);
 
 
@@ -41,9 +179,61 @@ function chooseType4() {
 }
 
 
+
+function firstMethod(e) {
+    if (calcMethodSelect2.value == '1-usul' && calcTypeEl.value == 'Eskirish-hisobi') {
+        inputBlockEL.append(firstMethodContainer2);
+    } else {
+        firstMethodContainer2.remove();
+    }
+}
+
+const firstMethodContainer2 = document.createElement('div');
+firstMethodContainer2.setAttribute('class', 'app-container__input-block');
+firstMethodContainer2.append(firstMethod01Box, firstMethod02Box, firstMethod03Box);
+
+calcMethodSelect2.addEventListener('change', firstMethod);
+
+firstMethod();
+
+function secondMethod(e) {
+    if (calcMethodSelect2.value == '2-usul' && calcTypeEl.value == 'Eskirish-hisobi') {
+        inputBlockEL.append(secondMethodContainer2);
+    } else {
+        secondMethodContainer2.remove();
+    }
+}
+
+const secondMethodContainer2 = document.createElement('div');
+secondMethodContainer2.setAttribute('class', 'app-container__input-block');
+secondMethodContainer2.append(secondMethod01Box, secondMethod02Box, secondMethod03Box);
+
+calcMethodSelect2.addEventListener('change', secondMethod);
+
+secondMethod();
+
+
+function thirdMethod(e) {
+    if (calcMethodSelect2.value == '3-usul' && calcTypeEl.value == 'Eskirish-hisobi') {
+        inputBlockEL.append(thirdMethodContainer2);
+    } else {
+        thirdMethodContainer2.remove();
+    }
+}
+
+const thirdMethodContainer2 = document.createElement('div');
+thirdMethodContainer2.setAttribute('class', 'app-container__input-block');
+thirdMethodContainer2.append(thirdMethod01Box, thirdMethod02Box);
+
+calcMethodSelect2.addEventListener('change', thirdMethod);
+
+thirdMethod();
+
+
 chooseType4();
 
 calcTypeEl.addEventListener('change', chooseType4);
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 

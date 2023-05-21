@@ -1,6 +1,7 @@
 // Jonibek
 /*eskirish hisobi 1- usul */
 
+
 const elFormEskirishBirinchi = document.querySelector(
   "[data-form-eskirish-birinchi-usul]"
 );
