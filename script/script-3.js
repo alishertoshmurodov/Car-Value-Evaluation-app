@@ -352,6 +352,9 @@ removeFuncOpt();
 
 //formula
 
+// Ифиз1?
+// Ai = SumUpElPriceBox
+// n = SumUpElPriceBoxSoni
 
 // kamchiliklar mavjud birinchi birgalikda to'g'irlaymiz savollar va asabbuzarliklar bo'lsa aytinglar
 // ************************************************************************************
@@ -486,21 +489,52 @@ calcMethodSelect2.addEventListener('change', fifthMethod);
 fifthMethod();
 
 //formula
+//1
+// let omega
 // function omegaFunc() {
-//     if (explCarTypeEl.value == explCarTypeOption1) {
-        
+//         if (explCarTypeSelect.value == explCarTypeOption1) {
+//             omega = 0.07 * explCarAgeInput.value + 0.0035 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption2){
+//             omega = 0.1 * explCarAgeInput.value + 0.003 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption3){
+//             omega = 0.09 * explCarAgeInput.value + 0.002 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption4){
+//             omega = 0.15 * explCarAgeInput.value + 0.0025 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption5){
+//             omega = 0.14 * explCarAgeInput.value + 0.002 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption6){
+//             omega = 0.16 * explCarAgeInput.value + 0.001 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption7){
+//             omega = 0.05 * explCarAgeInput.value + 0.0025 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption8){
+//             omega = 0.0055 * explCarAgeInput.value + 0.003 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption9){
+//             omega = 0.065 * explCarAgeInput.value + 0.0032 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption10){
+//             omega = 0.045 * explCarAgeInput.value + 0.002 * explCarDestInput;
+//         }
+//         else if(explCarTypeSelect.value == explCarTypeOption11){
+//             omega = 0.09 * explCarAgeInput.value + 0.002 * explCarDestInput;
+//         }
+//         else{
+//             omega = 0.12 * explCarAgeInput.value + 0.001 * explCarDestInput;
+//         }       
+    
 //     }
-//     else {
-           
-//     }
-
-// }
-
-// omegaFunc();
-// calcTypeEl.addEventListener('change', omegaFunc);
-
-// const omega = 0.07 * explCarAgeInput.value + 0.0035 * explCarDestInput
-// explCarInputEski.value = 100(1 - Math.pow(e, -omega))
+    
+//     omegaFunc();
+//     explCarTypeSelect.addEventListener('change', omegaFunc);
+    
+//     explCarInputEski.value = 100(1 - Math.pow(e, -omega))
 
 /****************************************************************** */
 /****************************************************************** */
@@ -528,21 +562,21 @@ funcEskSabInput.setAttribute('name', 'funksional-eskirish-sababi');
 funcEskSabInput.setAttribute('type', 'text');
 
 funcEskSab.append(funcEskSabLabel, funcEskSabInput);
-// Funksional eskirish: %
-const funcEskirish = document.createElement('div');
-funcEskirish.setAttribute('class', 'app-container__input-option')
+// Funksional eskirish: %  Main
+const funkEskirishMain = document.createElement('div');
+funkEskirishMain.setAttribute('class', 'app-container__input-option')
 
-const funcEskirishLabel = document.createElement('label');
-funcEskirishLabel.textContent = "Funksional eskirish: %";
-funcEskirishLabel.setAttribute('for', "funksional-eskirish");
+const funkEskirishMainLabel = document.createElement('label');
+funkEskirishMainLabel.textContent = "Funksional eskirish: %";
+funkEskirishMainLabel.setAttribute('for', "funksional-eskirish");
 
-const funcEskirishInput = document.createElement('input');
-funcEskirishInput.setAttribute('id', "funksional-eskirish");
-funcEskirishInput.setAttribute('name', "funksional-eskirish");
-funcEskirishInput.setAttribute('type', 'number');
+const funkEskirishInputMain = document.createElement('input');
+funkEskirishInputMain.setAttribute('id', "funksional-eskirish");
+funkEskirishInputMain.setAttribute('name', "funksional-eskirish");
+funkEskirishInputMain.setAttribute('type', 'number');
 
-funcEskirish.append(funcEskirishLabel, funcEskirishInput);
-//Tashqi (iqtisodiy) eskirish Avtotransport vositasiga tashqi eskirish hisoblash sababi
+funkEskirishMain.append(funkEskirishMainLabel, funkEskirishInputMain);
+//   sababi
 const expertTahMethodLabel2 = document.createElement('h3');
 expertTahMethodLabel2.setAttribute('for', 'calculation-method');
 expertTahMethodLabel2.textContent = "Tashqi (iqtisodiy) eskirish";
@@ -576,6 +610,7 @@ tashqiEskirishInput.setAttribute('type', 'number');
 
 tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput)
 /////////////////////////////////////////////////
+// Jamlangan eskirish
 const expertTahMethodLabel3 = document.createElement('h3');
 expertTahMethodLabel3.setAttribute('for', 'calculation-method');
 expertTahMethodLabel3.textContent = "Jamlangan eskirish";
@@ -684,7 +719,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel, funcEskSab, funcEskirish, expertTahMethodLabel2, tashqiEskSab, tashqiEskirish, expertTahMethodLabel3, jisEsk, funkEskirish, tashqiInEskirish, jamiEskirish, expertTahMethodLabel4, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel2, tashqiEskSab, tashqiEskirish, expertTahMethodLabel3, jisEsk, funkEskirish, tashqiInEskirish, jamiEskirish, expertTahMethodLabel4, tiklanishQiymat, avtJamEskirish, xarQiymat)
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {
@@ -705,12 +740,14 @@ sixthMethod();
 //formula
 
 ////////////////////////
-
-
-
-// const removeContainer = document.createElement('div');
-// removeContainer.setAttribute('class', 'app-container__input-block');
-// removeContainer.append(calcMethodInputBlock2);
+//1
+// jisEskInput.value = explCarInputEski;
+// funkEskirishInput.value = funkEskirishInputMain;
+// tashqiInEskirishInput.value = tashqiEskirishInput;
+//  const jamgarEsk = (1 - (1 - jisEskInput / 100) * (1 - funkEskirishInput / 100)(1 - tashqiInEskirishInput / 100)) * 100
+//2
+//  const qoldiqQiymat = tiklanishQiymatInput * (1 - ? / 100)
+///////////////////////
 
 function chooseTypeFinished() {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
