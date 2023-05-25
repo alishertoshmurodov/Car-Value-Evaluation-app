@@ -13,6 +13,9 @@ firstMethod01Label.textContent = 'Asosiy parametrlarning aksplutatsiyaga qadar q
 firstMethod01Label.setAttribute('for', 'ekputatsiyaga-qadar-qiymat');
 
 const firstMethod01Input = document.createElement('input');
+firstMethod01Input.dataset.eksplutatsiyagaQadarQiymat = '';
+
+
 firstMethod01Input.setAttribute('id', 'ekputatsiyaga-qadar-qiymat');
 firstMethod01Input.setAttribute('name', 'ekputatsiyaga-qadar-qiymat');
 firstMethod01Input.setAttribute('type', 'number');
@@ -28,6 +31,7 @@ firstMethod02Label.textContent = 'Asosiy parametirlarning baholash paytidagi qiy
 firstMethod02Label.setAttribute('for', 'baholash-paytidagi-qiymati');
 
 const firstMethod02Input = document.createElement('input');
+firstMethod02Input.dataset.baholashPaytidagiQiymati = '';
 firstMethod02Input.setAttribute('id', 'baholash-paytidagi-qiymatiti');
 firstMethod02Input.setAttribute('name', 'baholash-paytidagi-qiymatiti');
 firstMethod02Input.setAttribute('type', 'number')
@@ -43,11 +47,12 @@ firstMethod03Label.textContent = "Asosiy parametirlarning baholash obyektiga tas
 firstMethod03Label.setAttribute('for', 'baholash-daraja-korsatkichi');
 
 const firstMethod03Input = document.createElement('input');
+firstMethod03Input.dataset.baholashDarajaKorsatkichi = '';
 firstMethod03Input.setAttribute('id', 'baholash-daraja-korsatkichi');
 firstMethod03Input.setAttribute('name', 'baholash-daraja-korsatkichi');
 firstMethod03Input.setAttribute('type', 'number')
 
-firstMethod02Box.append(firstMethod02Label, firstMethod02Input);
+firstMethod03Box.append(firstMethod03Label, firstMethod03Input);
 
 // 
 

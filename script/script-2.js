@@ -2,32 +2,36 @@
 /*eskirish hisobi 1- usul */
 
 
-const elFormEskirishBirinchi = document.querySelector(
-  "[data-form-eskirish-birinchi-usul]"
-);
-const elAsosiyParametrNomi = document.querySelector(
-  "[data-asosiy-parametr-nomi]"
-);
-const elEksplutatsiyagaQadarQiymati = document.querySelector(
-  "[data-eksplutatsiyaga-qadar-qiymat]"
-);
-const elBaholashPaytidagiQiymati = document.querySelector(
-  "[data-baholash-paytidagi-qiymati]"
-);
-const elBaholashDarajasiKorsatkichi = document.querySelector(
-  "[data-baholash-daraja-korsatkichi]"
-);
+
+
+
 const elJamiEskirish = document.querySelector("[data-jami-eskirish-text]");
 
-elFormEskirishBirinchi.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (e.target.matches("[data-birinchi-usul-tugmasi]"))
-    elJamiEskirish.textContent = `${elAsosiyParametrNomi.value}${
-      1 -
-      (elBaholashPaytidagiQiymati.value /
-        elEksplutatsiyagaQadarQiymati.value) **
-        elBaholashDarajasiKorsatkichi.value
-    }%`;
+
+
+
+
+document.querySelector('#calc-btn').addEventListener("click", (e) => {
+  let res = ''
+  const elBaholashPaytidagiQiymati = document.querySelector(
+    "[data-baholash-paytidagi-qiymati]"
+  );
+  const elFormEskirishBirinchi = document.querySelector(
+    "[data-form-eskirish-birinchi-usul]"
+  );
+  const elAsosiyParametrNomi = document.querySelector(
+    "[data-asosiy-parametr-nomi]"
+  );
+  const elEksplutatsiyagaQadarQiymati = document.querySelector(
+    "[data-eksplutatsiyaga-qadar-qiymat]"
+  );
+  const elBaholashDarajasiKorsatkichi = document.querySelector(
+    "[data-baholash-daraja-korsatkichi]"
+  );
+  if (calcTypeEl.value == 'Eskirish-hisobi' && calcMethodSelect2.value == '1-usul')
+    res =  1 - (elBaholashPaytidagiQiymati.value /
+        elEksplutatsiyagaQadarQiymati.value) ** elBaholashDarajasiKorsatkichi.value;
+        console.log(res);
 });
 
 /* eskirish hisobi 2- usul */
@@ -54,14 +58,13 @@ elFormEskirishIkkinchi.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (!e.target.matches("[data-eskirish-tugma]"))
-    elJismoniyEskirish.textContent = `${
-      (qoldiqXizmatMuddati(
-        +elXizmatMuddati.value,
-        +elQoldiqXizmatMuddati.value
-      ) /
+    elJismoniyEskirish.textContent = `${(qoldiqXizmatMuddati(
+      +elXizmatMuddati.value,
+      +elQoldiqXizmatMuddati.value
+    ) /
         +elXizmatMuddati.value) *
       100
-    }%`;
+      }%`;
 });
 
 /* eskirishni hisoblashni 3- usuli */
@@ -79,7 +82,6 @@ const elEskirishTugriText = document.querySelector(
 elFormEskirishUchunchi.addEventListener("click", (e) => {
   e.preventDefault();
   if (!e.target.matches("[data-eskirish-tugri-hisoblash-tugma]"))
-    elEskirishTugriText.textContent = `${
-      (elTamirlashQiymati.value / elYangiAnalog.value) * 100
-    }%`;
+    elEskirishTugriText.textContent = `${(elTamirlashQiymati.value / elYangiAnalog.value) * 100
+      }%`;
 });
