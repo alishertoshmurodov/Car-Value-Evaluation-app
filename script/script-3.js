@@ -67,6 +67,7 @@ const secondMethod01Input = document.createElement('input');
 secondMethod01Input.setAttribute('id', 'samarali-yoshi');
 secondMethod01Input.setAttribute('name', 'samarali-yoshi');
 secondMethod01Input.setAttribute('type', 'number');
+secondMethod01Input.dataset.samaraliYosh = '';
 
 secondMethod01Box.append(secondMethod01Label, secondMethod01Input);
 
@@ -82,6 +83,7 @@ const secondMethod02Input = document.createElement('input');
 secondMethod02Input.setAttribute('id', 'xizmat-muddati');
 secondMethod02Input.setAttribute('name', 'xizmat-muddati');
 secondMethod02Input.setAttribute('type', 'number');
+secondMethod02Input.dataset.xizmatMuddat = '';
 
 secondMethod02Box.append(secondMethod02Label, secondMethod02Input);
 
@@ -96,6 +98,7 @@ const secondMethod03Input = document.createElement('input');
 secondMethod03Input.setAttribute('id', 'qoldiq-xizmat-muddati');
 secondMethod03Input.setAttribute('name', 'qoldiq-xizmat-muddati');
 secondMethod03Input.setAttribute('type', 'number');
+secondMethod03Input.dataset.qoldiqXizmatMuddat = '';
 
 secondMethod03Box.append(secondMethod03Label, secondMethod03Input);
 
@@ -112,6 +115,7 @@ const thirdMethod01Input = document.createElement('input');
 thirdMethod01Input.setAttribute('id', 'tamirlash-qiymati');
 thirdMethod01Input.setAttribute('name', 'tamirlash-qiymati');
 thirdMethod01Input.setAttribute('type', 'number');
+thirdMethod01Input.dataset.tamirlashQiymat = '';
 
 thirdMethod01Box.append(thirdMethod01Label, thirdMethod01Input);
 
@@ -127,6 +131,7 @@ const thirdMethod02Input = document.createElement('input');
 thirdMethod02Input.setAttribute('id', 'yangi-anolog-qiymati');
 thirdMethod02Input.setAttribute('name', 'yangi-anolog-qiymati');
 thirdMethod02Input.setAttribute('type', 'number');
+thirdMethod02Input.dataset.yangiAnalog = '';
 
 thirdMethod02Box.append(thirdMethod02Label, thirdMethod02Input);
 
