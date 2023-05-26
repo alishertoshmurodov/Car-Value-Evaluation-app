@@ -63,7 +63,7 @@ function chooseType(e) {
 }
 
 
-chooseType(); 
+chooseType();
 
 calcTypeEl.addEventListener('change', chooseType);
 // calcTypeEl.addEventListener('change', chooseType2);
@@ -241,10 +241,10 @@ firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBo
 
 function removeFuncOpt1(e) {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
-         firstMethodContainer.remove();
+        firstMethodContainer.remove();
     }
- }
- removeFuncOpt1();
+}
+removeFuncOpt1();
 calcTypeEl.addEventListener('change', removeFuncOpt1);
 
 
@@ -578,9 +578,38 @@ Method();
 
 
 /*  ---------  */
-/*  Hisoblash  */ 
+/*  Hisoblash  */
 /*  ---------  */
 
 
 
 const calcBtnEl = document.querySelector('#calc-btn');
+
+calcBtnEl.addEventListener('click', function (e) {
+    if (calcTypeEl.value == 'Tiklanish-hisobi') {
+        // 1-usul
+        if (calcMethodSelect.value == '1-usul') {
+            console.log(1);
+        }
+        // 2-usul
+        let cPod = 0;
+        let cP = 0;
+        if (calcMethodSelect.value == '2-usul') {
+            console.log(2);
+            cPod = ((1 - Number(secondMethodInput2.value)) * (1 - Number(secondMethodInput3.value)
+             - Number(secondMethodInput4.value)) * Number(secondMethodInput.value))
+             / ((1 + Number(secondMethodInput2.value)) * (1 - Number(secondMethodInput3.value)));
+            cP = cPod * (Number(secondMethodInput5.value) / Number(secondMethodInput6.value)) * (Number(secondMethodInput7.value) / Number(secondMethodInput8.value))
+            cV = ((1 - Number(secondMethodInput3.value)) * cP) / 1 - Number(secondMethodInput3.value) - Number(secondMethodInput4.value);
+            console.log(cV);
+        }
+        // 3-usul
+        if (calcMethodSelect.value == '3-usul') {
+            console.log(3);
+        }
+        // 4-usul
+        if (calcMethodSelect.value == '4-usul') {
+            console.log(4);
+        }
+    }
+});

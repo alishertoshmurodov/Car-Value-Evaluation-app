@@ -48,20 +48,10 @@ document.querySelector('#calc-btn').addEventListener("click", (e) => {
 
   let res = '';
 
-  const elFormEskirishIkkinchi = document.querySelector(
-    "[data-form-eskirish-ikkinchi-usul]"
-  );
-
-  const elSamariYoshi = document.querySelector("[data-samarali-yosh]");
   const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
   const elQoldiqXizmatMuddati = document.querySelector(
     "[data-qoldiq-xizmat-muddat]"
   );
-
-  const elJismoniyEskirish = document.querySelector(
-    "[data-jismoniy-eskirish-text]"
-  );
-
 
   if (calcTypeEl.value == 'Eskirish-hisobi' && calcMethodSelect2.value == '2-usul') {
     res = `${(qoldiqXizmatMuddati(
@@ -82,15 +72,8 @@ document.querySelector('#calc-btn').addEventListener("click", (e) => {
 document.querySelector('#calc-btn').addEventListener("click", (e) => {
   let res = '';
 
-  const elFormEskirishUchunchi = document.querySelector(
-    "[data-form-uchunchi-usul-eskirish]"
-  );
-
   const elTamirlashQiymati = document.querySelector("[data-tamirlash-qiymat]");
   const elYangiAnalog = document.querySelector("[data-yangi-analog]");
-  const elEskirishTugriText = document.querySelector(
-    "[data-jismoniy-eskirish-tugri-usuli-text]"
-  );
 
   if (calcTypeEl.value == 'Eskirish-hisobi' && calcMethodSelect2.value == '3-usul') {
     res = `${(elTamirlashQiymati.value / elYangiAnalog.value) * 100
