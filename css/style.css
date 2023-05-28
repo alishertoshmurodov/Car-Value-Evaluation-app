@@ -80,3 +80,21 @@ body {
 .app-container__right-block {
     
 }
+.add_btn{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.6rem;
+    background-color: #9E0031;
+    border: 2px solid #9E0031;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: 200ms ease;
+}
+.add_btn:hover{
+    background-color: #fff;
+    color: #9E0031;
+}

@@ -277,6 +277,20 @@ SumUpElPriceInput.setAttribute('type', 'number');
 
 SumUpElPriceBox.append(SumUpElPriceLabel, SumUpElPriceInput);
 
+//1-konstruktiv jismoniy eskirishi
+const SumUpElPriceBoxEsk = document.createElement('div');
+SumUpElPriceBoxEsk.setAttribute('class', 'app-container__input-option')
+
+const SumUpElPriceEskLabel = document.createElement('label');
+SumUpElPriceEskLabel.textContent = "Baholanayotgan avtotransport vositasi 1-konstruktiv elementi jismoniy eskirishi: %";
+SumUpElPriceEskLabel.setAttribute('for', "Baholanayotgan-avto-1-elementi-jismoniy-eskirishi");
+
+const SumUpElPriceEskInput = document.createElement('input');
+SumUpElPriceEskInput.setAttribute('id', "Baholanayotgan-avto-1-elementi-jismoniy-eskirishi");
+SumUpElPriceEskInput.setAttribute('name', "Baholanayotgan-avto-1-elementi-jismoniy-eskirishi");
+SumUpElPriceEskInput.setAttribute('type', 'number');
+
+SumUpElPriceBoxEsk.append(SumUpElPriceEskLabel, SumUpElPriceEskInput);
 // "Baholanayotgan avtotransport vositasi 2-konstruktiv elementning nomi"
 const SumUpElNameBox2 = document.createElement('div');
 SumUpElNameBox2.setAttribute('class', 'app-container__input-option')
@@ -306,7 +320,78 @@ SumUpElPriceInput2.setAttribute('name', "Baholanayotgan-avto-2-elementi-tannarxi
 SumUpElPriceInput2.setAttribute('type', 'number');
 
 SumUpElPriceBox2.append(SumUpElPriceLabel2, SumUpElPriceInput2);
+//2-konstruktiv jismoniy eskirishi
+const SumUpElPriceBoxEsk2 = document.createElement('div');
+SumUpElPriceBoxEsk2.setAttribute('class', 'app-container__input-option')
 
+const SumUpElPriceEskLabel2 = document.createElement('label');
+SumUpElPriceEskLabel2.textContent = "Baholanayotgan avtotransport vositasi 2-konstruktiv elementi jismoniy eskirishi: %";
+SumUpElPriceEskLabel2.setAttribute('for', "Baholanayotgan-avto-2-elementi-jismoniy-eskirishi");
+
+const SumUpElPriceEskInput2 = document.createElement('input');
+SumUpElPriceEskInput2.setAttribute('id', "Baholanayotgan-avto-2-elementi-jismoniy-eskirishi");
+SumUpElPriceEskInput2.setAttribute('name', "Baholanayotgan-avto-2-elementi-jismoniy-eskirishi");
+SumUpElPriceEskInput2.setAttribute('type', 'number');
+SumUpElPriceBoxEsk2.append(SumUpElPriceEskLabel2, SumUpElPriceEskInput2);
+
+const konstAddbtn = document.createElement("button");
+konstAddbtn.setAttribute("class", "add_btn");
+konstAddbtn.setAttribute("id", "add_btn");
+konstAddbtn.textContent = "Konstruktiv element qo'shish";
+
+const consturctivs = []
+let counter = 3;
+
+konstAddbtn.addEventListener('click', () => {
+    const SumUpElNameBox2 = document.createElement('div');
+    SumUpElNameBox2.setAttribute('class', 'app-container__input-option')
+
+    const SumUpElNameLabel2 = document.createElement('label');
+    SumUpElNameLabel2.textContent = 'Baholanayotgan avtotransport vositasi ' + counter + '-konstruktiv elementning nomi:';
+    SumUpElNameLabel2.setAttribute('for', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
+
+    const SumUpElNameInput2 = document.createElement('input');
+    SumUpElNameInput2.setAttribute('id', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
+    SumUpElNameInput2.setAttribute('name', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
+    SumUpElNameInput2.setAttribute('type', 'text');
+
+    SumUpElNameBox2.append(SumUpElNameLabel2, SumUpElNameInput2);
+
+    ///////////////////
+    const SumUpElPriceBox2 = document.createElement('div');
+    SumUpElPriceBox2.setAttribute('class', 'app-container__input-option')
+
+    const SumUpElPriceLabel2 = document.createElement('label');
+    SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositas "+ counter + "-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: %";
+    SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
+
+    const SumUpElPriceInput2 = document.createElement('input');
+    SumUpElPriceInput2.setAttribute('id', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
+    SumUpElPriceInput2.setAttribute('name', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
+    SumUpElPriceInput2.setAttribute('type', 'number');
+
+    SumUpElPriceBox2.append(SumUpElPriceLabel2, SumUpElPriceInput2);
+    ///////////////////
+    const SumUpElPriceBoxEsk2 = document.createElement('div');
+    SumUpElPriceBoxEsk2.setAttribute('class', 'app-container__input-option')
+
+    const SumUpElPriceEskLabel2 = document.createElement('label');
+    SumUpElPriceEskLabel2.textContent = "Baholanayotgan avtotransport vositasi "+ counter +"-konstruktiv elementi jismoniy eskirishi: %";
+    SumUpElPriceEskLabel2.setAttribute('for', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
+
+    const SumUpElPriceEskInput2 = document.createElement('input');
+    SumUpElPriceEskInput2.setAttribute('id', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
+    SumUpElPriceEskInput2.setAttribute('name', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
+    SumUpElPriceEskInput2.setAttribute('type', 'number');
+    SumUpElPriceBoxEsk2.append(SumUpElPriceEskLabel2, SumUpElPriceEskInput2);
+    ////////////
+    fourthMethodContainer2.appendChild(SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2);
+    konstAddbtn.before(SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2);
+    counter++;
+
+    consturctivs.push({'SumUpElNameBox2': SumUpElNameBox2, 'SumUpElPriceBox2': SumUpElPriceBox2, 'SumUpElPriceBox2': SumUpElPriceBoxEsk2});
+    console.log(consturctivs);
+});
 //Baholanayotgan avtotransport vositasining konstruktiv elementlar soni
 const SumUpElPriceBoxSoni = document.createElement('div');
 SumUpElPriceBoxSoni.setAttribute('class', 'app-container__input-option')
@@ -322,20 +407,6 @@ SumUpElPriceInputsoni.setAttribute('type', 'number');
 
 SumUpElPriceBoxSoni.append(SumUpCarPriceLabel, SumUpElPriceInputsoni);
 
-//Jismoniy eskirish
-const SumUpElPriceBoxEski = document.createElement('div');
-SumUpElPriceBoxEski.setAttribute('class', 'app-container__input-option')
-
-const SumUpElPriceLabelEski = document.createElement('label');
-SumUpElPriceLabelEski.textContent = "Jismoniy eskirish: %";
-SumUpElPriceLabelEski.setAttribute('for', "Jismoniy-eskirish");
-
-const SumUpElPriceInputEski = document.createElement('input');
-SumUpElPriceInputEski.setAttribute('id', "Jismoniy-eskirish");
-SumUpElPriceInputEski.setAttribute('name', "Jismoniy-eskirish");
-SumUpElPriceInputEski.setAttribute('type', 'number');
-
-SumUpElPriceBoxEski.append(SumUpElPriceLabelEski, SumUpElPriceInputEski);
 
 function fourthMethod(e) {
     if (calcMethodSelect2.value == '4-usul') {
@@ -347,7 +418,7 @@ function fourthMethod(e) {
 
 const fourthMethodContainer2 = document.createElement('div');
 fourthMethodContainer2.setAttribute('class', 'app-container__input-block');
-fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxSoni, SumUpElPriceBoxEski);
+fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElPriceBoxEsk, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2, konstAddbtn, SumUpElPriceBoxSoni);
 
 calcMethodSelect2.addEventListener('change', fourthMethod);
 
@@ -362,7 +433,6 @@ removeFuncOpt();
 
 //formula
 
-// Ифиз1?
 // Ai = SumUpElPriceBox
 // n = SumUpElPriceBoxSoni
 
@@ -465,19 +535,6 @@ explCarDestInput.setAttribute('type', 'number');
 
 explCarDest.append(explCarDestLabel, explCarDestInput);
 
-const explCarBoxEski = document.createElement('div');
-explCarBoxEski.setAttribute('class', 'app-container__input-option')
-
-const explCarLabelEski = document.createElement('label');
-explCarLabelEski.textContent = "Jismoniy eskirish: %";
-explCarLabelEski.setAttribute('for', "Jismoniy-eskirish");
-
-const explCarInputEski = document.createElement('input');
-explCarInputEski.setAttribute('id', "Jismoniy-eskirish");
-explCarInputEski.setAttribute('name', "Jismoniy-eskirish");
-explCarInputEski.setAttribute('type', 'number');
-
-explCarBoxEski.append(explCarLabelEski, explCarInputEski);
 
 explCarTypeSelect.append(explCarTypeOption1, explCarTypeOption2, explCarTypeOption3, explCarTypeOption4, explCarTypeOption5, explCarTypeOption6, explCarTypeOption7, explCarTypeOption8, explCarTypeOption9, explCarTypeOption10, explCarTypeOption11, explCarTypeOption12)
 explCarTypes.append(explCarTypesLabel, explCarTypeSelect)
@@ -492,7 +549,7 @@ function fifthMethod(e) {
 
 const fifthMethodContainer = document.createElement('div');
 fifthMethodContainer.setAttribute('class', 'app-container__input-block');
-fifthMethodContainer.append(explCarTypes, explCarAge, explCarDest, explCarBoxEski);
+fifthMethodContainer.append(explCarTypes, explCarAge, explCarDest);
 
 calcMethodSelect2.addEventListener('change', fifthMethod);
 
@@ -500,51 +557,49 @@ fifthMethod();
 
 //formula
 //1
-// let omega
-// function omegaFunc() {
-//         if (explCarTypeSelect.value == explCarTypeOption1) {
-//             omega = 0.07 * explCarAgeInput.value + 0.0035 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption2){
-//             omega = 0.1 * explCarAgeInput.value + 0.003 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption3){
-//             omega = 0.09 * explCarAgeInput.value + 0.002 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption4){
-//             omega = 0.15 * explCarAgeInput.value + 0.0025 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption5){
-//             omega = 0.14 * explCarAgeInput.value + 0.002 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption6){
-//             omega = 0.16 * explCarAgeInput.value + 0.001 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption7){
-//             omega = 0.05 * explCarAgeInput.value + 0.0025 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption8){
-//             omega = 0.0055 * explCarAgeInput.value + 0.003 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption9){
-//             omega = 0.065 * explCarAgeInput.value + 0.0032 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption10){
-//             omega = 0.045 * explCarAgeInput.value + 0.002 * explCarDestInput;
-//         }
-//         else if(explCarTypeSelect.value == explCarTypeOption11){
-//             omega = 0.09 * explCarAgeInput.value + 0.002 * explCarDestInput;
-//         }
-//         else{
-//             omega = 0.12 * explCarAgeInput.value + 0.001 * explCarDestInput;
-//         }       
-    
-//     }
-    
-//     omegaFunc();
-//     explCarTypeSelect.addEventListener('change', omegaFunc);
-    
-//     explCarInputEski.value = 100(1 - Math.pow(e, -omega))
+let omega;
+function omegaFunc() {
+    if (explCarTypeSelect.value == explCarTypeOption1.value) {
+        omega = 0.07 * Number(explCarAgeInput.value) + 0.0035 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption2.value) {
+        omega = 0.1 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption3.value) {
+        omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption4.value) {
+        omega = 0.15 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption5.value) {
+        omega = 0.14 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption6.value) {
+        omega = 0.16 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption7.value) {
+        omega = 0.05 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption8.value) {
+        omega = 0.0055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption9.value) {
+        omega = 0.065 * Number(explCarAgeInput.value) + 0.0032 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption10.value) {
+        omega = 0.045 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    }
+    else if (explCarTypeSelect.value == explCarTypeOption11.value) {
+        omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    }
+    else {
+        omega = 0.12 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
+
+    }
+
+}
+omegaFunc();
+explCarTypeSelect.addEventListener('change', omegaFunc);
 
 /****************************************************************** */
 /****************************************************************** */
@@ -618,14 +673,13 @@ tashqiEskirishInput.setAttribute('id', "tashqi-eskirish");
 tashqiEskirishInput.setAttribute('name', "tashqi-eskirish");
 tashqiEskirishInput.setAttribute('type', 'number');
 
-tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput)
-/////////////////////////////////////////////////
-// Jamlangan eskirish
+tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput);
+// Jismoniy eskirish: %'
 const expertTahMethodLabel3 = document.createElement('h3');
 expertTahMethodLabel3.setAttribute('for', 'calculation-method');
-expertTahMethodLabel3.textContent = "Jamlangan eskirish";
+expertTahMethodLabel3.textContent = "Jismoniy eskirish";
 expertTahMethodLabel3.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
-// Jismoniy eskirish: %'
+
 const jisEsk = document.createElement('div');
 jisEsk.setAttribute('class', 'app-container__input-option')
 
@@ -636,56 +690,38 @@ jisEskLabel.setAttribute('for', 'jismoniy-eskirish');
 const jisEskInput = document.createElement('input');
 jisEskInput.setAttribute('id', 'jismoniy-eskirish');
 jisEskInput.setAttribute('name', 'jismoniy-eskirish');
-jisEskInput.setAttribute('type', 'text');
+jisEskInput.setAttribute('type', 'number');
 
 jisEsk.append(jisEskLabel, jisEskInput);
-// funksional eskirish: %"
-const funkEskirish = document.createElement('div');
-funkEskirish.setAttribute('class', 'app-container__input-option')
+/////////////////////////////////////////////////
+// Jamlangan eskirish
+const expertTahMethodLabel4 = document.createElement('h3');
+expertTahMethodLabel4.setAttribute('for', 'calculation-method');
+expertTahMethodLabel4.textContent = "Jamlangan eskirish";
+expertTahMethodLabel4.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
-const funkEskirishLabel = document.createElement('label');
-funkEskirishLabel.textContent = "funksional eskirish: %";
-funkEskirishLabel.setAttribute('for', "funksional-eskirish");
-
-const funkEskirishInput = document.createElement('input');
-funkEskirishInput.setAttribute('id', "funksional-eskirish");
-funkEskirishInput.setAttribute('name', "funksional-eskirish");
-funkEskirishInput.setAttribute('type', 'number');
-
-funkEskirish.append(funkEskirishLabel, funkEskirishInput);
-// Tashqi (iqtisodiy) eskirish: %
-const tashqiInEskirish = document.createElement('div');
-tashqiInEskirish.setAttribute('class', 'app-container__input-option')
-
-const tashqiInEskirishLabel = document.createElement('label');
-tashqiInEskirishLabel.textContent = "Tashqi (iqtisodiy) eskirish: %";
-tashqiInEskirishLabel.setAttribute('for', "tashqi-eskirish");
-
-const tashqiInEskirishInput = document.createElement('input');
-tashqiInEskirishInput.setAttribute('id', "tashqi-eskirish");
-tashqiInEskirishInput.setAttribute('name', "tashqi-eskirish");
-tashqiInEskirishInput.setAttribute('type', 'number');
-
-tashqiInEskirish.append(tashqiInEskirishLabel, tashqiInEskirishInput);
-// Jamlangan eskirish: %
 const jamiEskirish = document.createElement('div');
 jamiEskirish.setAttribute('class', 'app-container__input-option')
 
 const jamiEskirishLabel = document.createElement('label');
-jamiEskirishLabel.textContent = "Jamlangan eskirish: %";
 jamiEskirishLabel.setAttribute('for', "jami-eskirish");
+jamiEskirishLabel.textContent = "Jamlangan eskirish:"
 
-const jamiEskirishInput = document.createElement('input');
-jamiEskirishInput.setAttribute('id', "jami-eskirish");
-jamiEskirishInput.setAttribute('name', "jami-eskirish");
-jamiEskirishInput.setAttribute('type', 'number');
+const eskirishEls = [tashqiEskirishInput, funkEskirishInputMain, jisEskInput];
 
-jamiEskirish.append(jamiEskirishLabel, jamiEskirishInput);
+eskirishEls.forEach(element => {
+    element.addEventListener('input', () => {
+        jamiEskirish.value = Number(tashqiEskirishInput.value) + Number(funkEskirishInputMain.value) + Number(jisEskInput.value);
+        jamiEskirishLabel.textContent = `Jamlangan eskirish: ${jamiEskirish.value}%`;
+    })
+});
+jamiEskirish.append(jamiEskirishLabel);
+
 /////////////////////////////////////////////////
-const expertTahMethodLabel4 = document.createElement('h3');
-expertTahMethodLabel4.setAttribute('for', 'calculation-method');
-expertTahMethodLabel4.textContent = "Avtotransport vositasining xarajat yondashuvida hisoblangan qiymati";
-expertTahMethodLabel4.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+const expertTahMethodLabel5 = document.createElement('h3');
+expertTahMethodLabel5.setAttribute('for', 'calculation-method');
+expertTahMethodLabel5.textContent = "Avtotransport vositasining xarajat yondashuvida hisoblangan qiymati";
+expertTahMethodLabel5.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 // Avtotransport vositasining tiklanish qiymati: so'm
 const tiklanishQiymat = document.createElement('div');
 tiklanishQiymat.setAttribute('class', 'app-container__input-option')
@@ -729,7 +765,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel2, tashqiEskSab, tashqiEskirish, expertTahMethodLabel3, jisEsk, funkEskirish, tashqiInEskirish, jamiEskirish, expertTahMethodLabel4, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel2, tashqiEskSab, tashqiEskirish, expertTahMethodLabel3, jisEsk, expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {
@@ -751,12 +787,15 @@ sixthMethod();
 
 ////////////////////////
 //1
-// jisEskInput.value = explCarInputEski;
-// funkEskirishInput.value = funkEskirishInputMain;
-// tashqiInEskirishInput.value = tashqiEskirishInput;
-//  const jamgarEsk = (1 - (1 - jisEskInput / 100) * (1 - funkEskirishInput / 100)(1 - tashqiInEskirishInput / 100)) * 100
-//2
-//  const qoldiqQiymat = tiklanishQiymatInput * (1 - ? / 100)
+// Jamg'arilgan formula
+
+const jamgarEsk = (1 - (1 - Number(jisEskInput.value) / 100) *
+    (1 - Number(funkEskirishInputMain.value) / 100) *
+    (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
+
+//2 Qoldiq qiymat
+
+const qoldiqQiymat = Number(tiklanishQiymatInput) * (1 - Number(avtJamEskirishInput.value) / 100);
 ///////////////////////
 
 function chooseTypeFinished() {
@@ -769,9 +808,22 @@ function chooseTypeFinished() {
         fifthMethodContainer.remove();
         sixthMethodContainer.remove();
     }
-    
+
 }
 calcTypeEl.addEventListener('change', chooseTypeFinished);
 
 chooseTypeFinished();
+const calcBtn = document.querySelector('#calc-btn');
 
+calcBtn.addEventListener('click', omegaFunc)
+calcBtn.addEventListener('click', (e) => {
+    if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase() && calcMethodSelect2.value == "5-usul") {
+        console.log(100 * (1 - 2.71828 ** -omega) + " foiz");
+    }
+    else if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase() && calcMethodSelect2.value == "6-usul") {
+        console.log((1 - (1 - Number(jisEskInput.value) / 100) *
+            (1 - Number(funkEskirishInputMain.value) / 100) *
+            (1 - Number(tashqiEskirishInput.value) / 100)) * 100);
+        console.log(Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100));
+    }
+})
