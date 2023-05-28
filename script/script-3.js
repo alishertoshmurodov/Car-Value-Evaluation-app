@@ -256,6 +256,7 @@ SumUpElNameLabel.textContent = 'Baholanayotgan avtotransport vositasi 1-konstruk
 SumUpElNameLabel.setAttribute('for', 'Baholanayotgan-avto-1-konstruktiv-elementning-nomi');
 
 const SumUpElNameInput = document.createElement('input');
+SumUpElNameInput.dataset.konstNomi = '';
 SumUpElNameInput.setAttribute('id', 'Baholanayotgan-avto-1-konstruktiv-elementning-nomi');
 SumUpElNameInput.setAttribute('name', 'Baholanayotgan-avto-1-konstruktiv-elementning-nomi');
 SumUpElNameInput.setAttribute('type', 'text');
@@ -271,6 +272,7 @@ SumUpElPriceLabel.textContent = "Baholanayotgan avtotransport vositasi 1-konstru
 SumUpElPriceLabel.setAttribute('for', "Baholanayotgan-avto-1-elementi-tannarxining-baholash-oby'ekti-tannarxidagi-salmog'i");
 
 const SumUpElPriceInput = document.createElement('input');
+SumUpElPriceInput.dataset.konstPrice = '';
 SumUpElPriceInput.setAttribute('id', "Baholanayotgan-avto-1-elementi-tannarxining-baholash-oby'ekti-tannarxidagi-salmog'i");
 SumUpElPriceInput.setAttribute('name', "Baholanayotgan-avto-1-elementi-tannarxining-baholash-oby'ekti-tannarxidagi-salmog'i");
 SumUpElPriceInput.setAttribute('type', 'number');
@@ -286,6 +288,7 @@ SumUpElPriceEskLabel.textContent = "Baholanayotgan avtotransport vositasi 1-kons
 SumUpElPriceEskLabel.setAttribute('for', "Baholanayotgan-avto-1-elementi-jismoniy-eskirishi");
 
 const SumUpElPriceEskInput = document.createElement('input');
+SumUpElPriceEskInput.dataset.konstPriceEski = '';
 SumUpElPriceEskInput.setAttribute('id', "Baholanayotgan-avto-1-elementi-jismoniy-eskirishi");
 SumUpElPriceEskInput.setAttribute('name', "Baholanayotgan-avto-1-elementi-jismoniy-eskirishi");
 SumUpElPriceEskInput.setAttribute('type', 'number');
@@ -300,6 +303,7 @@ SumUpElNameLabel2.textContent = 'Baholanayotgan avtotransport vositasi 2-konstru
 SumUpElNameLabel2.setAttribute('for', 'Baholanayotgan-avto-2-konstruktiv-elementning-nomi');
 
 const SumUpElNameInput2 = document.createElement('input');
+SumUpElNameInput2.dataset.konstNomi = '';
 SumUpElNameInput2.setAttribute('id', 'Baholanayotgan-avto-2-konstruktiv-elementning-nomi');
 SumUpElNameInput2.setAttribute('name', 'Baholanayotgan-avto-2-konstruktiv-elementning-nomi');
 SumUpElNameInput2.setAttribute('type', 'text');
@@ -315,6 +319,7 @@ SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositasi 2-konstr
 SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto-2-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 
 const SumUpElPriceInput2 = document.createElement('input');
+SumUpElPriceInput2.dataset.konstPrice = '';
 SumUpElPriceInput2.setAttribute('id', "Baholanayotgan-avto-2-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 SumUpElPriceInput2.setAttribute('name', "Baholanayotgan-avto-2-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 SumUpElPriceInput2.setAttribute('type', 'number');
@@ -329,6 +334,7 @@ SumUpElPriceEskLabel2.textContent = "Baholanayotgan avtotransport vositasi 2-kon
 SumUpElPriceEskLabel2.setAttribute('for', "Baholanayotgan-avto-2-elementi-jismoniy-eskirishi");
 
 const SumUpElPriceEskInput2 = document.createElement('input');
+SumUpElPriceEskInput2.dataset.konstPriceEski = '';
 SumUpElPriceEskInput2.setAttribute('id', "Baholanayotgan-avto-2-elementi-jismoniy-eskirishi");
 SumUpElPriceEskInput2.setAttribute('name', "Baholanayotgan-avto-2-elementi-jismoniy-eskirishi");
 SumUpElPriceEskInput2.setAttribute('type', 'number');
@@ -339,7 +345,6 @@ konstAddbtn.setAttribute("class", "add_btn");
 konstAddbtn.setAttribute("id", "add_btn");
 konstAddbtn.textContent = "Konstruktiv element qo'shish";
 
-const consturctivs = []
 let counter = 3;
 
 konstAddbtn.addEventListener('click', () => {
@@ -351,6 +356,7 @@ konstAddbtn.addEventListener('click', () => {
     SumUpElNameLabel2.setAttribute('for', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
 
     const SumUpElNameInput2 = document.createElement('input');
+    SumUpElNameInput2.dataset.konstNomi = '';
     SumUpElNameInput2.setAttribute('id', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
     SumUpElNameInput2.setAttribute('name', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
     SumUpElNameInput2.setAttribute('type', 'text');
@@ -366,6 +372,7 @@ konstAddbtn.addEventListener('click', () => {
     SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 
     const SumUpElPriceInput2 = document.createElement('input');
+    SumUpElPriceInput2.dataset.konstPrice = '';
     SumUpElPriceInput2.setAttribute('id', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
     SumUpElPriceInput2.setAttribute('name', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
     SumUpElPriceInput2.setAttribute('type', 'number');
@@ -380,6 +387,7 @@ konstAddbtn.addEventListener('click', () => {
     SumUpElPriceEskLabel2.setAttribute('for', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
 
     const SumUpElPriceEskInput2 = document.createElement('input');
+    SumUpElPriceEskInput2.dataset.konstPriceEski = '';
     SumUpElPriceEskInput2.setAttribute('id', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
     SumUpElPriceEskInput2.setAttribute('name', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
     SumUpElPriceEskInput2.setAttribute('type', 'number');
@@ -387,25 +395,19 @@ konstAddbtn.addEventListener('click', () => {
     ////////////
     fourthMethodContainer2.appendChild(SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2);
     konstAddbtn.before(SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2);
+    SumUpCarPriceLabel.textContent = `Baholanayotgan avtotransport vositasining konstruktiv elementlar soni: ${counter}`;
+
     counter++;
 
-    consturctivs.push({'SumUpElNameBox2': SumUpElNameBox2, 'SumUpElPriceBox2': SumUpElPriceBox2, 'SumUpElPriceBox2': SumUpElPriceBoxEsk2});
-    console.log(consturctivs);
 });
 //Baholanayotgan avtotransport vositasining konstruktiv elementlar soni
 const SumUpElPriceBoxSoni = document.createElement('div');
 SumUpElPriceBoxSoni.setAttribute('class', 'app-container__input-option')
 
 const SumUpCarPriceLabel = document.createElement('label');
-SumUpCarPriceLabel.textContent = "Baholanayotgan avtotransport vositasining konstruktiv elementlar soni";
+SumUpCarPriceLabel.textContent = `Baholanayotgan avtotransport vositasining konstruktiv elementlar soni: 2`;
 SumUpCarPriceLabel.setAttribute('for', "Baholanayotgan-avto-elementlar-soni");
-
-const SumUpElPriceInputsoni = document.createElement('input');
-SumUpElPriceInputsoni.setAttribute('id', "Baholanayotgan-avto-elementlar-soni");
-SumUpElPriceInputsoni.setAttribute('name', "Baholanayotgan-avto-elementlar-soni");
-SumUpElPriceInputsoni.setAttribute('type', 'number');
-
-SumUpElPriceBoxSoni.append(SumUpCarPriceLabel, SumUpElPriceInputsoni);
+SumUpElPriceBoxSoni.append(SumUpCarPriceLabel);
 
 
 function fourthMethod(e) {
@@ -436,7 +438,7 @@ removeFuncOpt();
 // Ai = SumUpElPriceBox
 // n = SumUpElPriceBoxSoni
 
-// kamchiliklar mavjud birinchi birgalikda to'g'irlaymiz savollar va asabbuzarliklar bo'lsa aytinglar
+
 // ************************************************************************************
 // ************************************************************************************
 // ************************************************************************************
@@ -826,4 +828,21 @@ calcBtn.addEventListener('click', (e) => {
             (1 - Number(tashqiEskirishInput.value) / 100)) * 100);
         console.log(Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100));
     }
-})
+    else if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase() && calcMethodSelect2.value == "4-usul") {
+        const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
+        const arrPricEls = document.querySelectorAll('[data-konst-price]')
+        const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
+        const kosntlarSoni = arrNameEls.length;
+        arrNameEls.forEach(element => {
+            console.log(element.value);
+        });
+        arrPricEls.forEach(element => {
+            console.log(element.value);
+        });
+        arrPricEskiEls.forEach(element => {
+            console.log(element.value);
+        });
+        
+    }
+});
+
