@@ -531,10 +531,30 @@ fourthMethodInput2.setAttribute('type', 'number');
 fourthMethodBox2.append(fourthMethodLabel2, fourthMethodInput2);
 
 
+// Qayta baholash indeksi
+
+const fourthMethodBox3 = document.createElement('div');
+fourthMethodBox3.setAttribute('class', 'app-container__input-option')
+
+const fourthMethodLabel3 = document.createElement('label');
+fourthMethodLabel3.textContent = "Qayta baholash  koeffitsiyenti:";
+fourthMethodLabel3.setAttribute('for', 'qayta-baholash-koeff');
+
+const fourthMethodInput3 = document.createElement('input');
+fourthMethodInput3.setAttribute('id', 'qayta-baholash-koeff');
+fourthMethodInput3.setAttribute('name', 'qayta-baholash-koeff');
+fourthMethodInput3.setAttribute('type', 'number');
+
+fourthMethodBox2.append(fourthMethodLabel3, fourthMethodInput3);
+
 
 const fourthMethodContainer = document.createElement('div');
 fourthMethodContainer.setAttribute('class', 'app-container__input-block');
-fourthMethodContainer.append(fourthMethodBox, fourthMethodBox2);
+fourthMethodContainer.append(fourthMethodBox, fourthMethodBox2, fourthMethodBox3);
+
+
+
+
 
 
 function Method(e) {
@@ -594,6 +614,7 @@ calcBtnEl.addEventListener('click', function (e) {
         // 2-usul
         let cPod = 0;
         let cP = 0;
+        let cV = 0;
         if (calcMethodSelect.value == '2-usul') {
             console.log(2);
             cPod = ((1 - Number(secondMethodInput2.value)) * (1 - Number(secondMethodInput3.value)
@@ -604,12 +625,21 @@ calcBtnEl.addEventListener('click', function (e) {
             console.log(cV);
         }
         // 3-usul
+        let cP2 = 0;
+        let cV2 = 0;
         if (calcMethodSelect.value == '3-usul') {
             console.log(3);
+            cP2 = Number(thirdMethodInput2.value) + Number(thirdMethodInput3.value);
+            cV2 = ((1 - Number(thirdMethodInput4.value)) * cP2) /
+            (1 - Number(thirdMethodInput4.value) - Number(thirdMethodInput5.value));
+            console.log(cV2);
         }
         // 4-usul
+        let qT = 0;
         if (calcMethodSelect.value == '4-usul') {
             console.log(4);
+            qT = Number(fourthMethodInput.value) * Number(fourthMethodInput2.value) * Number(fourthMethodInput3.value);
+            console.log(qT);
         }
     }
 });
