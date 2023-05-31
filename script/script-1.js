@@ -235,9 +235,26 @@ analogCarPriceSetting4Input.setAttribute('type', 'number');
 analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSetting4Input);
 
 
+
+const firstMethodLastBox = document.createElement('div');
+firstMethodLastBox.setAttribute('class', 'app-container__input-option')
+
+const firstMethodLastLabel = document.createElement('label');
+firstMethodLastLabel.textContent = `Baholanayotgan avtotransport vositasining tiklanish 
+qiymati, so'm`;
+firstMethodLastLabel.setAttribute('for', 'baholangan-avto-tiklanish');
+
+const firstMethodLastInput = document.createElement('input');
+firstMethodLastInput.setAttribute('id', 'baholangan-avto-tiklanish');
+firstMethodLastInput.setAttribute('name', 'baholangan-avto-tiklanish');
+firstMethodLastInput.setAttribute('type', 'number');
+
+firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
+
+
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
-firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box);
+firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox);
 
 function removeFuncOpt1(e) {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {

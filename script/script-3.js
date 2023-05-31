@@ -150,6 +150,10 @@ calcMethodSelect2.setAttribute('name', 'calculation-method');
 calcMethodSelect2.setAttribute('id', 'calculation-method');
 calcMethodSelect2.setAttribute('class', 'app-container__select');
 
+const calcMethodOption00 = document.createElement('option');
+calcMethodOption00.setAttribute('value', 'none');
+calcMethodOption00.textContent = "Usulni tanlang";
+
 const calcMethodOption01 = document.createElement('option');
 calcMethodOption01.setAttribute('value', '1-usul');
 calcMethodOption01.textContent = "1.Asosiy parametrning yomonlashuvi usuli";
@@ -174,8 +178,9 @@ const calcMethodOption6 = document.createElement('option');
 calcMethodOption6.setAttribute('value', '6-usul');
 calcMethodOption6.textContent = "6.Ekspert-tahliliy usul";
 
-calcMethodSelect2.append(calcMethodOption01, calcMethodOption02, calcMethodOption03, calcMethodOption44, calcMethodOption5, calcMethodOption6);
+calcMethodSelect2.append(calcMethodOption00, calcMethodOption01, calcMethodOption02, calcMethodOption03, calcMethodOption44, calcMethodOption5, calcMethodOption6);
 calcMethodInputBlock2.append(calcMethodLabel2, calcMethodSelect2);
+
 
 
 function chooseType4() {
@@ -184,6 +189,10 @@ function chooseType4() {
     }
     else {
         calcMethodInputBlock2.remove();
+        firstMethodContainer2.remove();
+        secondMethodContainer2.remove();
+        thirdMethodContainer2.remove();
+        calcMethodSelect2.value = 'none';
     }
 
 }
