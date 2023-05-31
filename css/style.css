@@ -78,8 +78,11 @@ body {
 }
 
 .app-container__right-block {
-    
+    overflow-y: scroll;
+    width: 100%;
+    padding: 2rem 1rem;
 }
+
 .add_btn{
     text-align: center;
     text-transform: uppercase;
@@ -97,4 +100,35 @@ body {
 .add_btn:hover{
     background-color: #fff;
     color: #9E0031;
+}
+
+@media (max-width: 1050px) {
+    .app-container__general-info {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.app-container__general-info {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.app-container__general-input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.app-container__general-input-box input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+
+.app-container__general-input-box label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
