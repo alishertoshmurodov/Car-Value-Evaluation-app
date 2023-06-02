@@ -60,6 +60,7 @@ main {
     font-size: 1rem;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    border-radius: 5px;
 }
 
 .app-container__calculate-btn {
@@ -114,16 +115,29 @@ main {
     }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 750px) {
     .app-container {
         height: unset;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 0;
     }
 
     .app-container__left-block {
         max-width: unset;
+        border-right: none;
+        overflow-y: unset;
+        padding-right: 0;
     }
+
+    .app-container__right-block {
+        overflow-y: unset;
+    }
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
 }
 
 .app-container__general-info {
