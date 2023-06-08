@@ -429,7 +429,16 @@ function fourthMethod(e) {
 
 const fourthMethodContainer2 = document.createElement('div');
 fourthMethodContainer2.setAttribute('class', 'app-container__input-block');
-fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElPriceBoxEsk, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2, konstAddbtn, SumUpElPriceBoxSoni);
+
+/////jis eskirish
+const SumUpElPriceJisEsk = document.createElement('div');
+SumUpElPriceJisEsk.setAttribute('class', 'app-container__input-option');
+
+const SumUpElPriceJisEskLabel = document.createElement('label');
+SumUpElPriceJisEskLabel.textContent = `Jismoniy eskirish: `;
+SumUpElPriceJisEskLabel.setAttribute('for', "Baholanayotgan-avto-elementlar-soni");
+SumUpElPriceJisEsk.append(SumUpElPriceJisEskLabel);
+fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElPriceBoxEsk, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2, konstAddbtn, SumUpElPriceBoxSoni,SumUpElPriceJisEsk);
 
 calcMethodSelect2.addEventListener('change', fourthMethod);
 
@@ -442,10 +451,6 @@ function removeFuncOpt(e) {
 }
 removeFuncOpt();
 
-//formula
-
-// Ai = SumUpElPriceBox
-// n = SumUpElPriceBoxSoni
 
 
 // ************************************************************************************
@@ -826,7 +831,8 @@ calcTypeEl.addEventListener('change', chooseTypeFinished);
 chooseTypeFinished();
 const calcBtn = document.querySelector('#calc-btn');
 
-calcBtn.addEventListener('click', omegaFunc)
+calcBtn.addEventListener('click', omegaFunc);
+
 calcBtn.addEventListener('click', (e) => {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase() && calcMethodSelect2.value == "5-usul") {
         console.log(100 * (1 - 2.71828 ** -omega) + " foiz");
@@ -851,7 +857,12 @@ calcBtn.addEventListener('click', (e) => {
         arrPricEskiEls.forEach(element => {
             console.log(element.value);
         });
-        
+        //4-formula
+        let result = 0;
+         for (let i = 0; i < arrPricEls.length; i++) {
+        result += Number(arrPricEls[i].value) * Number(arrPricEskiEls[i].value) ;
+         };
+         SumUpElPriceJisEskLabel.textContent = "Jismoniy eskirish: " + result
     }
 });
 
