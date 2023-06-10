@@ -34,48 +34,7 @@ document
   .addEventListener("click", async function (e) {
 
     const hisobotSanasi = new Date(hisobotTuzilganSanasi.value);
-    const hisobotSanasiOyi = (monthNum) => {
-      switch (Number(monthNum)) {
-        case 0:
-          return 'Yanvar';
-          break;
-        case 1:
-          return 'Fevral';
-          break;
-        case 2:
-          return 'Mart';
-          break;
-        case 3:
-          return 'Aprel';
-          break;
-        case 4:
-          return 'May';
-          break;
-        case 5:
-          return 'Iyun';
-          break;
-        case 6:
-          return 'Iyul';
-          break;
-        case 7:
-          return 'Avgust';
-          break;
-        case 8:
-          return 'Sentyabr';
-          break;
-        case 9:
-          return 'Oktyabr';
-          break;
-        case 10:
-          return 'Noyabr';
-          break;
-        case 11:
-          return 'Dekabr';
-          break;
-        default:
-          break;
-      }
-    }
+    
 
 
     let myWindow = window.open("", "PRINT", "");
@@ -120,3 +79,47 @@ document
       return await res.text();
     }
   });
+
+
+  const hisobotSanasiOyi = (monthNum) => {
+    switch (Number(monthNum)) {
+      case 0:
+        return 'Yanvar';
+        break;
+      case 1:
+        return 'Fevral';
+        break;
+      case 2:
+        return 'Mart';
+        break;
+      case 3:
+        return 'Aprel';
+        break;
+      case 4:
+        return 'May';
+        break;
+      case 5:
+        return 'Iyun';
+        break;
+      case 6:
+        return 'Iyul';
+        break;
+      case 7:
+        return 'Avgust';
+        break;
+      case 8:
+        return 'Sentyabr';
+        break;
+      case 9:
+        return 'Oktyabr';
+        break;
+      case 10:
+        return 'Noyabr';
+        break;
+      case 11:
+        return 'Dekabr';
+        break;
+      default:
+        break;
+    }
+  }
