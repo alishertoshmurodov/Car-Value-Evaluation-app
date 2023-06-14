@@ -192,7 +192,6 @@ function chooseType4() {
         firstMethodContainer2.remove();
         secondMethodContainer2.remove();
         thirdMethodContainer2.remove();
-        calcMethodSelect2.value = 'none';
     }
 
 }
@@ -614,6 +613,7 @@ function omegaFunc() {
     }
 
 }
+
 omegaFunc();
 explCarTypeSelect.addEventListener('change', omegaFunc);
 
