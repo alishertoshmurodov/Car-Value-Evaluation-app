@@ -630,66 +630,71 @@ expertTahMethodLabel.setAttribute('for', 'calculation-method');
 expertTahMethodLabel.textContent = "Funksional (ma'naviy) eskirish";
 expertTahMethodLabel.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 // Avtotransport vositasiga funksional eskirish hisoblash sababi
-const funcEskSab = document.createElement('div');
-funcEskSab.setAttribute('class', 'app-container__input-option')
+// const funcEskSab = document.createElement('div');
+// funcEskSab.setAttribute('class', 'app-container__input-option')
 
-const funcEskSabLabel = document.createElement('label');
-funcEskSabLabel.textContent = 'Avtotransport vositasiga funksional eskirish hisoblash sababi';
-funcEskSabLabel.setAttribute('for', 'funksional-eskirish-sababi');
+// const funcEskSabLabel = document.createElement('label');
+// funcEskSabLabel.textContent = 'Avtotransport vositasiga funksional eskirish hisoblash sababi';
+// funcEskSabLabel.setAttribute('for', 'funksional-eskirish-sababi');
 
-const funcEskSabInput = document.createElement('input');
-funcEskSabInput.setAttribute('id', 'funksional-eskirish-sababi');
-funcEskSabInput.setAttribute('name', 'funksional-eskirish-sababi');
-funcEskSabInput.setAttribute('type', 'text');
+const funcEskSabInput = document.querySelector('#funksional-eskirish-sababi');
+// funcEskSabInput.setAttribute('id', 'funksional-eskirish-sababi');
+// funcEskSabInput.setAttribute('name', 'funksional-eskirish-sababi');
+// funcEskSabInput.setAttribute('type', 'text');
 
-funcEskSab.append(funcEskSabLabel, funcEskSabInput);
+// funcEskSab.append(funcEskSabLabel, funcEskSabInput);
+
+
 // Funksional eskirish: %  Main
-const funkEskirishMain = document.createElement('div');
-funkEskirishMain.setAttribute('class', 'app-container__input-option')
+// const funkEskirishMain = document.createElement('div');
+// funkEskirishMain.setAttribute('class', 'app-container__input-option')
 
-const funkEskirishMainLabel = document.createElement('label');
-funkEskirishMainLabel.textContent = "Funksional eskirish: %";
-funkEskirishMainLabel.setAttribute('for', "funksional-eskirish");
+// const funkEskirishMainLabel = document.createElement('label');
+// funkEskirishMainLabel.textContent = "Funksional eskirish: %";
+// funkEskirishMainLabel.setAttribute('for', "funksional-eskirish");
 
-const funkEskirishInputMain = document.createElement('input');
-funkEskirishInputMain.setAttribute('id', "funksional-eskirish");
-funkEskirishInputMain.setAttribute('name', "funksional-eskirish");
-funkEskirishInputMain.setAttribute('type', 'number');
+const funkEskirishInputMain = document.querySelector('#funksional-eskirish');
+// funkEskirishInputMain.setAttribute('id', "funksional-eskirish");
+// funkEskirishInputMain.setAttribute('name', "funksional-eskirish");
+// funkEskirishInputMain.setAttribute('type', 'number');
 
-funkEskirishMain.append(funkEskirishMainLabel, funkEskirishInputMain);
+// funkEskirishMain.append(funkEskirishMainLabel, funkEskirishInputMain);
+
+
 //   sababi
-const expertTahMethodLabel2 = document.createElement('h3');
-expertTahMethodLabel2.setAttribute('for', 'calculation-method');
-expertTahMethodLabel2.textContent = "Tashqi (iqtisodiy) eskirish";
-expertTahMethodLabel2.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+// const expertTahMethodLabel2 = document.createElement('h3');
+// expertTahMethodLabel2.setAttribute('for', 'calculation-method');
+// expertTahMethodLabel2.textContent = "Tashqi (iqtisodiy) eskirish";
+// expertTahMethodLabel2.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
-const tashqiEskSab = document.createElement('div');
-tashqiEskSab.setAttribute('class', 'app-container__input-option')
+// const tashqiEskSab = document.createElement('div');
+// tashqiEskSab.setAttribute('class', 'app-container__input-option')
 
-const tashqiEskSabLabel = document.createElement('label');
-tashqiEskSabLabel.textContent = 'Avtotransport vositasiga tashqi eskirish hisoblash sababi';
-tashqiEskSabLabel.setAttribute('for', 'tashqi-eskirish-sababi');
+// const tashqiEskSabLabel = document.createElement('label');
+// tashqiEskSabLabel.textContent = 'Avtotransport vositasiga tashqi eskirish hisoblash sababi';
+// tashqiEskSabLabel.setAttribute('for', 'tashqi-eskirish-sababi');
 
-const tashqiEskSabInput = document.createElement('input');
-tashqiEskSabInput.setAttribute('id', 'tashqi-eskirish-sababi');
-tashqiEskSabInput.setAttribute('name', 'tashqi-eskirish-sababi');
-tashqiEskSabInput.setAttribute('type', 'text');
+const tashqiEskSabInput = document.querySelector('#tashqi-eskirish-sababi');
+// tashqiEskSabInput.setAttribute('id', 'tashqi-eskirish-sababi');
+// tashqiEskSabInput.setAttribute('name', 'tashqi-eskirish-sababi');
+// tashqiEskSabInput.setAttribute('type', 'text');
 
-tashqiEskSab.append(tashqiEskSabLabel, tashqiEskSabInput);
+// tashqiEskSab.append(tashqiEskSabLabel, tashqiEskSabInput);
+
 // Tashqi eskirish: %
-const tashqiEskirish = document.createElement('div');
-tashqiEskirish.setAttribute('class', 'app-container__input-option')
+// const tashqiEskirish = document.createElement('div');
+// tashqiEskirish.setAttribute('class', 'app-container__input-option')
 
-const tashqiEskirishLabel = document.createElement('label');
-tashqiEskirishLabel.textContent = "Tashqi eskirish: %";
-tashqiEskirishLabel.setAttribute('for', "tashqi-eskirish");
+// const tashqiEskirishLabel = document.createElement('label');
+// tashqiEskirishLabel.textContent = "Tashqi eskirish: %";
+// tashqiEskirishLabel.setAttribute('for', "tashqi-eskirish");
 
-const tashqiEskirishInput = document.createElement('input');
-tashqiEskirishInput.setAttribute('id', "tashqi-eskirish");
-tashqiEskirishInput.setAttribute('name', "tashqi-eskirish");
-tashqiEskirishInput.setAttribute('type', 'number');
+const tashqiEskirishInput = document.querySelector('#tashqi-eskirish');
+// tashqiEskirishInput.setAttribute('id', "tashqi-eskirish");
+// tashqiEskirishInput.setAttribute('name', "tashqi-eskirish");
+// tashqiEskirishInput.setAttribute('type', 'number');
 
-tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput);
+// tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput);
 // Jismoniy eskirish: %'
 const expertTahMethodLabel3 = document.createElement('h3');
 expertTahMethodLabel3.setAttribute('for', 'calculation-method');
@@ -781,7 +786,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel2, tashqiEskSab, tashqiEskirish, expertTahMethodLabel3, jisEsk, expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(expertTahMethodLabel, expertTahMethodLabel3, jisEsk, expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {
