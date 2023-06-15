@@ -56,7 +56,6 @@ function chooseType(e) {
         inputBlockEL.append(calcMethodInputBlock);
     } else {
         calcMethodInputBlock.remove();
-        calcMethodSelect.value = 'none';
         firstMethodContainer.remove();
         secondMethodContainer.remove();
         thirdMethodContainer.remove();
@@ -576,7 +575,7 @@ fourthMethodContainer.append(fourthMethodBox, fourthMethodBox2, fourthMethodBox3
 
 
 
-function Method(e) {
+ function Method(e) {
     chooseType();
     if (calcMethodSelect.value == '1-usul') {
         inputBlockEL.append(firstMethodContainer);
