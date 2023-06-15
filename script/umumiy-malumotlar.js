@@ -38,7 +38,7 @@ const baholashObyektiningEgasi = document.querySelector(
 const baholashdanMaqsad = document.querySelector("#Baholashdan-maqsad");
 const baholovchiTashkilotNomi = document.querySelector('#Baholovchi-tashkilot-nomi');
 const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashkilot-ismi-sharifi');
-
+const avtoVositaTiklashQiymati  = document.querySelector('#avto-vosita-tiklash-qiymati')
 
 document
   .querySelector(".app-container__calculate-btn")
@@ -235,6 +235,8 @@ document
         baholashdanMaqsad: baholashdanMaqsad.value,
         baholovchiTashkilotNomi: baholovchiTashkilotNomi.value,
         baholovchiTashkilotIsmiSharifi: baholovchiTashkilotIsmiSharifi.value,
+        avtoVositaTiklashQiymati: avtoVositaTiklashQiymati.value,
+        avtotransportVositasiIshlanganYili: avtotransportVositasiIshlanganYili.value,
         // tiklanish hisobi
         tiklanisUsuli: tiklanisUsuli,
         tiklanishQiymati: tiklanishQiymati,
