@@ -5,6 +5,25 @@
 /* 1-3 usul */
 /* -------- */
 
+
+
+const firstMethod00Box = document.createElement('div');
+firstMethod00Box.setAttribute('class', 'app-container__input-option')
+
+const firstMethod00Label = document.createElement('label');
+firstMethod00Label.textContent = 'Baholanayotgan avtotransport vositasining asosiy parametri nomi';
+firstMethod00Label.setAttribute('for', 'avtotransport-asosiy-parametri');
+
+const firstMethod00Input = document.createElement('input');
+firstMethod00Input.dataset.eksplutatsiyagaQadarQiymat = '';
+
+
+firstMethod00Input.setAttribute('id', 'avtotransport-asosiy-parametri');
+firstMethod00Input.setAttribute('name', 'avtotransport-asosiy-parametri');
+firstMethod00Input.setAttribute('type', 'text');
+
+firstMethod00Box.append(firstMethod00Label, firstMethod00Input);
+/////////////////////////
 const firstMethod01Box = document.createElement('div');
 firstMethod01Box.setAttribute('class', 'app-container__input-option')
 
@@ -208,7 +227,7 @@ function firstMethod(e) {
 
 const firstMethodContainer2 = document.createElement('div');
 firstMethodContainer2.setAttribute('class', 'app-container__input-block');
-firstMethodContainer2.append(firstMethod01Box, firstMethod02Box, firstMethod03Box);
+firstMethodContainer2.append(firstMethod00Box, firstMethod01Box, firstMethod02Box, firstMethod03Box);
 
 calcMethodSelect2.addEventListener('change', firstMethod);
 
