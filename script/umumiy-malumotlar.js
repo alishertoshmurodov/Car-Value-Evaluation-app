@@ -248,8 +248,12 @@ document
         jismoniyEskirish: jisEskInput.value,
         //funksional eskriish
         funksionaleskirish: funkEskirishInputMain.value,
+        // funk sababi
+        funksionaleskirishSababi: funcEskSabInput.value,
         //tashqi eskirish
         tashqiEskirish: tashqiEskirishInput.value,
+        //tashqi eskirish sababi
+        tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
         baholashQiymat: xarQiymatInput.value,
        })
