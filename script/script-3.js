@@ -629,6 +629,7 @@ const expertTahMethodLabel = document.createElement('h3');
 expertTahMethodLabel.setAttribute('for', 'calculation-method');
 expertTahMethodLabel.textContent = "Funksional (ma'naviy) eskirish";
 expertTahMethodLabel.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+
 // Avtotransport vositasiga funksional eskirish hisoblash sababi
 const funcEskSab = document.createElement('div');
 funcEskSab.setAttribute('class', 'app-container__input-option')
@@ -786,7 +787,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel, expertTahMethodLabel3, funcEskSab, funkEskirishMain, tashqiEskSab, tashqiEskirish, jisEsk, expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel3, jisEsk, tashqiEskSab, tashqiEskirish,  expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {
