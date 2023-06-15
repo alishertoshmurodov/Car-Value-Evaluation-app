@@ -1,3 +1,13 @@
+fetch('https://cbu.uz/uz/arkhiv-kursov-valyut/json/')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector('#Baholovchi-sanasidagi-som-kursi-1').value = `1 AQSH dollari: ${data[0].Rate} so'm`;
+      document.querySelector('#Baholovchi-sanasidagi-som-kursi-2').value = `1 Yevro: ${data[1].Rate} so'm`;
+      document.querySelector('#Baholovchi-sanasidagi-som-kursi-3').value = `1 Rubl: ${data[2].Rate} so'm`;
+    });
+
+
+
 
 const buyurtmachi = document.querySelector("#Buyurtmachi");
 const hisobotRoyhatiRaqami = document.querySelector(
