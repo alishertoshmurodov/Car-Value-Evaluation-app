@@ -243,8 +243,16 @@ document
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
         //jam eskirish
-        jamiEskirish: jamiEskirish.value 
-      })
+        jamiEskirish: jamiEskirish.value,
+        //jis eskirish
+        jismoniyEskirish: jisEskInput.value,
+        //funksional eskriish
+        funksionaleskirish: funkEskirishInputMain.value,
+        //tashqi eskirish
+        tashqiEskirish: tashqiEskirishInput.value,
+        //baholash obyekti 
+        baholashQiymat: xarQiymatInput.value,
+       })
     );
     myWindow.print();
 

@@ -787,7 +787,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel3, jisEsk, tashqiEskSab, tashqiEskirish,  expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(expertTahMethodLabel, funcEskSab,  expertTahMethodLabel3, tashqiEskSab,  funkEskirishMain, jisEsk, tashqiEskirish,  expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {
