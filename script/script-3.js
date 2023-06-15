@@ -721,7 +721,7 @@ jamiEskirish.setAttribute('class', 'app-container__input-option')
 
 const jamiEskirishLabel = document.createElement('label');
 jamiEskirishLabel.setAttribute('for', "jami-eskirish");
-jamiEskirishLabel.textContent = "Jamlangan eskirish:"
+jamiEskirishLabel.textContent = "Jamlangan eskirish: "
 
 const eskirishEls = [tashqiEskirishInput, funkEskirishInputMain, jisEskInput];
 
