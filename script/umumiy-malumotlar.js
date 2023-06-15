@@ -121,7 +121,6 @@ document
 
     }
 
-
     if (calcMethodSelect2.value == '2-usul') {
       function qoldiqXizmatMuddati(ti, tost) {
         return (ti / tost) * 100;
@@ -243,6 +242,8 @@ document
         // eskirish hisobi
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
+        //jam eskirish
+        jamiEskirish: jamiEskirish.value 
       })
     );
     myWindow.print();
