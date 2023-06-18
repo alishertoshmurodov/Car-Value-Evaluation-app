@@ -1,10 +1,10 @@
 fetch('https://cbu.uz/uz/arkhiv-kursov-valyut/json/')
-    .then(response => response.json())
-    .then(data => {
-      document.querySelector('#Baholovchi-sanasidagi-som-kursi-1').value = `1 AQSH dollari: ${data[0].Rate} so'm`;
-      document.querySelector('#Baholovchi-sanasidagi-som-kursi-2').value = `1 Yevro: ${data[1].Rate} so'm`;
-      document.querySelector('#Baholovchi-sanasidagi-som-kursi-3').value = `1 Rubl: ${data[2].Rate} so'm`;
-    });
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('#Baholovchi-sanasidagi-som-kursi-1').value = `1 AQSH dollari: ${data[0].Rate} so'm`;
+    document.querySelector('#Baholovchi-sanasidagi-som-kursi-2').value = `1 Yevro: ${data[1].Rate} so'm`;
+    document.querySelector('#Baholovchi-sanasidagi-som-kursi-3').value = `1 Rubl: ${data[2].Rate} so'm`;
+  });
 
 
 
@@ -123,8 +123,16 @@ document
       console.log(elBaholashDarajasiKorsatkichi);
 
       eskirishHisobi = 1 - (Number(elBaholashPaytidagiQiymati.value) /
-       Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
-        console.log(eskirishHisobi);
+        Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
+      console.log(eskirishHisobi);
+
+
+      if (String(eskirishHisobi).includes('.')) {
+        const arr = String(eskirishHisobi).split('.');
+        console.log(arr);
+        const afterThePoint = String(arr[1]).slice(0, 2);
+        eskirishHisobi = String(arr[0]) + '.' + String(afterThePoint);
+      }
     }
 
     if (calcMethodSelect2.value == '2-usul') {
@@ -172,25 +180,29 @@ document
       eskirishUsuli = `Jismoniy eskirishni aniqlashning to'g'ridan-to'g'ri`;
     }
     if (calcMethodSelect2.value == '4-usul') {
+      eskirishHisobi = 0;
 
       const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
       const arrPricEls = document.querySelectorAll('[data-konst-price]')
       const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
+      
       const kosntlarSoni = arrNameEls.length;
-      arrNameEls.forEach(element => {
-        console.log(element.value);
-      });
-      arrPricEls.forEach(element => {
-        console.log(element.value);
-      });
-      arrPricEskiEls.forEach(element => {
-        console.log(element.value);
-      });
+      // arrNameEls.forEach(element => {
+      //   console.log(element.value);
+      // });
+      // arrPricEls.forEach(element => {
+      //   console.log(element.value);
+      // });
+      // arrPricEskiEls.forEach(element => {
+      //   console.log(element.value);
+      // });
+
       //4-formula
       let result = 0;
       for (let i = 0; i < arrPricEls.length; i++) {
         eskirishHisobi += Number(arrPricEls[i].value) * Number(arrPricEskiEls[i].value);
       };
+
 
       if (String(eskirishHisobi).includes('.')) {
         const arr = String(eskirishHisobi).split('.');
@@ -198,6 +210,8 @@ document
         const afterThePoint = String(arr[1]).slice(0, 2);
         eskirishHisobi = String(arr[0]) + '.' + String(afterThePoint);
       }
+
+      console.log(eskirishHisobi);
 
       eskirishUsuli = `O'rtacha o'lchangan eskirish`;
     }
@@ -250,7 +264,7 @@ document
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
         //jam eskirish
-        jamiEskirish: jamiEskirish.value,
+        // jamiEskirish: jamiEskirish.value,
         //jis eskirish
         jismoniyEskirish: jisEskInput.value,
         //funksional eskriish
@@ -262,8 +276,8 @@ document
         //tashqi eskirish sababi
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
-        baholashQiymat:  Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100), 
-       }) 
+        baholashQiymat: Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100),
+      })
     );
     myWindow.print();
 
@@ -333,40 +347,40 @@ const hisobotSanasiOyi = (monthNum) => {
 
 function omegaFunc() {
   if (explCarTypeSelect.value == explCarTypeOption1.value) {
-      omega = 0.07 * Number(explCarAgeInput.value) + 0.0035 * Number(explCarDestInput.value);
+    omega = 0.07 * Number(explCarAgeInput.value) + 0.0035 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption2.value) {
-      omega = 0.1 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+    omega = 0.1 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption3.value) {
-      omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption4.value) {
-      omega = 0.15 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
+    omega = 0.15 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption5.value) {
-      omega = 0.14 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.14 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption6.value) {
-      omega = 0.16 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
+    omega = 0.16 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption7.value) {
-      omega = 0.05 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
+    omega = 0.05 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption8.value) {
-      omega = 0.0055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+    omega = 0.0055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption9.value) {
-      omega = 0.065 * Number(explCarAgeInput.value) + 0.0032 * Number(explCarDestInput.value);
+    omega = 0.065 * Number(explCarAgeInput.value) + 0.0032 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption10.value) {
-      omega = 0.045 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.045 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption11.value) {
-      omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else {
-      omega = 0.12 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
+    omega = 0.12 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
 
   }
 
