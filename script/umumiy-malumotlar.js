@@ -101,7 +101,7 @@ document
 
     if (calcMethodSelect2.value == '1-usul') {
       const elBaholashPaytidagiQiymati = document.querySelector(
-        "[data-baholash-paytidagi-qiymati]"
+        "#ekputatsiyaga-qadar-qiymat"
       );
       const elFormEskirishBirinchi = document.querySelector(
         "[data-form-eskirish-birinchi-usul]"
@@ -117,13 +117,14 @@ document
       );
 
       eskirishUsuli = 'Asosiy parametrning yomonlashuvi';
-      console.log(elBaholashPaytidagiQiymati.value);
+      console.log(elBaholashPaytidagiQiymati);
       console.log(elEksplutatsiyagaQadarQiymati);
-      console.log(elBaholashDarajasiKorsatkichi.value);
+
+      console.log(elBaholashDarajasiKorsatkichi);
 
       eskirishHisobi = 1 - (Number(elBaholashPaytidagiQiymati.value) /
        Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
-
+        console.log(eskirishHisobi);
     }
 
     if (calcMethodSelect2.value == '2-usul') {
