@@ -78,36 +78,36 @@ calcTypeEl.addEventListener('change', chooseType);
 
 // Analog-transport-rusumi
 
-const analogCarNameBox = document.createElement('div');
-analogCarNameBox.setAttribute('class', 'app-container__input-option')
+// const analogCarNameBox = document.createElement('div');
+// analogCarNameBox.setAttribute('class', 'app-container__input-option')
 
-const analogCarNameLabel = document.createElement('label');
-analogCarNameLabel.textContent = 'Analog avtotransport vositasi rusumi:';
-analogCarNameLabel.setAttribute('for', 'Analog-transport-rusumi');
+// const analogCarNameLabel = document.createElement('label');
+// analogCarNameLabel.textContent = 'Analog avtotransport vositasi rusumi:';
+// analogCarNameLabel.setAttribute('for', 'Analog-transport-rusumi');
 
-const analogCarNameInput = document.createElement('input');
-analogCarNameInput.setAttribute('id', 'Analog-transport-rusumi');
-analogCarNameInput.setAttribute('name', 'Analog-transport-rusumi');
-analogCarNameInput.setAttribute('type', 'text');
+// const analogCarNameInput = document.createElement('input');
+// analogCarNameInput.setAttribute('id', 'Analog-transport-rusumi');
+// analogCarNameInput.setAttribute('name', 'Analog-transport-rusumi');
+// analogCarNameInput.setAttribute('type', 'text');
 
-analogCarNameBox.append(analogCarNameLabel, analogCarNameInput);
+// analogCarNameBox.append(analogCarNameLabel, analogCarNameInput);
 
 
 // Analog-transport-turi
 
-const analogCarTypeBox = document.createElement('div');
-analogCarTypeBox.setAttribute('class', 'app-container__input-option')
+// const analogCarTypeBox = document.createElement('div');
+// analogCarTypeBox.setAttribute('class', 'app-container__input-option')
 
-const analogCarTypeLabel = document.createElement('label');
-analogCarTypeLabel.textContent = 'Analog avtotransport vositasi turi:';
-analogCarTypeLabel.setAttribute('for', 'Analog-transport-turi');
+// const analogCarTypeLabel = document.createElement('label');
+// analogCarTypeLabel.textContent = 'Analog avtotransport vositasi turi:';
+// analogCarTypeLabel.setAttribute('for', 'Analog-transport-turi');
 
-const analogCarTypeInput = document.createElement('input');
-analogCarTypeInput.setAttribute('id', 'Analog-transport-turi');
-analogCarTypeInput.setAttribute('name', 'Analog-transport-turi');
-analogCarTypeInput.setAttribute('type', 'text');
+// const analogCarTypeInput = document.createElement('input');
+// analogCarTypeInput.setAttribute('id', 'Analog-transport-turi');
+// analogCarTypeInput.setAttribute('name', 'Analog-transport-turi');
+// analogCarTypeInput.setAttribute('type', 'text');
 
-analogCarTypeBox.append(analogCarTypeLabel, analogCarTypeInput);
+// analogCarTypeBox.append(analogCarTypeLabel, analogCarTypeInput);
 
 
 // Analog-transport-narxi
@@ -255,7 +255,9 @@ firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
 
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
-firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox);
+firstMethodContainer.append( analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox);
+
+// analogCarNameBox, analogCarTypeBox,
 
 function removeFuncOpt1(e) {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
