@@ -110,15 +110,19 @@ document
         "[data-asosiy-parametr-nomi]"
       );
       const elEksplutatsiyagaQadarQiymati = document.querySelector(
-        "[data-eksplutatsiyaga-qadar-qiymat]"
+        "#baholash-paytidagi-qiymatiti"
       );
       const elBaholashDarajasiKorsatkichi = document.querySelector(
         "[data-baholash-daraja-korsatkichi]"
       );
 
       eskirishUsuli = 'Asosiy parametrning yomonlashuvi';
-      eskirishHisobi = String(1 - (elBaholashPaytidagiQiymati.value /
-        elEksplutatsiyagaQadarQiymati.value) ** elBaholashDarajasiKorsatkichi.value).slice(0, 6);
+      console.log(elBaholashPaytidagiQiymati.value);
+      console.log(elEksplutatsiyagaQadarQiymati);
+      console.log(elBaholashDarajasiKorsatkichi.value);
+
+      eskirishHisobi = 1 - (Number(elBaholashPaytidagiQiymati.value) /
+       Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
 
     }
 
