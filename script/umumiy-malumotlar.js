@@ -57,7 +57,7 @@ document
 
     if (calcMethodSelect.value == '1-usul') {
       tiklanisUsuli = 'Amashtirish';
-      tiklanishQiymati = document.querySelector('#baholangan-avto-tiklanish').value;
+      // tiklanishQiymati = document.querySelector('#baholangan-avto-tiklanish').value;
     }
     // 2-usul
     let cPod = 0;

@@ -428,7 +428,7 @@ const thirdMethodBox = document.createElement('div');
 thirdMethodBox.setAttribute('class', 'app-container__input-option')
 
 const thirdMethodLabel = document.createElement('label');
-thirdMethodLabel.textContent = "Butlovchi usel va agreganlarining nomi";
+thirdMethodLabel.textContent = "Butlovchi usel va agregatlarining nomi";
 thirdMethodLabel.setAttribute('for', 'Butlovchi-usel-agreganlarining nomi');
 
 const thirdMethodInput = document.createElement('input');
@@ -445,7 +445,7 @@ const thirdMethodBox2 = document.createElement('div');
 thirdMethodBox2.setAttribute('class', 'app-container__input-option')
 
 const thirdMethodLabel2 = document.createElement('label');
-thirdMethodLabel2.textContent = "Butlovchi usel va agreganlarining narxi, so'm";
+thirdMethodLabel2.textContent = "Butlovchi usel va agregatlarining narxi, so'm";
 thirdMethodLabel2.setAttribute('for', 'Butlovchi-usel-agreganlarining nomi');
 
 const thirdMethodInput2 = document.createElement('input');
