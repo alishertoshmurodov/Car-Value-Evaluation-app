@@ -240,7 +240,8 @@ document
         avtotransportVositasiIshlanganYili: avtotransportVositasiIshlanganYili.value,
         // tiklanish hisobi
         tiklanisUsuli: tiklanisUsuli,
-        tiklanishQiymati: firstMethodLastInput.value,
+        firstmethodLabel: firstMethodLastInput.value,
+        tiklanishQiymati: tiklanishQiymati,
         // eskirish hisobi
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
