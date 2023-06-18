@@ -38,7 +38,8 @@ const baholashObyektiningEgasi = document.querySelector(
 const baholashdanMaqsad = document.querySelector("#Baholashdan-maqsad");
 const baholovchiTashkilotNomi = document.querySelector('#Baholovchi-tashkilot-nomi');
 const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashkilot-ismi-sharifi');
-const avtoVositaTiklashQiymati  = document.querySelector('#avto-vosita-tiklash-qiymati')
+const avtoVositaTiklashQiymati  = document.querySelector('#tiklanish-qiymati');
+
 const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori')
 document
   .querySelector(".app-container__calculate-btn")
@@ -235,7 +236,7 @@ document
         baholashdanMaqsad: baholashdanMaqsad.value,
         baholovchiTashkilotNomi: baholovchiTashkilotNomi.value,
         baholovchiTashkilotIsmiSharifi: baholovchiTashkilotIsmiSharifi.value,
-        avtoVositaTiklashQiymati: avtoVositaTiklashQiymati.value,
+        // avtoVositaTiklashQiymati: avtoVositaTiklashQiymati.value,
         avtotransportVositasiIshlanganYili: avtotransportVositasiIshlanganYili.value,
         // tiklanish hisobi
         tiklanisUsuli: tiklanisUsuli,
@@ -256,10 +257,11 @@ document
         //tashqi eskirish sababi
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
-        baholashQiymat: xarQiymatInput.value,
+        baholashQiymat: Number(document.querySelector('#tiklanish-qiymati').value) * (1 - Number(document.querySelector('#avtJam-eskirish').value) / 100), 
        })
     );
     myWindow.print();
+
 
     return false;
 

@@ -836,7 +836,7 @@ const jamgarEsk = (1 - (1 - Number(jisEskInput.value) / 100) *
 
 //2 Qoldiq qiymat
 
-const qoldiqQiymat = Number(tiklanishQiymatInput) * (1 - Number(avtJamEskirishInput.value) / 100);
+const qoldiqQiymat = Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100);
 ///////////////////////
 
 function chooseTypeFinished() {
