@@ -240,7 +240,7 @@ document
         avtotransportVositasiIshlanganYili: avtotransportVositasiIshlanganYili.value,
         // tiklanish hisobi
         tiklanisUsuli: tiklanisUsuli,
-        tiklanishQiymati: tiklanishQiymati,
+        tiklanishQiymati: firstMethodLastInput.value,
         // eskirish hisobi
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
@@ -257,8 +257,8 @@ document
         //tashqi eskirish sababi
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
-        baholashQiymat: Number(document.querySelector('#tiklanish-qiymati').value) * (1 - Number(document.querySelector('#avtJam-eskirish').value) / 100), 
-       })
+        baholashQiymat:  Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100), 
+       }) 
     );
     myWindow.print();
 
