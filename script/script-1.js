@@ -161,10 +161,10 @@ analogCarInfoSourceInput.setAttribute('type', 'text');
 analogCarInfoSourceBox.append(analogCarInfoSourceLabel, analogCarInfoSourceInput);
 
 
-// Analog-ob'yekt narxiga tuzatushlar
+// Analog-ob'yekt narxiga tuzatishlar
 
 const analogObjPriceSettingsHeading = document.createElement('h3');
-analogObjPriceSettingsHeading.textContent = "Analog-ob'yekt narxiga tuzatushlar";
+analogObjPriceSettingsHeading.textContent = "Analog-ob'yekt narxiga tuzatishlar";
 analogObjPriceSettingsHeading.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
 

@@ -39,7 +39,7 @@ const baholashdanMaqsad = document.querySelector("#Baholashdan-maqsad");
 const baholovchiTashkilotNomi = document.querySelector('#Baholovchi-tashkilot-nomi');
 const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashkilot-ismi-sharifi');
 const avtoVositaTiklashQiymati  = document.querySelector('#avto-vosita-tiklash-qiymati')
-
+const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori')
 document
   .querySelector(".app-container__calculate-btn")
   .addEventListener("click", async function (e) {
@@ -224,6 +224,7 @@ document
         hisobotSanasiOyi: hisobotSanasiOyi(hisobotSanasi.getMonth()),
         hisobotSanasiYili: hisobotSanasi.getFullYear(),
         baholashSanasi: baholashSanasi.value,
+        tashkilotDirektori: tashkilotDirektori.value,
         avtotransportVositasiDavlatRaqami:
           avtotransportVositasiDavlatRaqami.value,
         avtotransportVositasiRusumi: avtotransportVositasiRusumi.value,
@@ -248,8 +249,12 @@ document
         jismoniyEskirish: jisEskInput.value,
         //funksional eskriish
         funksionaleskirish: funkEskirishInputMain.value,
+        // funk sababi
+        funksionaleskirishSababi: funcEskSabInput.value,
         //tashqi eskirish
         tashqiEskirish: tashqiEskirishInput.value,
+        //tashqi eskirish sababi
+        tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
         baholashQiymat: xarQiymatInput.value,
        })
