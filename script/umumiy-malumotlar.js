@@ -53,11 +53,11 @@ document
 
 
     let tiklanisUsuli = '';
-    let tiklanishQiymati;
+    let tiklanishQiymatiVar;
 
     if (calcMethodSelect.value == '1-usul') {
       tiklanisUsuli = 'Amashtirish';
-      tiklanishQiymati = document.querySelector('#baholangan-avto-tiklanish').value;
+      tiklanishQiymatiVar = document.querySelector('#baholangan-avto-tiklanish').value;
     }
     // 2-usul
     let cPod = 0;
@@ -71,7 +71,7 @@ document
         / ((1 + Number(secondMethodInput2.value)) * (1 - Number(secondMethodInput3.value)));
       cP = cPod * (Number(secondMethodInput5.value) / Number(secondMethodInput6.value)) * (Number(secondMethodInput7.value) / Number(secondMethodInput8.value))
       cV = ((1 - Number(secondMethodInput3.value)) * cP) / 1 - Number(secondMethodInput3.value) - Number(secondMethodInput4.value);
-      tiklanishQiymati = cV;
+      tiklanishQiymatiVar = cV;
     }
     // 3-usul
     let cP2 = 0;
@@ -82,7 +82,7 @@ document
       cP2 = Number(thirdMethodInput2.value) + Number(thirdMethodInput3.value);
       cV2 = ((1 - Number(thirdMethodInput4.value)) * cP2) /
         (1 - Number(thirdMethodInput4.value) - Number(thirdMethodInput5.value));
-      tiklanishQiymati = cV2;
+      tiklanishQiymatiVar = cV2;
     }
     // 4-usul
     let qT = 0;
@@ -90,7 +90,7 @@ document
       console.log(4);
       tiklanisUsuli = `Qiymatni indeksatsiyalash`;
       qT = Number(fourthMethodInput.value) * Number(fourthMethodInput2.value) * Number(fourthMethodInput3.value);
-      tiklanishQiymati = qT;
+      tiklanishQiymatiVar = qT;
     }
 
 
@@ -211,7 +211,6 @@ document
         eskirishHisobi = String(arr[0]) + '.' + String(afterThePoint);
       }
 
-      console.log(eskirishHisobi);
 
       eskirishUsuli = `O'rtacha o'lchangan eskirish`;
     }
@@ -230,10 +229,10 @@ document
     if (calcMethodSelect2.value == '6-usul') {
       eskirishUsuli = 'Ekspert-tahliliy';
     }
-    const jamgarEsk = (1 - (1 - Number(jisEskInput.value) / 100) *
+    const jamgarEsk = (1 - (1 - Number(eskirishHisobi) / 100) *
     (1 - Number(funkEskirishInputMain.value) / 100) *
     (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
-    
+    console.log(eskirishHisobi);
   // if (String(jamgarEsk).includes('.')) {
   //     const arr = String(jamgarEsk).split('.');
   //     console.log(arr);
@@ -267,7 +266,7 @@ document
         avtotransportVositasiIshlanganYili: avtotransportVositasiIshlanganYili.value,
         // tiklanish hisobi
         tiklanisUsuli: tiklanisUsuli,
-        tiklanishQiymati: tiklanishQiymati,
+        tiklanishQiymati: tiklanishQiymatiVar,
         // eskirish hisobi
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
@@ -284,11 +283,11 @@ document
         //tashqi eskirish sababi
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
-        baholashQiymat: Number(baholash.value) * (1 - Number(jamgarEsk) / 100),
+        baholashQiymat: tiklanishQiymatiVar * (1 - Number(jamgarEsk) / 100),
       })
     );
     myWindow.print();
-console.log(jamgarEsk);
+console.log(tiklanishQiymatiVar);
 
     return false;
 
