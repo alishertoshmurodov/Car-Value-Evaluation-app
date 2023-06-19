@@ -276,11 +276,11 @@ document
         //tashqi eskirish sababi
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
-        baholashQiymat: Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100),
+        baholashQiymat: Number(baholash.value) * (1 - Number(jamgarEsk) / 100),
       })
     );
     myWindow.print();
-
+console.log(jamgarEsk);
 
     return false;
 
