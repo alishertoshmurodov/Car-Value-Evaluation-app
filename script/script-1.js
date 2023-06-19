@@ -253,9 +253,41 @@ firstMethodLastInput.setAttribute('type', 'number');
 firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
 
 
+const addMalumotBtn = document.createElement("button");
+addMalumotBtn.setAttribute("class", "add_btn");
+addMalumotBtn.setAttribute("id", "add_btn");
+addMalumotBtn.textContent = `Ma'lumot qo'shish`;
+
+addMalumotBtn.addEventListener('click', function (e) {
+    const addMalumotBlock = document.createElement('div');
+    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+
+    const addMalumotNomiLabel = document.createElement('label');
+    addMalumotNomiLabel.textContent = `Qoshimcha ma'lumot nomi:`;
+
+    const addMalumotNomi = document.createElement('input');
+    addMalumotNomi.setAttribute('type', 'text');
+
+
+    const addMalumotQiymatiabel = document.createElement('label');
+    addMalumotQiymatiabel.textContent = `Qoshimcha ma'lumot qiymati:`;
+
+    const addMalumotQiymati = document.createElement('input');
+    addMalumotQiymati.dataset.qiymatNomi = '';
+    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('type', 'number');
+
+    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+    firstMethodContainer.append(addMalumotBlock)
+    addMalumotBtn.before(addMalumotBlock);
+});
+
+
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
-firstMethodContainer.append( analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox);
+firstMethodContainer.append( analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox, addMalumotBtn);
 
 // analogCarNameBox, analogCarTypeBox,
 
