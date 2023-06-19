@@ -539,9 +539,41 @@ thirdMethodInput5.setAttribute('type', 'number');
 thirdMethodBox5.append(thirdMethodLabel5, thirdMethodInput5);
 
 
+const addMalumotBtn1 = document.createElement("button");
+addMalumotBtn1.setAttribute("class", "add_btn");
+addMalumotBtn1.setAttribute("id", "add_btn");
+addMalumotBtn1.textContent = `Ma'lumot qo'shish`;
+
+addMalumotBtn1.addEventListener('click', function (e) {
+    const addMalumotBlock = document.createElement('div');
+    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+
+    const addMalumotNomiLabel = document.createElement('label');
+    addMalumotNomiLabel.textContent = `Qoshimcha ma'lumot nomi:`;
+
+    const addMalumotNomi = document.createElement('input');
+    addMalumotNomi.setAttribute('type', 'text');
+
+
+    const addMalumotQiymatiabel = document.createElement('label');
+    addMalumotQiymatiabel.textContent = `Qoshimcha ma'lumot qiymati:`;
+
+    const addMalumotQiymati = document.createElement('input');
+    addMalumotQiymati.dataset.qiymatNomi = '';
+    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('type', 'number');
+
+    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+    firstMethodContainer.append(addMalumotBlock)
+    addMalumotBtn1.before(addMalumotBlock);
+});
+
+
 const thirdMethodContainer = document.createElement('div');
 thirdMethodContainer.setAttribute('class', 'app-container__input-block');
-thirdMethodContainer.append(thirdMethodBox, thirdMethodBox2, thirdMethodBox3, thirdMethodBox4, thirdMethodBox5);
+thirdMethodContainer.append(thirdMethodBox, thirdMethodBox2, thirdMethodBox3, thirdMethodBox4, thirdMethodBox5, addMalumotBtn1);
 
 
 // 
