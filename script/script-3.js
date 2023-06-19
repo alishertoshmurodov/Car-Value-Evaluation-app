@@ -755,10 +755,11 @@ const tashqiEskirish = document.querySelector("#tashqi-eskirish");
 const jismoniyEskirish = document.querySelector("#jismoniy-eskirish");
 const jamiEskirishlabel = document.querySelector("#jam-eskirish-label");
 const jamgarEskirish = document.querySelector("#avtJam-eskirish");
+const baholashQiymat = document.querySelector("#xarajat-qiymat");
 let jamiEskirish = (1 - (1 - Number(jisEskInput.value) / 100) *
 (1 - Number(funkEskirishInputMain.value) / 100) *
 (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
-const eskirishEls = [tashqiEskirish, funksionalEskirish, jismoniyEskirish];
+const eskirishEls = [tashqiEskirish, funksionalEskirish];
 
 eskirishEls.forEach(element => {
     element.addEventListener('input', () => {
@@ -960,6 +961,7 @@ calcBtn.addEventListener('click', (e) => {
 });
 
 const baholash = document.querySelector("#tiklanish-qiymati777");
+
 // Plain hide 
 
 const plainInputEls = document.querySelectorAll('.plain-inputs');

@@ -274,7 +274,7 @@ document
         //jam eskirish
         jamiEskirish: jamiEskirish,
         //jis eskirish
-        jismoniyEskirish: document.querySelector("#jismoniy-eskirish").value,
+        jismoniyEskirish: eskirishHisobi,
         //funksional eskriish
         funksionaleskirish: funkEskirishInputMain.value,
         // funk sababi
