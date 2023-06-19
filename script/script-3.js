@@ -891,7 +891,7 @@ const jamgarEsk = (1 - (1 - Number(jisEskInput.value) / 100) *
     (1 - Number(funkEskirishInputMain.value) / 100) *
     (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
 
-//2 Qoldiq qiymat
+////2 Qoldiq qiymat
 
 const qoldiqQiymat = Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100);
 ///////////////////////
