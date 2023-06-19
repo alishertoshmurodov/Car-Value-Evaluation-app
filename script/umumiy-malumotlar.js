@@ -234,12 +234,12 @@ document
     (1 - Number(funkEskirishInputMain.value) / 100) *
     (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
     
-  if (String(jamgarEsk).includes('.')) {
-      const arr = String(jamgarEsk).split('.');
-      console.log(arr);
-      const afterThePoint = String(arr[1]).slice(0, 2);
-      jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
-    }
+  // if (String(jamgarEsk).includes('.')) {
+  //     const arr = String(jamgarEsk).split('.');
+  //     console.log(arr);
+  //     const afterThePoint = String(arr[1]).slice(0, 2);
+  //     jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
+  //   }
 
     let myWindow = window.open("", "PRINT", "");
 
