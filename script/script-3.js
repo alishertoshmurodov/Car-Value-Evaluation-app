@@ -748,15 +748,21 @@ const jamiEskirishLabel = document.querySelector('#jam-eskirish-label');
 // jamiEskirishLabel.setAttribute('for', "jami-eskirish");
 // jamiEskirishLabel.textContent = "Jamlangan eskirish: "
 
-const eskirishEls = [tashqiEskirishInput, funkEskirishInputMain, jisEskInput];
+
+const funksionalEskirish = document.querySelector("#funksional-eskirish");
+const tashqiEskirish = document.querySelector("#tashqi-eskirish");
+const jismoniyEskirish = document.querySelector("#jismoniy-eskirish");
+const jamiEskirishlabel = document.querySelector("#jam-eskirish-label");
+let jamiEskirish = Number(funksionalEskirish.value)  + Number(tashqiEskirish.value ) + Number(jismoniyEskirish.value);
+const eskirishEls = [tashqiEskirish, funksionalEskirish, jismoniyEskirish];
 
 eskirishEls.forEach(element => {
     element.addEventListener('input', () => {
-        jamiEskirish.value = Number(tashqiEskirishInput.value) + Number(funkEskirishInputMain.value) + Number(jisEskInput.value);
-        jamiEskirishLabel.textContent = `Jamlangan eskirish: ${jamiEskirish.value}%`;
+        jamiEskirish =  Number(funksionalEskirish.value)  + Number(tashqiEskirish.value ) + Number(jismoniyEskirish.value);
+        jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamiEskirish}%`;
     })
 });
-// jamiEskirish.append(jamiEskirishLabel);
+// jamiEskirish.append(jamiEskirishlabel);
 
 /////////////////////////////////////////////////
 const expertTahMethodLabel5 = document.createElement('h3');
