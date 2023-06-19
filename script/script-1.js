@@ -78,36 +78,36 @@ calcTypeEl.addEventListener('change', chooseType);
 
 // Analog-transport-rusumi
 
-const analogCarNameBox = document.createElement('div');
-analogCarNameBox.setAttribute('class', 'app-container__input-option')
+// const analogCarNameBox = document.createElement('div');
+// analogCarNameBox.setAttribute('class', 'app-container__input-option')
 
-const analogCarNameLabel = document.createElement('label');
-analogCarNameLabel.textContent = 'Analog avtotransport vositasi rusumi:';
-analogCarNameLabel.setAttribute('for', 'Analog-transport-rusumi');
+// const analogCarNameLabel = document.createElement('label');
+// analogCarNameLabel.textContent = 'Analog avtotransport vositasi rusumi:';
+// analogCarNameLabel.setAttribute('for', 'Analog-transport-rusumi');
 
-const analogCarNameInput = document.createElement('input');
-analogCarNameInput.setAttribute('id', 'Analog-transport-rusumi');
-analogCarNameInput.setAttribute('name', 'Analog-transport-rusumi');
-analogCarNameInput.setAttribute('type', 'text');
+// const analogCarNameInput = document.createElement('input');
+// analogCarNameInput.setAttribute('id', 'Analog-transport-rusumi');
+// analogCarNameInput.setAttribute('name', 'Analog-transport-rusumi');
+// analogCarNameInput.setAttribute('type', 'text');
 
-analogCarNameBox.append(analogCarNameLabel, analogCarNameInput);
+// analogCarNameBox.append(analogCarNameLabel, analogCarNameInput);
 
 
 // Analog-transport-turi
 
-const analogCarTypeBox = document.createElement('div');
-analogCarTypeBox.setAttribute('class', 'app-container__input-option')
+// const analogCarTypeBox = document.createElement('div');
+// analogCarTypeBox.setAttribute('class', 'app-container__input-option')
 
-const analogCarTypeLabel = document.createElement('label');
-analogCarTypeLabel.textContent = 'Analog avtotransport vositasi turi:';
-analogCarTypeLabel.setAttribute('for', 'Analog-transport-turi');
+// const analogCarTypeLabel = document.createElement('label');
+// analogCarTypeLabel.textContent = 'Analog avtotransport vositasi turi:';
+// analogCarTypeLabel.setAttribute('for', 'Analog-transport-turi');
 
-const analogCarTypeInput = document.createElement('input');
-analogCarTypeInput.setAttribute('id', 'Analog-transport-turi');
-analogCarTypeInput.setAttribute('name', 'Analog-transport-turi');
-analogCarTypeInput.setAttribute('type', 'text');
+// const analogCarTypeInput = document.createElement('input');
+// analogCarTypeInput.setAttribute('id', 'Analog-transport-turi');
+// analogCarTypeInput.setAttribute('name', 'Analog-transport-turi');
+// analogCarTypeInput.setAttribute('type', 'text');
 
-analogCarTypeBox.append(analogCarTypeLabel, analogCarTypeInput);
+// analogCarTypeBox.append(analogCarTypeLabel, analogCarTypeInput);
 
 
 // Analog-transport-narxi
@@ -161,10 +161,10 @@ analogCarInfoSourceInput.setAttribute('type', 'text');
 analogCarInfoSourceBox.append(analogCarInfoSourceLabel, analogCarInfoSourceInput);
 
 
-// Analog-ob'yekt narxiga tuzatushlar
+// Analog-ob'yekt narxiga tuzatishlar
 
 const analogObjPriceSettingsHeading = document.createElement('h3');
-analogObjPriceSettingsHeading.textContent = "Analog-ob'yekt narxiga tuzatushlar";
+analogObjPriceSettingsHeading.textContent = "Analog-ob'yekt narxiga tuzatishlar";
 analogObjPriceSettingsHeading.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
 
@@ -253,9 +253,43 @@ firstMethodLastInput.setAttribute('type', 'number');
 firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
 
 
+const addMalumotBtn = document.createElement("button");
+addMalumotBtn.setAttribute("class", "add_btn");
+addMalumotBtn.setAttribute("id", "add_btn");
+addMalumotBtn.textContent = `Ma'lumot qo'shish`;
+
+addMalumotBtn.addEventListener('click', function (e) {
+    const addMalumotBlock = document.createElement('div');
+    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+
+    const addMalumotNomiLabel = document.createElement('label');
+    addMalumotNomiLabel.textContent = `Qoshimcha ma'lumot nomi:`;
+
+    const addMalumotNomi = document.createElement('input');
+    addMalumotNomi.setAttribute('type', 'text');
+
+
+    const addMalumotQiymatiabel = document.createElement('label');
+    addMalumotQiymatiabel.textContent = `Qoshimcha ma'lumot qiymati:`;
+
+    const addMalumotQiymati = document.createElement('input');
+    addMalumotQiymati.dataset.qiymatNomi = '';
+    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('type', 'number');
+
+    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+    firstMethodContainer.append(addMalumotBlock)
+    addMalumotBtn.before(addMalumotBlock);
+});
+
+
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
-firstMethodContainer.append(analogCarNameBox, analogCarTypeBox, analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox);
+firstMethodContainer.append( analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox, addMalumotBtn);
+
+// analogCarNameBox, analogCarTypeBox,
 
 function removeFuncOpt1(e) {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
@@ -426,7 +460,7 @@ const thirdMethodBox = document.createElement('div');
 thirdMethodBox.setAttribute('class', 'app-container__input-option')
 
 const thirdMethodLabel = document.createElement('label');
-thirdMethodLabel.textContent = "Butlovchi usel va agreganlarining nomi";
+thirdMethodLabel.textContent = "Butlovchi usel va agregatlarining nomi";
 thirdMethodLabel.setAttribute('for', 'Butlovchi-usel-agreganlarining nomi');
 
 const thirdMethodInput = document.createElement('input');
@@ -443,7 +477,7 @@ const thirdMethodBox2 = document.createElement('div');
 thirdMethodBox2.setAttribute('class', 'app-container__input-option')
 
 const thirdMethodLabel2 = document.createElement('label');
-thirdMethodLabel2.textContent = "Butlovchi usel va agreganlarining narxi, so'm";
+thirdMethodLabel2.textContent = "Butlovchi usel va agregatlarining narxi, so'm";
 thirdMethodLabel2.setAttribute('for', 'Butlovchi-usel-agreganlarining nomi');
 
 const thirdMethodInput2 = document.createElement('input');
@@ -505,9 +539,41 @@ thirdMethodInput5.setAttribute('type', 'number');
 thirdMethodBox5.append(thirdMethodLabel5, thirdMethodInput5);
 
 
+const addMalumotBtn1 = document.createElement("button");
+addMalumotBtn1.setAttribute("class", "add_btn");
+addMalumotBtn1.setAttribute("id", "add_btn");
+addMalumotBtn1.textContent = `Ma'lumot qo'shish`;
+
+addMalumotBtn1.addEventListener('click', function (e) {
+    const addMalumotBlock = document.createElement('div');
+    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+
+    const addMalumotNomiLabel = document.createElement('label');
+    addMalumotNomiLabel.textContent = `Qoshimcha ma'lumot nomi:`;
+
+    const addMalumotNomi = document.createElement('input');
+    addMalumotNomi.setAttribute('type', 'text');
+
+
+    const addMalumotQiymatiabel = document.createElement('label');
+    addMalumotQiymatiabel.textContent = `Qoshimcha ma'lumot qiymati:`;
+
+    const addMalumotQiymati = document.createElement('input');
+    addMalumotQiymati.dataset.qiymatNomi = '';
+    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('type', 'number');
+
+    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+    firstMethodContainer.append(addMalumotBlock)
+    addMalumotBtn1.before(addMalumotBlock);
+});
+
+
 const thirdMethodContainer = document.createElement('div');
 thirdMethodContainer.setAttribute('class', 'app-container__input-block');
-thirdMethodContainer.append(thirdMethodBox, thirdMethodBox2, thirdMethodBox3, thirdMethodBox4, thirdMethodBox5);
+thirdMethodContainer.append(thirdMethodBox, thirdMethodBox2, thirdMethodBox3, thirdMethodBox4, thirdMethodBox5, addMalumotBtn1);
 
 
 // 
@@ -661,3 +727,23 @@ calcBtnEl.addEventListener('click', function (e) {
         }
     }
 });
+
+// plain hide 
+
+const plainInputEls1 = document.querySelectorAll('.plain-inputs');
+
+function hidePlain(e) {
+    if (calcMethodSelect.value !== 'none') {
+        plainInputEls1.forEach(element => {
+            element.classList.add('plain-inputs')
+        });
+    } else {
+        plainInputEls1.forEach(element => {
+            element.classList.remove('plain-inputs');
+        });
+    }
+}
+
+hidePlain();
+
+calcMethodSelect.addEventListener('change', hidePlain);

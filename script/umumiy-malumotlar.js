@@ -1,10 +1,10 @@
 fetch('https://cbu.uz/uz/arkhiv-kursov-valyut/json/')
-    .then(response => response.json())
-    .then(data => {
-      document.querySelector('#Baholovchi-sanasidagi-som-kursi-1').value = `1 AQSH dollari: ${data[0].Rate} so'm`;
-      document.querySelector('#Baholovchi-sanasidagi-som-kursi-2').value = `1 Yevro: ${data[1].Rate} so'm`;
-      document.querySelector('#Baholovchi-sanasidagi-som-kursi-3').value = `1 Rubl: ${data[2].Rate} so'm`;
-    });
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('#Baholovchi-sanasidagi-som-kursi-1').value = `1 AQSH dollari: ${data[0].Rate} so'm`;
+    document.querySelector('#Baholovchi-sanasidagi-som-kursi-2').value = `1 Yevro: ${data[1].Rate} so'm`;
+    document.querySelector('#Baholovchi-sanasidagi-som-kursi-3').value = `1 Rubl: ${data[2].Rate} so'm`;
+  });
 
 
 
@@ -38,8 +38,9 @@ const baholashObyektiningEgasi = document.querySelector(
 const baholashdanMaqsad = document.querySelector("#Baholashdan-maqsad");
 const baholovchiTashkilotNomi = document.querySelector('#Baholovchi-tashkilot-nomi');
 const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashkilot-ismi-sharifi');
+// const avtoVositaTiklashQiymati  = document.querySelector('#tiklanish-qiymati');
 
-
+const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori')
 document
   .querySelector(".app-container__calculate-btn")
   .addEventListener("click", async function (e) {
@@ -100,7 +101,7 @@ document
 
     if (calcMethodSelect2.value == '1-usul') {
       const elBaholashPaytidagiQiymati = document.querySelector(
-        "[data-baholash-paytidagi-qiymati]"
+        "#ekputatsiyaga-qadar-qiymat"
       );
       const elFormEskirishBirinchi = document.querySelector(
         "[data-form-eskirish-birinchi-usul]"
@@ -109,18 +110,30 @@ document
         "[data-asosiy-parametr-nomi]"
       );
       const elEksplutatsiyagaQadarQiymati = document.querySelector(
-        "[data-eksplutatsiyaga-qadar-qiymat]"
+        "#baholash-paytidagi-qiymatiti"
       );
       const elBaholashDarajasiKorsatkichi = document.querySelector(
         "[data-baholash-daraja-korsatkichi]"
       );
 
       eskirishUsuli = 'Asosiy parametrning yomonlashuvi';
-      eskirishHisobi = String(1 - (elBaholashPaytidagiQiymati.value /
-        elEksplutatsiyagaQadarQiymati.value) ** elBaholashDarajasiKorsatkichi.value).slice(0, 6);
+      console.log(elBaholashPaytidagiQiymati);
+      console.log(elEksplutatsiyagaQadarQiymati);
 
+      console.log(elBaholashDarajasiKorsatkichi);
+
+      eskirishHisobi = 1 - (Number(elBaholashPaytidagiQiymati.value) /
+        Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
+      console.log(eskirishHisobi);
+
+
+      if (String(eskirishHisobi).includes('.')) {
+        const arr = String(eskirishHisobi).split('.');
+        console.log(arr);
+        const afterThePoint = String(arr[1]).slice(0, 2);
+        eskirishHisobi = String(arr[0]) + '.' + String(afterThePoint);
+      }
     }
-
 
     if (calcMethodSelect2.value == '2-usul') {
       function qoldiqXizmatMuddati(ti, tost) {
@@ -167,25 +180,29 @@ document
       eskirishUsuli = `Jismoniy eskirishni aniqlashning to'g'ridan-to'g'ri`;
     }
     if (calcMethodSelect2.value == '4-usul') {
+      eskirishHisobi = 0;
 
       const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
       const arrPricEls = document.querySelectorAll('[data-konst-price]')
       const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
+      
       const kosntlarSoni = arrNameEls.length;
-      arrNameEls.forEach(element => {
-        console.log(element.value);
-      });
-      arrPricEls.forEach(element => {
-        console.log(element.value);
-      });
-      arrPricEskiEls.forEach(element => {
-        console.log(element.value);
-      });
+      // arrNameEls.forEach(element => {
+      //   console.log(element.value);
+      // });
+      // arrPricEls.forEach(element => {
+      //   console.log(element.value);
+      // });
+      // arrPricEskiEls.forEach(element => {
+      //   console.log(element.value);
+      // });
+
       //4-formula
       let result = 0;
       for (let i = 0; i < arrPricEls.length; i++) {
         eskirishHisobi += Number(arrPricEls[i].value) * Number(arrPricEskiEls[i].value);
       };
+
 
       if (String(eskirishHisobi).includes('.')) {
         const arr = String(eskirishHisobi).split('.');
@@ -193,6 +210,8 @@ document
         const afterThePoint = String(arr[1]).slice(0, 2);
         eskirishHisobi = String(arr[0]) + '.' + String(afterThePoint);
       }
+
+      console.log(eskirishHisobi);
 
       eskirishUsuli = `O'rtacha o'lchangan eskirish`;
     }
@@ -211,8 +230,16 @@ document
     if (calcMethodSelect2.value == '6-usul') {
       eskirishUsuli = 'Ekspert-tahliliy';
     }
-
-
+    const jamgarEsk = (1 - (1 - Number(jisEskInput.value) / 100) *
+    (1 - Number(funkEskirishInputMain.value) / 100) *
+    (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
+    
+  if (String(jamgarEsk).includes('.')) {
+      const arr = String(jamgarEsk).split('.');
+      console.log(arr);
+      const afterThePoint = String(arr[1]).slice(0, 2);
+      jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
+    }
 
     let myWindow = window.open("", "PRINT", "");
 
@@ -225,6 +252,7 @@ document
         hisobotSanasiOyi: hisobotSanasiOyi(hisobotSanasi.getMonth()),
         hisobotSanasiYili: hisobotSanasi.getFullYear(),
         baholashSanasi: baholashSanasi.value,
+        tashkilotDirektori: tashkilotDirektori.value,
         avtotransportVositasiDavlatRaqami:
           avtotransportVositasiDavlatRaqami.value,
         avtotransportVositasiRusumi: avtotransportVositasiRusumi.value,
@@ -235,15 +263,32 @@ document
         baholashdanMaqsad: baholashdanMaqsad.value,
         baholovchiTashkilotNomi: baholovchiTashkilotNomi.value,
         baholovchiTashkilotIsmiSharifi: baholovchiTashkilotIsmiSharifi.value,
+        // avtoVositaTiklashQiymati: avtoVositaTiklashQiymati.value,
+        avtotransportVositasiIshlanganYili: avtotransportVositasiIshlanganYili.value,
         // tiklanish hisobi
         tiklanisUsuli: tiklanisUsuli,
         tiklanishQiymati: tiklanishQiymati,
         // eskirish hisobi
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
+        //jam eskirish
+        jamiEskirish: jamiEskirish,
+        //jis eskirish
+        jismoniyEskirish: document.querySelector("#jismoniy-eskirish").value,
+        //funksional eskriish
+        funksionaleskirish: funkEskirishInputMain.value,
+        // funk sababi
+        funksionaleskirishSababi: funcEskSabInput.value,
+        //tashqi eskirish
+        tashqiEskirish: tashqiEskirishInput.value,
+        //tashqi eskirish sababi
+        tashqiEskirishSababi: tashqiEskSabInput.value,
+        //baholash obyekti 
+        baholashQiymat: Number(baholash.value) * (1 - Number(jamgarEsk) / 100),
       })
     );
     myWindow.print();
+console.log(jamgarEsk);
 
     return false;
 
@@ -310,40 +355,40 @@ const hisobotSanasiOyi = (monthNum) => {
 
 function omegaFunc() {
   if (explCarTypeSelect.value == explCarTypeOption1.value) {
-      omega = 0.07 * Number(explCarAgeInput.value) + 0.0035 * Number(explCarDestInput.value);
+    omega = 0.07 * Number(explCarAgeInput.value) + 0.0035 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption2.value) {
-      omega = 0.1 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+    omega = 0.1 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption3.value) {
-      omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption4.value) {
-      omega = 0.15 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
+    omega = 0.15 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption5.value) {
-      omega = 0.14 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.14 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption6.value) {
-      omega = 0.16 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
+    omega = 0.16 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption7.value) {
-      omega = 0.05 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
+    omega = 0.05 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption8.value) {
-      omega = 0.0055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+    omega = 0.0055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption9.value) {
-      omega = 0.065 * Number(explCarAgeInput.value) + 0.0032 * Number(explCarDestInput.value);
+    omega = 0.065 * Number(explCarAgeInput.value) + 0.0032 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption10.value) {
-      omega = 0.045 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.045 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else if (explCarTypeSelect.value == explCarTypeOption11.value) {
-      omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
+    omega = 0.09 * Number(explCarAgeInput.value) + 0.002 * Number(explCarDestInput.value);
   }
   else {
-      omega = 0.12 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
+    omega = 0.12 * Number(explCarAgeInput.value) + 0.001 * Number(explCarDestInput.value);
 
   }
 

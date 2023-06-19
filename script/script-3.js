@@ -5,6 +5,26 @@
 /* 1-3 usul */
 /* -------- */
 
+
+
+
+const firstMethod00Box = document.createElement('div');
+firstMethod00Box.setAttribute('class', 'app-container__input-option')
+
+const firstMethod00Label = document.createElement('label');
+firstMethod00Label.textContent = 'Baholanayotgan avtotransport vositasining asosiy parametri nomi';
+firstMethod00Label.setAttribute('for', 'avtotransport-asosiy-parametri');
+
+const firstMethod00Input = document.createElement('input');
+firstMethod00Input.dataset.eksplutatsiyagaQadarQiymat = '';
+
+
+firstMethod00Input.setAttribute('id', 'avtotransport-asosiy-parametri');
+firstMethod00Input.setAttribute('name', 'avtotransport-asosiy-parametri');
+firstMethod00Input.setAttribute('type', 'text');
+
+firstMethod00Box.append(firstMethod00Label, firstMethod00Input);
+/////////////////////////
 const firstMethod01Box = document.createElement('div');
 firstMethod01Box.setAttribute('class', 'app-container__input-option')
 
@@ -208,7 +228,7 @@ function firstMethod(e) {
 
 const firstMethodContainer2 = document.createElement('div');
 firstMethodContainer2.setAttribute('class', 'app-container__input-block');
-firstMethodContainer2.append(firstMethod01Box, firstMethod02Box, firstMethod03Box);
+firstMethodContainer2.append(firstMethod00Box, firstMethod01Box, firstMethod02Box, firstMethod03Box);
 
 calcMethodSelect2.addEventListener('change', firstMethod);
 
@@ -361,12 +381,12 @@ konstAddbtn.addEventListener('click', () => {
 
     const SumUpElNameLabel2 = document.createElement('label');
     SumUpElNameLabel2.textContent = 'Baholanayotgan avtotransport vositasi ' + counter + '-konstruktiv elementning nomi:';
-    SumUpElNameLabel2.setAttribute('for', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
+    SumUpElNameLabel2.setAttribute('for', 'Baholanayotgan-avto-' + counter + '-konstruktiv-elementning-nomi');
 
     const SumUpElNameInput2 = document.createElement('input');
     SumUpElNameInput2.dataset.konstNomi = '';
-    SumUpElNameInput2.setAttribute('id', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
-    SumUpElNameInput2.setAttribute('name', 'Baholanayotgan-avto-' + counter +'-konstruktiv-elementning-nomi');
+    SumUpElNameInput2.setAttribute('id', 'Baholanayotgan-avto-' + counter + '-konstruktiv-elementning-nomi');
+    SumUpElNameInput2.setAttribute('name', 'Baholanayotgan-avto-' + counter + '-konstruktiv-elementning-nomi');
     SumUpElNameInput2.setAttribute('type', 'text');
 
     SumUpElNameBox2.append(SumUpElNameLabel2, SumUpElNameInput2);
@@ -376,13 +396,13 @@ konstAddbtn.addEventListener('click', () => {
     SumUpElPriceBox2.setAttribute('class', 'app-container__input-option')
 
     const SumUpElPriceLabel2 = document.createElement('label');
-    SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositas "+ counter + "-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: %";
-    SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
+    SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositas " + counter + "-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: %";
+    SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto " + counter + "-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 
     const SumUpElPriceInput2 = document.createElement('input');
     SumUpElPriceInput2.dataset.konstPrice = '';
-    SumUpElPriceInput2.setAttribute('id', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
-    SumUpElPriceInput2.setAttribute('name', "Baholanayotgan-avto "+ counter +"-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
+    SumUpElPriceInput2.setAttribute('id', "Baholanayotgan-avto " + counter + "-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
+    SumUpElPriceInput2.setAttribute('name', "Baholanayotgan-avto " + counter + "-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
     SumUpElPriceInput2.setAttribute('type', 'number');
 
     SumUpElPriceBox2.append(SumUpElPriceLabel2, SumUpElPriceInput2);
@@ -391,13 +411,13 @@ konstAddbtn.addEventListener('click', () => {
     SumUpElPriceBoxEsk2.setAttribute('class', 'app-container__input-option')
 
     const SumUpElPriceEskLabel2 = document.createElement('label');
-    SumUpElPriceEskLabel2.textContent = "Baholanayotgan avtotransport vositasi "+ counter +"-konstruktiv elementi jismoniy eskirishi: %";
-    SumUpElPriceEskLabel2.setAttribute('for', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
+    SumUpElPriceEskLabel2.textContent = "Baholanayotgan avtotransport vositasi " + counter + "-konstruktiv elementi jismoniy eskirishi: %";
+    SumUpElPriceEskLabel2.setAttribute('for', "Baholanayotgan-avto- " + counter + "-elementi-jismoniy-eskirishi");
 
     const SumUpElPriceEskInput2 = document.createElement('input');
     SumUpElPriceEskInput2.dataset.konstPriceEski = '';
-    SumUpElPriceEskInput2.setAttribute('id', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
-    SumUpElPriceEskInput2.setAttribute('name', "Baholanayotgan-avto- "+ counter +"-elementi-jismoniy-eskirishi");
+    SumUpElPriceEskInput2.setAttribute('id', "Baholanayotgan-avto- " + counter + "-elementi-jismoniy-eskirishi");
+    SumUpElPriceEskInput2.setAttribute('name', "Baholanayotgan-avto- " + counter + "-elementi-jismoniy-eskirishi");
     SumUpElPriceEskInput2.setAttribute('type', 'number');
     SumUpElPriceBoxEsk2.append(SumUpElPriceEskLabel2, SumUpElPriceEskInput2);
     ////////////
@@ -437,7 +457,7 @@ const SumUpElPriceJisEskLabel = document.createElement('label');
 SumUpElPriceJisEskLabel.textContent = `Jismoniy eskirish: `;
 SumUpElPriceJisEskLabel.setAttribute('for', "Baholanayotgan-avto-elementlar-soni");
 SumUpElPriceJisEsk.append(SumUpElPriceJisEskLabel);
-fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElPriceBoxEsk, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2, konstAddbtn, SumUpElPriceBoxSoni,SumUpElPriceJisEsk);
+fourthMethodContainer2.append(SumUpElNameBox, SumUpElPriceBox, SumUpElPriceBoxEsk, SumUpElNameBox2, SumUpElPriceBox2, SumUpElPriceBoxEsk2, konstAddbtn, SumUpElPriceBoxSoni, SumUpElPriceJisEsk);
 
 calcMethodSelect2.addEventListener('change', fourthMethod);
 
@@ -625,163 +645,236 @@ explCarTypeSelect.addEventListener('change', omegaFunc);
 const expertTahMethod = document.createElement('div');
 expertTahMethod.setAttribute('class', 'app-container__input-option');
 
-const expertTahMethodLabel = document.createElement('h3');
-expertTahMethodLabel.setAttribute('for', 'calculation-method');
-expertTahMethodLabel.textContent = "Funksional (ma'naviy) eskirish";
-expertTahMethodLabel.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+// const expertTahMethodLabel = document.createElement('h3');
+// expertTahMethodLabel.setAttribute('for', 'calculation-method');
+// expertTahMethodLabel.textContent = "Funksional (ma'naviy) eskirish";
+// expertTahMethodLabel.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+
 // Avtotransport vositasiga funksional eskirish hisoblash sababi
-const funcEskSab = document.createElement('div');
-funcEskSab.setAttribute('class', 'app-container__input-option')
+// const funcEskSab = document.createElement('div');
+// funcEskSab.setAttribute('class', 'app-container__input-option')
 
-const funcEskSabLabel = document.createElement('label');
-funcEskSabLabel.textContent = 'Avtotransport vositasiga funksional eskirish hisoblash sababi';
-funcEskSabLabel.setAttribute('for', 'funksional-eskirish-sababi');
+// const funcEskSabLabel = document.createElement('label');
+// funcEskSabLabel.textContent = 'Avtotransport vositasiga funksional eskirish hisoblash sababi';
+// funcEskSabLabel.setAttribute('for', 'funksional-eskirish-sababi');
 
-const funcEskSabInput = document.createElement('input');
-funcEskSabInput.setAttribute('id', 'funksional-eskirish-sababi');
-funcEskSabInput.setAttribute('name', 'funksional-eskirish-sababi');
-funcEskSabInput.setAttribute('type', 'text');
+const funcEskSabInput = document.querySelector('#funksional-eskirish-sababi');
+// funcEskSabInput.setAttribute('id', 'funksional-eskirish-sababi');
+// funcEskSabInput.setAttribute('name', 'funksional-eskirish-sababi');
+// funcEskSabInput.setAttribute('type', 'text');
 
-funcEskSab.append(funcEskSabLabel, funcEskSabInput);
+// funcEskSab.append(funcEskSabLabel, funcEskSabInput);
+
+
 // Funksional eskirish: %  Main
-const funkEskirishMain = document.createElement('div');
-funkEskirishMain.setAttribute('class', 'app-container__input-option')
+// const funkEskirishMain = document.createElement('div');
+// funkEskirishMain.setAttribute('class', 'app-container__input-option')
 
-const funkEskirishMainLabel = document.createElement('label');
-funkEskirishMainLabel.textContent = "Funksional eskirish: %";
-funkEskirishMainLabel.setAttribute('for', "funksional-eskirish");
+// const funkEskirishMainLabel = document.createElement('label');
+// funkEskirishMainLabel.textContent = "Funksional eskirish: %";
+// funkEskirishMainLabel.setAttribute('for', "funksional-eskirish");
 
-const funkEskirishInputMain = document.createElement('input');
-funkEskirishInputMain.setAttribute('id', "funksional-eskirish");
-funkEskirishInputMain.setAttribute('name', "funksional-eskirish");
-funkEskirishInputMain.setAttribute('type', 'number');
+const funkEskirishInputMain = document.querySelector('#funksional-eskirish');
+// funkEskirishInputMain.setAttribute('id', "funksional-eskirish");
+// funkEskirishInputMain.setAttribute('name', "funksional-eskirish");
+// funkEskirishInputMain.setAttribute('type', 'number');
 
-funkEskirishMain.append(funkEskirishMainLabel, funkEskirishInputMain);
+// funkEskirishMain.append(funkEskirishMainLabel, funkEskirishInputMain);
+
+
 //   sababi
-const expertTahMethodLabel2 = document.createElement('h3');
-expertTahMethodLabel2.setAttribute('for', 'calculation-method');
-expertTahMethodLabel2.textContent = "Tashqi (iqtisodiy) eskirish";
-expertTahMethodLabel2.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+// const expertTahMethodLabel2 = document.createElement('h3');
+// expertTahMethodLabel2.setAttribute('for', 'calculation-method');
+// expertTahMethodLabel2.textContent = "Tashqi (iqtisodiy) eskirish";
+// expertTahMethodLabel2.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
-const tashqiEskSab = document.createElement('div');
-tashqiEskSab.setAttribute('class', 'app-container__input-option')
+// const tashqiEskSab = document.createElement('div');
+// tashqiEskSab.setAttribute('class', 'app-container__input-option')
 
-const tashqiEskSabLabel = document.createElement('label');
-tashqiEskSabLabel.textContent = 'Avtotransport vositasiga tashqi eskirish hisoblash sababi';
-tashqiEskSabLabel.setAttribute('for', 'tashqi-eskirish-sababi');
+// const tashqiEskSabLabel = document.createElement('label');
+// tashqiEskSabLabel.textContent = 'Avtotransport vositasiga tashqi eskirish hisoblash sababi';
+// tashqiEskSabLabel.setAttribute('for', 'tashqi-eskirish-sababi');
 
-const tashqiEskSabInput = document.createElement('input');
-tashqiEskSabInput.setAttribute('id', 'tashqi-eskirish-sababi');
-tashqiEskSabInput.setAttribute('name', 'tashqi-eskirish-sababi');
-tashqiEskSabInput.setAttribute('type', 'text');
+const tashqiEskSabInput = document.querySelector('#tashqi-eskirish-sababi');
+// tashqiEskSabInput.setAttribute('id', 'tashqi-eskirish-sababi');
+// tashqiEskSabInput.setAttribute('name', 'tashqi-eskirish-sababi');
+// tashqiEskSabInput.setAttribute('type', 'text');
 
-tashqiEskSab.append(tashqiEskSabLabel, tashqiEskSabInput);
+// tashqiEskSab.append(tashqiEskSabLabel, tashqiEskSabInput);
+
 // Tashqi eskirish: %
-const tashqiEskirish = document.createElement('div');
-tashqiEskirish.setAttribute('class', 'app-container__input-option')
+// const tashqiEskirish = document.createElement('div');
+// tashqiEskirish.setAttribute('class', 'app-container__input-option')
 
-const tashqiEskirishLabel = document.createElement('label');
-tashqiEskirishLabel.textContent = "Tashqi eskirish: %";
-tashqiEskirishLabel.setAttribute('for', "tashqi-eskirish");
+// const tashqiEskirishLabel = document.createElement('label');
+// tashqiEskirishLabel.textContent = "Tashqi eskirish: %";
+// tashqiEskirishLabel.setAttribute('for', "tashqi-eskirish");
 
-const tashqiEskirishInput = document.createElement('input');
-tashqiEskirishInput.setAttribute('id', "tashqi-eskirish");
-tashqiEskirishInput.setAttribute('name', "tashqi-eskirish");
-tashqiEskirishInput.setAttribute('type', 'number');
+const tashqiEskirishInput = document.querySelector('#tashqi-eskirish');
+// tashqiEskirishInput.setAttribute('id', "tashqi-eskirish");
+// tashqiEskirishInput.setAttribute('name', "tashqi-eskirish");
+// tashqiEskirishInput.setAttribute('type', 'number');
 
-tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput);
+// tashqiEskirish.append(tashqiEskirishLabel, tashqiEskirishInput);
 // Jismoniy eskirish: %'
-const expertTahMethodLabel3 = document.createElement('h3');
-expertTahMethodLabel3.setAttribute('for', 'calculation-method');
-expertTahMethodLabel3.textContent = "Jismoniy eskirish";
-expertTahMethodLabel3.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+// const expertTahMethodLabel3 = document.createElement('h3');
+// expertTahMethodLabel3.setAttribute('for', 'calculation-method');
+// expertTahMethodLabel3.textContent = "Jismoniy eskirish";
+// expertTahMethodLabel3.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
-const jisEsk = document.createElement('div');
-jisEsk.setAttribute('class', 'app-container__input-option')
+// const jisEsk = document.createElement('div');
+// jisEsk.setAttribute('class', 'app-container__input-option')
 
-const jisEskLabel = document.createElement('label');
-jisEskLabel.textContent = 'Jismoniy eskirish: %';
-jisEskLabel.setAttribute('for', 'jismoniy-eskirish');
+// const jisEskLabel = document.createElement('label');
+// jisEskLabel.textContent = 'Jismoniy eskirish: %';
+// jisEskLabel.setAttribute('for', 'jismoniy-eskirish');
 
-const jisEskInput = document.createElement('input');
-jisEskInput.setAttribute('id', 'jismoniy-eskirish');
-jisEskInput.setAttribute('name', 'jismoniy-eskirish');
-jisEskInput.setAttribute('type', 'number');
+const jisEskInput = document.querySelector('#jismoniy-eskirish');
+// jisEskInput.setAttribute('id', 'jismoniy-eskirish');
+// jisEskInput.setAttribute('name', 'jismoniy-eskirish');
+// jisEskInput.setAttribute('type', 'number');
 
-jisEsk.append(jisEskLabel, jisEskInput);
+// jisEsk.append(jisEskLabel, jisEskInput);
 /////////////////////////////////////////////////
 // Jamlangan eskirish
-const expertTahMethodLabel4 = document.createElement('h3');
-expertTahMethodLabel4.setAttribute('for', 'calculation-method');
-expertTahMethodLabel4.textContent = "Jamlangan eskirish";
-expertTahMethodLabel4.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+// const expertTahMethodLabel4 = document.createElement('h3');
+// expertTahMethodLabel4.setAttribute('for', 'calculation-method');
+// expertTahMethodLabel4.textContent = "Jamlangan eskirish";
+// expertTahMethodLabel4.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 
-const jamiEskirish = document.createElement('div');
-jamiEskirish.setAttribute('class', 'app-container__input-option')
+// const jamiEskirish = document.createElement('div');
+// jamiEskirish.setAttribute('class', 'app-container__input-option')
 
-const jamiEskirishLabel = document.createElement('label');
-jamiEskirishLabel.setAttribute('for', "jami-eskirish");
-jamiEskirishLabel.textContent = "Jamlangan eskirish:"
+const jamiEskirishLabel = document.querySelector('#jam-eskirish-label');
+// jamiEskirishLabel.setAttribute('for', "jami-eskirish");
+// jamiEskirishLabel.textContent = "Jamlangan eskirish: "
 
-const eskirishEls = [tashqiEskirishInput, funkEskirishInputMain, jisEskInput];
+
+const funksionalEskirish = document.querySelector("#funksional-eskirish");
+const tashqiEskirish = document.querySelector("#tashqi-eskirish");
+const jismoniyEskirish = document.querySelector("#jismoniy-eskirish");
+const jamiEskirishlabel = document.querySelector("#jam-eskirish-label");
+const jamgarEskirish = document.querySelector("#avtJam-eskirish");
+let jamiEskirish = (1 - (1 - Number(jisEskInput.value) / 100) *
+(1 - Number(funkEskirishInputMain.value) / 100) *
+(1 - Number(tashqiEskirishInput.value) / 100)) * 100;
+const eskirishEls = [tashqiEskirish, funksionalEskirish, jismoniyEskirish];
 
 eskirishEls.forEach(element => {
     element.addEventListener('input', () => {
-        jamiEskirish.value = Number(tashqiEskirishInput.value) + Number(funkEskirishInputMain.value) + Number(jisEskInput.value);
-        jamiEskirishLabel.textContent = `Jamlangan eskirish: ${jamiEskirish.value}%`;
+        jamiEskirish =  (1 - (1 - Number(jisEskInput.value) / 100) *
+        (1 - Number(funkEskirishInputMain.value) / 100) *
+        (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
+        if (String(jamiEskirish).includes('.')) {
+            const arr = String(jamiEskirish).split('.');
+            console.log(arr);
+            const afterThePoint = String(arr[1]).slice(0, 2);
+            jamiEskirish = String(arr[0]) + '.' + String(afterThePoint);
+          }
+        jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamiEskirish}%`;
     })
 });
-jamiEskirish.append(jamiEskirishLabel);
+// jamiEskirish.append(jamiEskirishlabel);
+const addMalumotBlock = document.createElement('div');
+addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+const addMalumotNomiLabel = document.createElement('label');
+addMalumotNomiLabel.textContent = `Avtotransport vositasining agregati nomi:`;
+
+const addMalumotNomi = document.createElement('input');
+addMalumotNomi.setAttribute('type', 'text');
+
+const addInfoBtn1 = document.createElement("button");
+addInfoBtn1.setAttribute("class", "add_btn");
+addInfoBtn1.setAttribute("id", "add_btn");
+addInfoBtn1.textContent = `Ma'lumot qo'shish`;
+const addMalumotQiymatiabel = document.createElement('label');
+addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
+
+const addMalumotQiymati = document.createElement('input');
+addMalumotQiymati.dataset.qiymatNomi = '';
+addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+addMalumotQiymati.setAttribute('type', 'number');
+
+addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati)
+addInfoBtn1.addEventListener('click', function (e) {
+    const addMalumotBlock = document.createElement('div');
+    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+
+    const addMalumotNomiLabel = document.createElement('label');
+    addMalumotNomiLabel.textContent = `Avtotransport vositasining agregati nomi:`;
+
+    const addMalumotNomi = document.createElement('input');
+    addMalumotNomi.setAttribute('type', 'text');
+
+
+    const addMalumotQiymatiabel = document.createElement('label');
+    addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
+
+    const addMalumotQiymati = document.createElement('input');
+    addMalumotQiymati.dataset.qiymatNomi = '';
+    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('type', 'number');
+
+    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+    expertTahMethod.append(addMalumotBlock)
+    addInfoBtn1.before(addMalumotBlock);
+});
 
 /////////////////////////////////////////////////
 const expertTahMethodLabel5 = document.createElement('h3');
-expertTahMethodLabel5.setAttribute('for', 'calculation-method');
-expertTahMethodLabel5.textContent = "Avtotransport vositasining xarajat yondashuvida hisoblangan qiymati";
-expertTahMethodLabel5.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
+// expertTahMethodLabel5.setAttribute('for', 'calculation-method');
+// expertTahMethodLabel5.textContent = "Avtotransport vositasining xarajat yondashuvida hisoblangan qiymati";
+// expertTahMethodLabel5.style = 'text-align: center; font-weight: 700; padding: 20px 0; border-bottom: 1px solid gray';
 // Avtotransport vositasining tiklanish qiymati: so'm
 const tiklanishQiymat = document.createElement('div');
-tiklanishQiymat.setAttribute('class', 'app-container__input-option')
+// tiklanishQiymat.setAttribute('class', 'app-container__input-option')
 
-const tiklanishQiymatLabel = document.createElement('label');
-tiklanishQiymatLabel.textContent = "Avtotransport vositasining tiklanish qiymati: so'm";
-tiklanishQiymatLabel.setAttribute('for', 'tiklanish-qiymati');
+// const tiklanishQiymatLabel = document.createElement('label');
+// tiklanishQiymatLabel.textContent = "Avtotransport vositasining tiklanish qiymati: so'm";
+// tiklanishQiymatLabel.setAttribute('for', 'tiklanish-qiymati');
 
-const tiklanishQiymatInput = document.createElement('input');
-tiklanishQiymatInput.setAttribute('id', 'tiklanish-qiymati');
-tiklanishQiymatInput.setAttribute('name', 'tiklanish-qiymati');
-tiklanishQiymatInput.setAttribute('type', 'number');
+// const tiklanishQiymatInput = document.createElement('input');
+// tiklanishQiymatInput.setAttribute('id', 'tiklanish-qiymati');
+// tiklanishQiymatInput.setAttribute('name', 'tiklanish-qiymati');
+// tiklanishQiymatInput.setAttribute('type', 'number');
 
-tiklanishQiymat.append(tiklanishQiymatLabel, tiklanishQiymatInput);
+// tiklanishQiymat.append(tiklanishQiymatLabel, tiklanishQiymatInput);
 // Avtotransport vositasining jamlangan eskirishi: %
 const avtJamEskirish = document.createElement('div');
-avtJamEskirish.setAttribute('class', 'app-container__input-option')
+// avtJamEskirish.setAttribute('class', 'app-container__input-option')
 
-const avtJamEskirishLabel = document.createElement('label');
-avtJamEskirishLabel.textContent = "Avtotransport vositasining jamlangan eskirishi: %";
-avtJamEskirishLabel.setAttribute('for', "avtJam-eskirish");
+// const avtJamEskirishLabel = document.createElement('label');
+// avtJamEskirishLabel.textContent = "Avtotransport vositasining jamlangan eskirishi: %";
+// avtJamEskirishLabel.setAttribute('for', "avtJam-eskirish");
 
-const avtJamEskirishInput = document.createElement('input');
-avtJamEskirishInput.setAttribute('id', "avtJam-eskirish");
-avtJamEskirishInput.setAttribute('name', "avtJam-eskirish");
-avtJamEskirishInput.setAttribute('type', 'number');
+// const avtJamEskirishInput = document.createElement('input');
+// avtJamEskirishInput.setAttribute('id', "avtJam-eskirish");
+// avtJamEskirishInput.setAttribute('name', "avtJam-eskirish");
+// avtJamEskirishInput.setAttribute('type', 'number');
 
-avtJamEskirish.append(avtJamEskirishLabel, avtJamEskirishInput);
+// avtJamEskirish.append(avtJamEskirishLabel, avtJamEskirishInput);
 // Baholash oby'ekti - avtotransport vositasining xarajat yondashuvida aniqlangan qiymati: so'm
 const xarQiymat = document.createElement('div');
-xarQiymat.setAttribute('class', 'app-container__input-option')
+// xarQiymat.setAttribute('class', 'app-container__input-option')
 
-const xarQiymatLabel = document.createElement('label');
-xarQiymatLabel.textContent = "Baholash oby'ekti - avtotransport vositasining xarajat yondashuvida aniqlangan qiymati: so'm";
-xarQiymatLabel.setAttribute('for', "xarajat-qiymat");
+// const xarQiymatLabel = document.createElement('label');
+// xarQiymatLabel.textContent = "Baholash oby'ekti - avtotransport vositasining xarajat yondashuvida aniqlangan qiymati: so'm";
+// xarQiymatLabel.setAttribute('for', "xarajat-qiymat");
 
-const xarQiymatInput = document.createElement('input');
-xarQiymatInput.setAttribute('id', "xarajat-qiymat");
-xarQiymatInput.setAttribute('name', "xarajat-qiymat");
-xarQiymatInput.setAttribute('type', 'number');
+// const xarQiymatInput = document.createElement('input');
+// xarQiymatInput.setAttribute('id', "xarajat-qiymat");
+// xarQiymatInput.setAttribute('name', "xarajat-qiymat");
+// xarQiymatInput.setAttribute('type', 'number');
 
-xarQiymat.append(xarQiymatLabel, xarQiymatInput);
+// xarQiymat.append(xarQiymatLabel);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel, funcEskSab, funkEskirishMain, expertTahMethodLabel2, tashqiEskSab, tashqiEskirish, expertTahMethodLabel3, jisEsk, expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(addMalumotBlock,addInfoBtn1,expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat, )
+
+//expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel3, jisEsk, tashqiEskirish, funcEskSab, tashqiEskSab,  funkEskirishMain,expertTahMethodLabel
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {
@@ -809,9 +902,9 @@ const jamgarEsk = (1 - (1 - Number(jisEskInput.value) / 100) *
     (1 - Number(funkEskirishInputMain.value) / 100) *
     (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
 
-//2 Qoldiq qiymat
+////2 Qoldiq qiymat
 
-const qoldiqQiymat = Number(tiklanishQiymatInput) * (1 - Number(avtJamEskirishInput.value) / 100);
+// const qoldiqQiymat = Number(document.querySelector("#tiklanish-qiymati").value) * (1 - Number(document.querySelector("#avtJam-eskirish").value) / 100);
 ///////////////////////
 
 function chooseTypeFinished() {
@@ -841,7 +934,7 @@ calcBtn.addEventListener('click', (e) => {
         console.log((1 - (1 - Number(jisEskInput.value) / 100) *
             (1 - Number(funkEskirishInputMain.value) / 100) *
             (1 - Number(tashqiEskirishInput.value) / 100)) * 100);
-        console.log(Number(tiklanishQiymatInput.value) * (1 - Number(avtJamEskirishInput.value) / 100));
+        console.log(Number(document.querySelector("#tiklanish-qiymati").value) * (1 - Number(document.querySelector("#avtJam-eskirish")) / 100));
     }
     else if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase() && calcMethodSelect2.value == "4-usul") {
         const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
@@ -859,10 +952,31 @@ calcBtn.addEventListener('click', (e) => {
         });
         //4-formula
         let result = 0;
-         for (let i = 0; i < arrPricEls.length; i++) {
-        result += Number(arrPricEls[i].value) * Number(arrPricEskiEls[i].value) ;
-         };
-         SumUpElPriceJisEskLabel.textContent = "Jismoniy eskirish: " + result
+        for (let i = 0; i < arrPricEls.length; i++) {
+            result += Number(arrPricEls[i].value) * Number(arrPricEskiEls[i].value);
+        };
+        SumUpElPriceJisEskLabel.textContent = "Jismoniy eskirish: " + result
     }
 });
+
+const baholash = document.querySelector("#tiklanish-qiymati777");
+// Plain hide 
+
+const plainInputEls = document.querySelectorAll('.plain-inputs');
+
+function hidePlain(e) {
+    if (calcMethodSelect2.value !== 'none') {
+        plainInputEls1.forEach(element => {
+            element.classList.add('plain-inputs')
+        });
+    } else {
+        plainInputEls1.forEach(element => {
+            element.classList.remove('plain-inputs');
+        });
+    }
+}
+
+hidePlain();
+
+calcMethodSelect2.addEventListener('change', hidePlain);
 
