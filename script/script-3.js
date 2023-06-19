@@ -7,6 +7,7 @@
 
 
 
+
 const firstMethod00Box = document.createElement('div');
 firstMethod00Box.setAttribute('class', 'app-container__input-option')
 
@@ -806,7 +807,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append( expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
 
 //expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel3, jisEsk, tashqiEskirish, funcEskSab, tashqiEskSab,  funkEskirishMain,expertTahMethodLabel
 
@@ -892,4 +893,26 @@ calcBtn.addEventListener('click', (e) => {
         SumUpElPriceJisEskLabel.textContent = "Jismoniy eskirish: " + result
     }
 });
+
+
+// Plain hide 
+
+const plainInputEls = document.querySelectorAll('.plain-inputs');
+
+function hidePlain(e) {
+    if (calcMethodSelect2.value !== 'none') {
+        plainInputEls1.forEach(element => {
+            element.classList.add('plain-inputs')
+        });
+    } else {
+        plainInputEls1.forEach(element => {
+            element.classList.remove('plain-inputs');
+        });
+    }
+}
+
+hidePlain();
+
+calcMethodSelect2.addEventListener('change', hidePlain);
+
 

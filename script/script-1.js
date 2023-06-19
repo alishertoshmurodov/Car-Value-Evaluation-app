@@ -663,3 +663,23 @@ calcBtnEl.addEventListener('click', function (e) {
         }
     }
 });
+
+// plain hide 
+
+const plainInputEls1 = document.querySelectorAll('.plain-inputs');
+
+function hidePlain(e) {
+    if (calcMethodSelect.value !== 'none') {
+        plainInputEls1.forEach(element => {
+            element.classList.add('plain-inputs')
+        });
+    } else {
+        plainInputEls1.forEach(element => {
+            element.classList.remove('plain-inputs');
+        });
+    }
+}
+
+hidePlain();
+
+calcMethodSelect.addEventListener('change', hidePlain);
