@@ -274,7 +274,7 @@ document
         //jam eskirish
         jamiEskirish: jamiEskirish,
         //jis eskirish
-        jismoniyEskirish: eskirishHisobi,
+        jismoniyEskirish: jismoniyEskirish,
         //funksional eskriish
         funksionaleskirish: funkEskirishInputMain.value,
         // funk sababi
