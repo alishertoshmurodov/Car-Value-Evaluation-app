@@ -764,6 +764,54 @@ eskirishEls.forEach(element => {
     })
 });
 // jamiEskirish.append(jamiEskirishlabel);
+const addMalumotBlock = document.createElement('div');
+addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+const addMalumotNomiLabel = document.createElement('label');
+addMalumotNomiLabel.textContent = `Avtotransport vositasining agregati nomi:`;
+
+const addMalumotNomi = document.createElement('input');
+addMalumotNomi.setAttribute('type', 'text');
+
+const addInfoBtn1 = document.createElement("button");
+addInfoBtn1.setAttribute("class", "add_btn");
+addInfoBtn1.setAttribute("id", "add_btn");
+addInfoBtn1.textContent = `Ma'lumot qo'shish`;
+const addMalumotQiymatiabel = document.createElement('label');
+addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
+
+const addMalumotQiymati = document.createElement('input');
+addMalumotQiymati.dataset.qiymatNomi = '';
+addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+addMalumotQiymati.setAttribute('type', 'number');
+
+addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati)
+addInfoBtn1.addEventListener('click', function (e) {
+    const addMalumotBlock = document.createElement('div');
+    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+
+
+    const addMalumotNomiLabel = document.createElement('label');
+    addMalumotNomiLabel.textContent = `Avtotransport vositasining agregati nomi:`;
+
+    const addMalumotNomi = document.createElement('input');
+    addMalumotNomi.setAttribute('type', 'text');
+
+
+    const addMalumotQiymatiabel = document.createElement('label');
+    addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
+
+    const addMalumotQiymati = document.createElement('input');
+    addMalumotQiymati.dataset.qiymatNomi = '';
+    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+    addMalumotQiymati.setAttribute('type', 'number');
+
+    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+    expertTahMethod.append(addMalumotBlock)
+    addInfoBtn1.before(addMalumotBlock);
+});
 
 /////////////////////////////////////////////////
 const expertTahMethodLabel5 = document.createElement('h3');
@@ -813,7 +861,7 @@ xarQiymatInput.setAttribute('type', 'number');
 
 xarQiymat.append(xarQiymatLabel, xarQiymatInput);
 /////////////////////////////////////////////////
-expertTahMethod.append(expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat)
+expertTahMethod.append(addMalumotBlock,addInfoBtn1,expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat, )
 
 //expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel3, jisEsk, tashqiEskirish, funcEskSab, tashqiEskSab,  funkEskirishMain,expertTahMethodLabel
 
