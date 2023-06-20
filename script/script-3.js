@@ -959,7 +959,7 @@ calcBtn.addEventListener('click', (e) => {
     }
 });
 
-const baholash = document.querySelector("#tiklanish-qiymati777");
+// const baholash = document.querySelector("#tiklanish-qiymati777");
 // Plain hide 
 
 const plainInputEls = document.querySelectorAll('.plain-inputs');
