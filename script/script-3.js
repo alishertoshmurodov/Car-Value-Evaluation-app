@@ -760,20 +760,19 @@ let jamiEskirish = (1 - (1 - Number(jisEskInput.value) / 100) *
 (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
 const eskirishEls = [tashqiEskirish, funksionalEskirish, jismoniyEskirish];
 
-eskirishEls.forEach(element => {
-    element.addEventListener('input', () => {
-        jamiEskirish =  (1 - (1 - Number(jisEskInput.value) / 100) *
-        (1 - Number(funkEskirishInputMain.value) / 100) *
-        (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
-        if (String(jamiEskirish).includes('.')) {
-            const arr = String(jamiEskirish).split('.');
-            console.log(arr);
-            const afterThePoint = String(arr[1]).slice(0, 2);
-            jamiEskirish = String(arr[0]) + '.' + String(afterThePoint);
-          }
-        jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamiEskirish}%`;
-    })
-});
+// eskirishEls.forEach(element => {
+//     element.addEventListener('input', () => {
+//         // jamiEskirish =  (1 - (1 - Number(jisEskInput.value) / 100) *
+//         // (1 - Number(funkEskirishInputMain.value) / 100) *
+//         // (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
+//         // if (String(jamiEskirish).includes('.')) {
+//         //     const arr = String(jamiEskirish).split('.');
+//         //     console.log(arr);
+//         //     const afterThePoint = String(arr[1]).slice(0, 2);
+//         //     jamiEskirish = String(arr[0]) + '.' + String(afterThePoint);
+//         //   }
+//     })
+// });
 // jamiEskirish.append(jamiEskirishlabel);
 const addMalumotBlock = document.createElement('div');
 addMalumotBlock.setAttribute('class', 'app-container__input-option')

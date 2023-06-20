@@ -39,7 +39,7 @@ const baholashdanMaqsad = document.querySelector("#Baholashdan-maqsad");
 const baholovchiTashkilotNomi = document.querySelector('#Baholovchi-tashkilot-nomi');
 const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashkilot-ismi-sharifi');
 // const avtoVositaTiklashQiymati  = document.querySelector('#tiklanish-qiymati');
-
+const jieskirish1 = document.querySelector("#jismoniy-eskirish")
 const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori')
 document
   .querySelector(".app-container__calculate-btn")
@@ -241,7 +241,8 @@ document
   //   }
 
     let myWindow = window.open("", "PRINT", "");
-
+    jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamgarEsk}%`;
+    jieskirish1.textContent = `Jismoniy eskirish: ${eskirishHisobi}`;
     myWindow.document.write(
       await getPopulatedHTML({
         buyurtmachi: buyurtmachi.value,
@@ -271,7 +272,7 @@ document
         eskirishUsuli: eskirishUsuli,
         eskirishHisobi: eskirishHisobi,
         //jam eskirish
-        jamiEskirish: jamiEskirish,
+        jamiEskirish: jamgarEsk,
         //jis eskirish
         jismoniyEskirish: document.querySelector("#jismoniy-eskirish").value,
         //funksional eskriish
