@@ -40,49 +40,10 @@ const baholovchiTashkilotNomi = document.querySelector('#Baholovchi-tashkilot-no
 const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashkilot-ismi-sharifi');
 // const avtoVositaTiklashQiymati  = document.querySelector('#tiklanish-qiymati');
 const jieskirish1 = document.querySelector("#jismoniy-eskirish")
-const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori')
-document
+const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori');
 
 
-// 1-4
-
-const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
-const arrPricEls = document.querySelectorAll('[data-konst-price]')
-const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
-
-
-// 
-
-const elTamirlashQiymati = document.querySelector("[data-tamirlash-qiymat]");
-const elYangiAnalog = document.querySelector("[data-yangi-analog]");
-
-// 
-
-const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
-const elQoldiqXizmatMuddati = document.querySelector(
-    "[data-qoldiq-xizmat-muddat]"
-);
-
-// 
-
-const elBaholashPaytidagiQiymati = document.querySelector(
-    "#ekputatsiyaga-qadar-qiymat"
-);
-const elFormEskirishBirinchi = document.querySelector(
-    "[data-form-eskirish-birinchi-usul]"
-);
-const elAsosiyParametrNomi = document.querySelector(
-    "[data-asosiy-parametr-nomi]"
-);
-const elEksplutatsiyagaQadarQiymati = document.querySelector(
-    "#baholash-paytidagi-qiymatiti"
-);
-const elBaholashDarajasiKorsatkichi = document.querySelector(
-    "[data-baholash-daraja-korsatkichi]"
-);
-
-
-  document.querySelector(".app-container__calculate-btn")
+document.querySelector(".app-container__calculate-btn")
   .addEventListener("click", async function (e) {
 
     const hisobotSanasi = new Date(hisobotTuzilganSanasi.value);
@@ -140,7 +101,22 @@ const elBaholashDarajasiKorsatkichi = document.querySelector(
     let eskirishHisobi;
 
     if (calcMethodSelect2.value == '1-usul') {
-      
+
+      const elBaholashPaytidagiQiymati = document.querySelector(
+        "#ekputatsiyaga-qadar-qiymat"
+      );
+      const elFormEskirishBirinchi = document.querySelector(
+        "[data-form-eskirish-birinchi-usul]"
+      );
+      const elAsosiyParametrNomi = document.querySelector(
+        "[data-asosiy-parametr-nomi]"
+      );
+      const elEksplutatsiyagaQadarQiymati = document.querySelector(
+        "#baholash-paytidagi-qiymatiti"
+      );
+      const elBaholashDarajasiKorsatkichi = document.querySelector(
+        "[data-baholash-daraja-korsatkichi]"
+      );
 
       eskirishUsuli = 'Asosiy parametrning yomonlashuvi';
 
@@ -162,7 +138,10 @@ const elBaholashDarajasiKorsatkichi = document.querySelector(
         return (ti / tost) * 100;
       }
 
-
+      const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
+      const elQoldiqXizmatMuddati = document.querySelector(
+        "[data-qoldiq-xizmat-muddat]"
+      );
 
       eskirishHisobi = `${(qoldiqXizmatMuddati(
         +elXizmatMuddati.value,
@@ -183,6 +162,8 @@ const elBaholashDarajasiKorsatkichi = document.querySelector(
     }
     if (calcMethodSelect2.value == '3-usul') {
 
+      const elTamirlashQiymati = document.querySelector("[data-tamirlash-qiymat]");
+      const elYangiAnalog = document.querySelector("[data-yangi-analog]");
 
 
       eskirishHisobi = `${(Number(elTamirlashQiymati.value) / Number(elYangiAnalog.value)) * 100
@@ -200,7 +181,9 @@ const elBaholashDarajasiKorsatkichi = document.querySelector(
     if (calcMethodSelect2.value == '4-usul') {
       eskirishHisobi = 0;
 
-
+      const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
+      const arrPricEls = document.querySelectorAll('[data-konst-price]')
+      const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
 
       const kosntlarSoni = arrNameEls.length;
       // arrNameEls.forEach(element => {
