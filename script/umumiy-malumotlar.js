@@ -100,27 +100,9 @@ document
     let eskirishHisobi;
 
     if (calcMethodSelect2.value == '1-usul') {
-      const elBaholashPaytidagiQiymati = document.querySelector(
-        "#ekputatsiyaga-qadar-qiymat"
-      );
-      const elFormEskirishBirinchi = document.querySelector(
-        "[data-form-eskirish-birinchi-usul]"
-      );
-      const elAsosiyParametrNomi = document.querySelector(
-        "[data-asosiy-parametr-nomi]"
-      );
-      const elEksplutatsiyagaQadarQiymati = document.querySelector(
-        "#baholash-paytidagi-qiymatiti"
-      );
-      const elBaholashDarajasiKorsatkichi = document.querySelector(
-        "[data-baholash-daraja-korsatkichi]"
-      );
+      
 
       eskirishUsuli = 'Asosiy parametrning yomonlashuvi';
-      console.log(elBaholashPaytidagiQiymati);
-      console.log(elEksplutatsiyagaQadarQiymati);
-
-      console.log(elBaholashDarajasiKorsatkichi);
 
       eskirishHisobi = 1 - (Number(elBaholashPaytidagiQiymati.value) /
         Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
@@ -140,10 +122,7 @@ document
         return (ti / tost) * 100;
       }
 
-      const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
-      const elQoldiqXizmatMuddati = document.querySelector(
-        "[data-qoldiq-xizmat-muddat]"
-      );
+
 
       eskirishHisobi = `${(qoldiqXizmatMuddati(
         +elXizmatMuddati.value,
@@ -164,8 +143,7 @@ document
     }
     if (calcMethodSelect2.value == '3-usul') {
 
-      const elTamirlashQiymati = document.querySelector("[data-tamirlash-qiymat]");
-      const elYangiAnalog = document.querySelector("[data-yangi-analog]");
+
 
       eskirishHisobi = `${(Number(elTamirlashQiymati.value) / Number(elYangiAnalog.value)) * 100
         }`;
@@ -182,10 +160,8 @@ document
     if (calcMethodSelect2.value == '4-usul') {
       eskirishHisobi = 0;
 
-      const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
-      const arrPricEls = document.querySelectorAll('[data-konst-price]')
-      const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
-      
+
+
       const kosntlarSoni = arrNameEls.length;
       // arrNameEls.forEach(element => {
       //   console.log(element.value);
@@ -230,15 +206,15 @@ document
       eskirishUsuli = 'Ekspert-tahliliy';
     }
     const jamgarEsk = (1 - (1 - Number(eskirishHisobi) / 100) *
-    (1 - Number(funkEskirishInputMain.value) / 100) *
-    (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
+      (1 - Number(funkEskirishInputMain.value) / 100) *
+      (1 - Number(tashqiEskirishInput.value) / 100)) * 100;
     console.log(eskirishHisobi);
-  // if (String(jamgarEsk).includes('.')) {
-  //     const arr = String(jamgarEsk).split('.');
-  //     console.log(arr);
-  //     const afterThePoint = String(arr[1]).slice(0, 2);
-  //     jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
-  //   }
+    // if (String(jamgarEsk).includes('.')) {
+    //     const arr = String(jamgarEsk).split('.');
+    //     console.log(arr);
+    //     const afterThePoint = String(arr[1]).slice(0, 2);
+    //     jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
+    //   }
 
     let myWindow = window.open("", "PRINT", "");
     jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamgarEsk}%`;
@@ -288,7 +264,7 @@ document
       })
     );
     myWindow.print();
-console.log(tiklanishQiymatiVar);
+    console.log(tiklanishQiymatiVar);
 
     return false;
 
