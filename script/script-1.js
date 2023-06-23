@@ -747,9 +747,3 @@ function hidePlain(e) {
 hidePlain();
 
 calcMethodSelect.addEventListener('change', hidePlain);
-
-
-
-
-//  fix 
-
