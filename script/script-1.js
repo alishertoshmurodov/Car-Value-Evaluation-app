@@ -753,37 +753,3 @@ calcMethodSelect.addEventListener('change', hidePlain);
 
 //  fix 
 
-const arrNameEls = document.querySelectorAll('[data-konst-nomi]');
-const arrPricEls = document.querySelectorAll('[data-konst-price]')
-const arrPricEskiEls = document.querySelectorAll('[data-konst-price-eski]')
-
-
-// 
-
-const elTamirlashQiymati = document.querySelector("[data-tamirlash-qiymat]");
-const elYangiAnalog = document.querySelector("[data-yangi-analog]");
-
-// 
-
-const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
-const elQoldiqXizmatMuddati = document.querySelector(
-    "[data-qoldiq-xizmat-muddat]"
-);
-
-// 
-
-const elBaholashPaytidagiQiymati = document.querySelector(
-    "#ekputatsiyaga-qadar-qiymat"
-);
-const elFormEskirishBirinchi = document.querySelector(
-    "[data-form-eskirish-birinchi-usul]"
-);
-const elAsosiyParametrNomi = document.querySelector(
-    "[data-asosiy-parametr-nomi]"
-);
-const elEksplutatsiyagaQadarQiymati = document.querySelector(
-    "#baholash-paytidagi-qiymatiti"
-);
-const elBaholashDarajasiKorsatkichi = document.querySelector(
-    "[data-baholash-daraja-korsatkichi]"
-);
