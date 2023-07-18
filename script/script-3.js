@@ -296,7 +296,7 @@ const SumUpElPriceBox = document.createElement('div');
 SumUpElPriceBox.setAttribute('class', 'app-container__input-option')
 
 const SumUpElPriceLabel = document.createElement('label');
-SumUpElPriceLabel.textContent = "Baholanayotgan avtotransport vositasi 1-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: %";
+SumUpElPriceLabel.textContent = "Baholanayotgan avtotransport vositasi 1-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: ";
 SumUpElPriceLabel.setAttribute('for', "Baholanayotgan-avto-1-elementi-tannarxining-baholash-oby'ekti-tannarxidagi-salmog'i");
 
 const SumUpElPriceInput = document.createElement('input');
