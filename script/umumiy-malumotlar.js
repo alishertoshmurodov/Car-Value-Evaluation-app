@@ -41,6 +41,7 @@ const baholovchiTashkilotIsmiSharifi = document.querySelector('#Baholovchi-tashk
 // const avtoVositaTiklashQiymati  = document.querySelector('#tiklanish-qiymati');
 const jieskirish1 = document.querySelector("#jismoniy-eskirish")
 const tashkilotDirektori = document.querySelector('#Tashkilot-ditektori');
+const baholashMaqsadiQiymatTuri = document.querySelector('#Baholash-maqsadiga-qiymat-turi');
 
 
 document.querySelector(".app-container__calculate-btn")
@@ -121,8 +122,8 @@ document.querySelector(".app-container__calculate-btn")
 
       eskirishUsuli = 'Asosiy parametrning yomonlashuvi';
 
-      eskirishHisobi = 1 - (Number(elBaholashPaytidagiQiymati.value) /
-        Number(elEksplutatsiyagaQadarQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
+      eskirishHisobi = 1 - (Number(elEksplutatsiyagaQadarQiymati.value) /
+        Number(elBaholashPaytidagiQiymati.value)) ** Number(elBaholashDarajasiKorsatkichi.value);
       console.log(eskirishHisobi);
 
 
@@ -140,6 +141,7 @@ document.querySelector(".app-container__calculate-btn")
       }
 
       const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
+      const dataXizmatMuddat = document.querySelector('[data-xizmat-muddat]');
       const elQoldiqXizmatMuddati = document.querySelector(
         "[data-qoldiq-xizmat-muddat]"
       );
@@ -148,7 +150,7 @@ document.querySelector(".app-container__calculate-btn")
         +elXizmatMuddati.value,
         +elQoldiqXizmatMuddati.value
       ) /
-        +elXizmatMuddati.value) *
+        +dataXizmatMuddat.value) *
         100
         }`;
 
@@ -285,6 +287,7 @@ document.querySelector(".app-container__calculate-btn")
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti 
         baholashQiymat: tiklanishQiymatiVar * (1 - Number(jamgarEsk) / 100),
+        baholashMaqsadiQiymatTuri: baholashMaqsadiQiymatTuri.value,
       })
     );
     myWindow.print();

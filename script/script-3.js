@@ -29,7 +29,7 @@ const firstMethod01Box = document.createElement('div');
 firstMethod01Box.setAttribute('class', 'app-container__input-option')
 
 const firstMethod01Label = document.createElement('label');
-firstMethod01Label.textContent = 'Asosiy parametrlarning aksplutatsiyaga qadar qiymati';
+firstMethod01Label.textContent = 'Asosiy parametrlarning eksplutatsiyaga qadar qiymati';
 firstMethod01Label.setAttribute('for', 'ekputatsiyaga-qadar-qiymat');
 
 const firstMethod01Input = document.createElement('input');
@@ -778,7 +778,7 @@ const addMalumotBlock = document.createElement('div');
 addMalumotBlock.setAttribute('class', 'app-container__input-option')
 
 const addMalumotNomiLabel = document.createElement('label');
-addMalumotNomiLabel.textContent = `Avtotransport vositasining agregati nomi:`;
+addMalumotNomiLabel.textContent = `Texnik ekspert F.I.Sh.`;
 
 const addMalumotNomi = document.createElement('input');
 addMalumotNomi.setAttribute('type', 'text');
@@ -803,7 +803,7 @@ addInfoBtn1.addEventListener('click', function (e) {
 
 
     const addMalumotNomiLabel = document.createElement('label');
-    addMalumotNomiLabel.textContent = `Avtotransport vositasining agregati nomi:`;
+    addMalumotNomiLabel.textContent = `Texnik ekspert F.I.Sh.`;
 
     const addMalumotNomi = document.createElement('input');
     addMalumotNomi.setAttribute('type', 'text');
