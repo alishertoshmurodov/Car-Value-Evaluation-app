@@ -343,7 +343,7 @@ const SumUpElPriceBox2 = document.createElement('div');
 SumUpElPriceBox2.setAttribute('class', 'app-container__input-option')
 
 const SumUpElPriceLabel2 = document.createElement('label');
-SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositasi 2-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: %";
+SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositasi 2-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: ";
 SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto-2-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 
 const SumUpElPriceInput2 = document.createElement('input');
@@ -396,7 +396,7 @@ konstAddbtn.addEventListener('click', () => {
     SumUpElPriceBox2.setAttribute('class', 'app-container__input-option')
 
     const SumUpElPriceLabel2 = document.createElement('label');
-    SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositas " + counter + "-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: %";
+    SumUpElPriceLabel2.textContent = "Baholanayotgan avtotransport vositas " + counter + "-konstruktiv elementi tannarxining butun baholash oby'ekti tannarxidagi salmog'i: ";
     SumUpElPriceLabel2.setAttribute('for', "Baholanayotgan-avto " + counter + "-elementi-tannarxining-oby'ekti-tannarxidagi-salmog'i");
 
     const SumUpElPriceInput2 = document.createElement('input');
