@@ -237,20 +237,20 @@ analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSett
 
 
 
-const firstMethodLastBox = document.createElement('div');
-firstMethodLastBox.setAttribute('class', 'app-container__input-option')
+// const firstMethodLastBox = document.createElement('div');
+// firstMethodLastBox.setAttribute('class', 'app-container__input-option')
 
-const firstMethodLastLabel = document.createElement('label');
-firstMethodLastLabel.textContent = `Baholanayotgan avtotransport vositasining tiklanish 
-qiymati, so'm`;
-firstMethodLastLabel.setAttribute('for', 'baholangan-avto-tiklanish');
+// const firstMethodLastLabel = document.createElement('label');
+// firstMethodLastLabel.textContent = `Baholanayotgan avtotransport vositasining tiklanish 
+// qiymati, so'm`;
+// firstMethodLastLabel.setAttribute('for', 'baholangan-avto-tiklanish');
 
-const firstMethodLastInput = document.createElement('input');
-firstMethodLastInput.setAttribute('id', 'baholangan-avto-tiklanish');
-firstMethodLastInput.setAttribute('name', 'baholangan-avto-tiklanish');
-firstMethodLastInput.setAttribute('type', 'number');
+// const firstMethodLastInput = document.createElement('input');
+// firstMethodLastInput.setAttribute('id', 'baholangan-avto-tiklanish');
+// firstMethodLastInput.setAttribute('name', 'baholangan-avto-tiklanish');
+// firstMethodLastInput.setAttribute('type', 'number');
 
-firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
+// firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
 
 
 const addMalumotBtn = document.createElement("button");
@@ -287,9 +287,9 @@ addMalumotBtn.addEventListener('click', function (e) {
 
 const firstMethodContainer = document.createElement('div');
 firstMethodContainer.setAttribute('class', 'app-container__input-block');
-firstMethodContainer.append(analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, firstMethodLastBox, addMalumotBtn);
+firstMethodContainer.append(analogCarPriceBox, analogCarInfoDateBox, analogCarInfoSourceBox, analogObjPriceSettingsHeading, analogCarPriceSetting1Box, analogCarPriceSetting2Box, analogCarPriceSetting3Box, analogCarPriceSetting4Box, addMalumotBtn);
 
-// analogCarNameBox, analogCarTypeBox,
+// analogCarNameBox, analogCarTypeBox, firstMethodLastBox,
 
 function removeFuncOpt1(e) {
     if (calcTypeEl.value.toLowerCase() == 'eskirish-hisobi'.toLowerCase()) {
@@ -617,24 +617,24 @@ fourthMethodBox2.append(fourthMethodLabel2, fourthMethodInput2);
 
 // Qayta baholash indeksi
 
-const fourthMethodBox3 = document.createElement('div');
-fourthMethodBox3.setAttribute('class', 'app-container__input-option')
+// const fourthMethodBox3 = document.createElement('div');
+// fourthMethodBox3.setAttribute('class', 'app-container__input-option')
 
-const fourthMethodLabel3 = document.createElement('label');
-fourthMethodLabel3.textContent = "Qayta baholash  koeffitsiyenti:";
-fourthMethodLabel3.setAttribute('for', 'qayta-baholash-koeff');
+// const fourthMethodLabel3 = document.createElement('label');
+// fourthMethodLabel3.textContent = "Qayta baholash  koeffitsiyenti:";
+// fourthMethodLabel3.setAttribute('for', 'qayta-baholash-koeff');
 
-const fourthMethodInput3 = document.createElement('input');
-fourthMethodInput3.setAttribute('id', 'qayta-baholash-koeff');
-fourthMethodInput3.setAttribute('name', 'qayta-baholash-koeff');
-fourthMethodInput3.setAttribute('type', 'number');
+// const fourthMethodInput3 = document.createElement('input');
+// fourthMethodInput3.setAttribute('id', 'qayta-baholash-koeff');
+// fourthMethodInput3.setAttribute('name', 'qayta-baholash-koeff');
+// fourthMethodInput3.setAttribute('type', 'number');
 
-fourthMethodBox2.append(fourthMethodLabel3, fourthMethodInput3);
+// fourthMethodBox3.append(fourthMethodLabel3, fourthMethodInput3);
 
 
 const fourthMethodContainer = document.createElement('div');
 fourthMethodContainer.setAttribute('class', 'app-container__input-block');
-fourthMethodContainer.append(fourthMethodBox, fourthMethodBox2, fourthMethodBox3);
+fourthMethodContainer.append(fourthMethodBox, fourthMethodBox2);
 
 
 
