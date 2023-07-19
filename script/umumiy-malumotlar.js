@@ -147,8 +147,8 @@ document
 
       eskirishHisobi =
        (1 -
-        (Number(elBaholashPaytidagiQiymati.value)) /
-          Number(elEksplutatsiyagaQadarQiymati.value) **
+        (Number(elBaholashPaytidagiQiymati.value) /
+          Number(elEksplutatsiyagaQadarQiymati.value)) **
           Number(elBaholashDarajasiKorsatkichi.value)) * 100;
       console.log(eskirishHisobi);
 
