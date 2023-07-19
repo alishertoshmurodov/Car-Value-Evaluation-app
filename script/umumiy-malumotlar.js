@@ -171,7 +171,7 @@ document
         "[data-qoldiq-xizmat-muddat]"
       );
 
-      eskirishHisobi = (Number(samaraliYoshi.value) / Number(dataXizmatMuddat.value)) * 1; 
+      eskirishHisobi = (Number(samaraliYoshi.value) / Number(dataXizmatMuddat.value)) * 100; 
 
       if (String(eskirishHisobi).includes(".")) {
         const arr = String(eskirishHisobi).split(".");
