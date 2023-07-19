@@ -146,10 +146,10 @@ document
       eskirishUsuli = "Asosiy parametrning yomonlashuvi";
 
       eskirishHisobi =
-        1 -
+       (1 -
         (Number(elEksplutatsiyagaQadarQiymati.value) /
           Number(elBaholashPaytidagiQiymati.value)) **
-          Number(elBaholashDarajasiKorsatkichi.value);
+          Number(elBaholashDarajasiKorsatkichi.value)) * 100;
       console.log(eskirishHisobi);
 
       if (String(eskirishHisobi).includes(".")) {
