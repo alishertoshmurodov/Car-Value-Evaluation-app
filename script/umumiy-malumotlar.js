@@ -165,20 +165,13 @@ document
         return (ti / tost) * 100;
       }
 
-      const elXizmatMuddati = document.querySelector("[data-xizmat-muddat]");
+      const samaraliYoshi = document.querySelector("[data-samarali-yosh]");
       const dataXizmatMuddat = document.querySelector("[data-xizmat-muddat]");
       const elQoldiqXizmatMuddati = document.querySelector(
         "[data-qoldiq-xizmat-muddat]"
       );
 
-      eskirishHisobi = `${
-        (qoldiqXizmatMuddati(
-          +elXizmatMuddati.value,
-          +elQoldiqXizmatMuddati.value
-        ) /
-          +dataXizmatMuddat.value) *
-        100
-      }`;
+      eskirishHisobi = (Number(samaraliYoshi.value) / Number(dataXizmatMuddat.value)) * 1; 
 
       if (String(eskirishHisobi).includes(".")) {
         const arr = String(eskirishHisobi).split(".");

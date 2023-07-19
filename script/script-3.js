@@ -107,20 +107,20 @@ secondMethod02Input.dataset.xizmatMuddat = '';
 
 secondMethod02Box.append(secondMethod02Label, secondMethod02Input);
 
-const secondMethod03Box = document.createElement('div');
-secondMethod03Box.setAttribute('class', 'app-container__input-option')
+// const secondMethod03Box = document.createElement('div');
+// secondMethod03Box.setAttribute('class', 'app-container__input-option')
 
-const secondMethod03Label = document.createElement('label');
-secondMethod03Label.textContent = 'Qoldiq xizmati muddati(ishlagan vaqti)';
-secondMethod03Label.setAttribute('for', 'qoldiq-xizmat-muddati');
+// const secondMethod03Label = document.createElement('label');
+// secondMethod03Label.textContent = 'Qoldiq xizmati muddati(ishlagan vaqti)';
+// secondMethod03Label.setAttribute('for', 'qoldiq-xizmat-muddati');
 
-const secondMethod03Input = document.createElement('input');
-secondMethod03Input.setAttribute('id', 'qoldiq-xizmat-muddati');
-secondMethod03Input.setAttribute('name', 'qoldiq-xizmat-muddati');
-secondMethod03Input.setAttribute('type', 'number');
-secondMethod03Input.dataset.qoldiqXizmatMuddat = '';
+// const secondMethod03Input = document.createElement('input');
+// secondMethod03Input.setAttribute('id', 'qoldiq-xizmat-muddati');
+// secondMethod03Input.setAttribute('name', 'qoldiq-xizmat-muddati');
+// secondMethod03Input.setAttribute('type', 'number');
+// secondMethod03Input.dataset.qoldiqXizmatMuddat = '';
 
-secondMethod03Box.append(secondMethod03Label, secondMethod03Input);
+// secondMethod03Box.append(secondMethod03Label, secondMethod03Input);
 
 // 
 
@@ -244,7 +244,7 @@ function secondMethod(e) {
 
 const secondMethodContainer2 = document.createElement('div');
 secondMethodContainer2.setAttribute('class', 'app-container__input-block');
-secondMethodContainer2.append(secondMethod01Box, secondMethod02Box, secondMethod03Box);
+secondMethodContainer2.append(secondMethod01Box, secondMethod02Box);
 
 calcMethodSelect2.addEventListener('change', secondMethod);
 
