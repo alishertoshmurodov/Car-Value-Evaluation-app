@@ -118,7 +118,14 @@ document
     if (calcMethodSelect.value == "3-usul") {
       tiklanisUsuli = `Elementma-element hisoblash`;
       console.log(3);
-      cP2 = Number(thirdMethodInput2.value) + Number(thirdMethodInput3.value);
+
+      let qoshimchaMalumotlarQiymati = 0;
+
+      for (let i = 0; i < qoshimchaMalumotlar.length; i++) {
+        qoshimchaMalumotlarQiymati+= Number(qoshimchaMalumotlar[i].value); 
+      }
+
+      cP2 = Number(thirdMethodInput2.value) + Number(thirdMethodInput3.value) + Number(qoshimchaMalumotlarQiymati);
       cV2 =
         ((1 - Number(thirdMethodInput4.value)) * cP2) /
         (1 - Number(thirdMethodInput4.value) - Number(thirdMethodInput5.value));

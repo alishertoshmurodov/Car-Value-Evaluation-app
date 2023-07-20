@@ -252,6 +252,7 @@ analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSett
 
 // firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
 
+const qoshimchaMalumotlar = [];
 
 const addMalumotBtn = document.createElement("button");
 addMalumotBtn.setAttribute("class", "add_btn");
@@ -282,6 +283,7 @@ addMalumotBtn.addEventListener('click', function (e) {
     addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
     firstMethodContainer.append(addMalumotBlock)
     addMalumotBtn.before(addMalumotBlock);
+    qoshimchaMalumotlar.push(addMalumotQiymati);
 });
 
 
