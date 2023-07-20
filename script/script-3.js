@@ -616,7 +616,7 @@ function omegaFunc() {
         omega = 0.05 * Number(explCarAgeInput.value) + 0.0025 * Number(explCarDestInput.value);
     }
     else if (explCarTypeSelect.value == explCarTypeOption8.value) {
-        omega = 0.0055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
+        omega = 0.055 * Number(explCarAgeInput.value) + 0.003 * Number(explCarDestInput.value);
     }
     else if (explCarTypeSelect.value == explCarTypeOption9.value) {
         omega = 0.065 * Number(explCarAgeInput.value) + 0.0032 * Number(explCarDestInput.value);
@@ -797,31 +797,31 @@ addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
 addMalumotQiymati.setAttribute('type', 'number');
 
 addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati)
-addInfoBtn1.addEventListener('click', function (e) {
-    const addMalumotBlock = document.createElement('div');
-    addMalumotBlock.setAttribute('class', 'app-container__input-option')
+// addInfoBtn1.addEventListener('click', function (e) {
+//     const addMalumotBlock = document.createElement('div');
+//     addMalumotBlock.setAttribute('class', 'app-container__input-option')
 
 
-    const addMalumotNomiLabel = document.createElement('label');
-    addMalumotNomiLabel.textContent = `Texnik ekspert F.I.Sh.`;
+//     const addMalumotNomiLabel = document.createElement('label');
+//     addMalumotNomiLabel.textContent = `Texnik ekspert F.I.Sh.`;
 
-    const addMalumotNomi = document.createElement('input');
-    addMalumotNomi.setAttribute('type', 'text');
+//     const addMalumotNomi = document.createElement('input');
+//     addMalumotNomi.setAttribute('type', 'text');
 
 
-    const addMalumotQiymatiabel = document.createElement('label');
-    addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
+//     const addMalumotQiymatiabel = document.createElement('label');
+//     addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
 
-    const addMalumotQiymati = document.createElement('input');
-    addMalumotQiymati.dataset.qiymatNomi = '';
-    addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
-    addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
-    addMalumotQiymati.setAttribute('type', 'number');
+//     const addMalumotQiymati = document.createElement('input');
+//     addMalumotQiymati.dataset.qiymatNomi = '';
+//     addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
+//     addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
+//     addMalumotQiymati.setAttribute('type', 'number');
 
-    addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
-    expertTahMethod.append(addMalumotBlock)
-    addInfoBtn1.before(addMalumotBlock);
-});
+//     addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
+//     expertTahMethod.append(addMalumotBlock)
+//     addInfoBtn1.before(addMalumotBlock);
+// });
 
 /////////////////////////////////////////////////
 const expertTahMethodLabel5 = document.createElement('h3');
@@ -871,9 +871,9 @@ const xarQiymat = document.createElement('div');
 
 // xarQiymat.append(xarQiymatLabel);
 /////////////////////////////////////////////////
-expertTahMethod.append(addMalumotBlock,addInfoBtn1,expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat, )
+expertTahMethod.append(expertTahMethodLabel5, tiklanishQiymat, avtJamEskirish, xarQiymat, addMalumotBlock )
 
-//expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel3, jisEsk, tashqiEskirish, funcEskSab, tashqiEskSab,  funkEskirishMain,expertTahMethodLabel
+//expertTahMethodLabel4, jamiEskirish, expertTahMethodLabel3, jisEsk, tashqiEskirish, funcEskSab, tashqiEskSab,  funkEskirishMain,expertTahMethodLabel, ,addInfoBtn1,
 
 function sixthMethod(e) {
     if (calcMethodSelect2.value == '6-usul') {

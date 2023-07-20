@@ -71,6 +71,13 @@ document
         Number(analogCarPriceSetting2Input.value) +
         Number(analogCarPriceSetting3Input.value) +
         Number(analogCarPriceSetting4Input.value);
+
+        if (String(tiklanishQiymatiVar).includes(".")) {
+          const arr = String(tiklanishQiymatiVar).split(".");
+          console.log(arr);
+          const afterThePoint = String(arr[1]).slice(0, 2);
+          tiklanishQiymatiVar = String(arr[0]) + "." + String(afterThePoint);
+        }
     }
     // 2-usul
     let cPod = 0;
@@ -97,6 +104,13 @@ document
           Number(secondMethodInput3.value) -
           Number(secondMethodInput4.value));
       tiklanishQiymatiVar = cV;
+
+      if (String(tiklanishQiymatiVar).includes(".")) {
+        const arr = String(tiklanishQiymatiVar).split(".");
+        console.log(arr);
+        const afterThePoint = String(arr[1]).slice(0, 2);
+        tiklanishQiymatiVar = String(arr[0]) + "." + String(afterThePoint);
+      }
     }
     // 3-usul
     let cP2 = 0;
@@ -109,6 +123,13 @@ document
         ((1 - Number(thirdMethodInput4.value)) * cP2) /
         (1 - Number(thirdMethodInput4.value) - Number(thirdMethodInput5.value));
       tiklanishQiymatiVar = cV2;
+
+      if (String(tiklanishQiymatiVar).includes(".")) {
+        const arr = String(tiklanishQiymatiVar).split(".");
+        console.log(arr);
+        const afterThePoint = String(arr[1]).slice(0, 2);
+        tiklanishQiymatiVar = String(arr[0]) + "." + String(afterThePoint);
+      }
     }
     // 4-usul
     let qT = 0;
@@ -119,6 +140,13 @@ document
         Number(fourthMethodInput.value) *
         Number(fourthMethodInput2.value);
       tiklanishQiymatiVar = qT;
+
+      if (String(tiklanishQiymatiVar).includes(".")) {
+        const arr = String(tiklanishQiymatiVar).split(".");
+        console.log(arr);
+        const afterThePoint = String(arr[1]).slice(0, 2);
+        tiklanishQiymatiVar = String(arr[0]) + "." + String(afterThePoint);
+      }
     }
 
     // Eskirish hisobi
@@ -410,7 +438,7 @@ function omegaFunc() {
       0.0025 * Number(explCarDestInput.value);
   } else if (explCarTypeSelect.value == explCarTypeOption8.value) {
     omega =
-      0.0055 * Number(explCarAgeInput.value) +
+      0.055 * Number(explCarAgeInput.value) +
       0.003 * Number(explCarDestInput.value);
   } else if (explCarTypeSelect.value == explCarTypeOption9.value) {
     omega =
