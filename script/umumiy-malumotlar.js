@@ -104,6 +104,7 @@ document
           Number(secondMethodInput3.value) -
           Number(secondMethodInput4.value));
       tiklanishQiymatiVar = cV;
+      console.log(tiklanishQiymatiVar);
 
       if (String(tiklanishQiymatiVar).includes(".")) {
         const arr = String(tiklanishQiymatiVar).split(".");
@@ -288,7 +289,7 @@ document
       eskirishUsuli = "Ekspert-tahliliy";
       eskirishHisobi = addMalumotQiymati.value;
     }
-    const jamgarEsk =
+    let jamgarEsk =
       (1 -
         (1 - Number(eskirishHisobi) / 100) *
           (1 - Number(funkEskirishInputMain.value) / 100) *
@@ -302,12 +303,15 @@ document
     //     jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
     //   }
 
-    const baaholashQiymatiVar = tiklanishQiymatiVar * (1 - Number(jamgarEsk) / 100);
+    let baaholashQiymatiVar = tiklanishQiymatiVar * (1 - Number(jamgarEsk) / 100);
+    console.log(baaholashQiymatiVar);
     if (String(baaholashQiymatiVar).includes(".")) {
       const arr = String(baaholashQiymatiVar).split(".");
       const afterThePoint = String(arr[1]).slice(0, 2);
       baaholashQiymatiVar = String(arr[0]) + "." + String(afterThePoint);
     }
+    console.log(baaholashQiymatiVar);
+
 
     let myWindow = window.open("", "PRINT", "");
     jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamgarEsk}%`;
