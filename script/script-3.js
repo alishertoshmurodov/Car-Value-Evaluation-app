@@ -787,6 +787,7 @@ const addInfoBtn1 = document.createElement("button");
 addInfoBtn1.setAttribute("class", "add_btn");
 addInfoBtn1.setAttribute("id", "add_btn");
 addInfoBtn1.textContent = `Butlovchi uzel va agregat qo'shish`;
+
 const addMalumotQiymatiabel = document.createElement('label');
 addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
 
@@ -796,16 +797,16 @@ addMalumotQiymati.setAttribute('id', 'add-malumot-qiymati');
 addMalumotQiymati.setAttribute('name', 'add-malumot-qiymati');
 addMalumotQiymati.setAttribute('type', 'number');
 
-const jisEskQiymatiLabel = document.createElement('label');
-jisEskQiymatiLabel.textContent = `Jismoniy eskirish:`;
+// const jisEskQiymatiLabel = document.createElement('label');
+// jisEskQiymatiLabel.textContent = `Jismoniy eskirish:`;
 
-const jisEskQiymati = document.createElement('input');
-jisEskQiymati.dataset.qiymatNomi = '';
-jisEskQiymati.setAttribute('id', 'jis-eskirish-qiymat');
-jisEskQiymati.setAttribute('name', 'jis-eskirish-qiymat');
-jisEskQiymati.setAttribute('type', 'number');
+// const jisEskQiymati = document.createElement('input');
+// jisEskQiymati.dataset.qiymatNomi = '';
+// jisEskQiymati.setAttribute('id', 'jis-eskirish-qiymat');
+// jisEskQiymati.setAttribute('name', 'jis-eskirish-qiymat');
+// jisEskQiymati.setAttribute('type', 'number');
 
-addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati, jisEskQiymatiLabel, jisEskQiymati)
+addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati)
 // addInfoBtn1.addEventListener('click', function (e) {
 //     const addMalumotBlock = document.createElement('div');
 //     addMalumotBlock.setAttribute('class', 'app-container__input-option')
