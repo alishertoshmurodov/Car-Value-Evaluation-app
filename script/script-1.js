@@ -191,7 +191,7 @@ const analogCarPriceSetting2Box = document.createElement('div');
 analogCarPriceSetting2Box.setAttribute('class', 'app-container__input-option')
 
 const analogCarPriceSetting2Label = document.createElement('label');
-analogCarPriceSetting2Label.textContent = "Tashish, bitimni rasmiylashtirish, soliq va yig imlarga qarab tuzatish, so`m";
+analogCarPriceSetting2Label.textContent = "Tashish, bitimni rasmiylashtirish, soliq va yig'imlarga qarab tuzatish, so`m";
 analogCarPriceSetting2Label.setAttribute('for', 'Analog-transport-narxiga-tuzatish-2');
 
 const analogCarPriceSetting2Input = document.createElement('input');
@@ -252,7 +252,7 @@ analogCarPriceSetting4Box.append(analogCarPriceSetting4Label, analogCarPriceSett
 
 // firstMethodLastBox.append(firstMethodLastLabel, firstMethodLastInput);
 
-const qoshimchaMalumotlar = [];
+
 
 const addMalumotBtn = document.createElement("button");
 addMalumotBtn.setAttribute("class", "add_btn");
@@ -283,7 +283,6 @@ addMalumotBtn.addEventListener('click', function (e) {
     addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
     firstMethodContainer.append(addMalumotBlock)
     addMalumotBtn.before(addMalumotBlock);
-    qoshimchaMalumotlar.push(addMalumotQiymati);
 });
 
 
@@ -541,12 +540,15 @@ thirdMethodInput5.setAttribute('type', 'number');
 thirdMethodBox5.append(thirdMethodLabel5, thirdMethodInput5);
 
 
+const qoshimchaMalumotlar = [];
+
 const addMalumotBtn1 = document.createElement("button");
 addMalumotBtn1.setAttribute("class", "add_btn");
 addMalumotBtn1.setAttribute("id", "add_btn");
 addMalumotBtn1.textContent = `Ma'lumot qo'shish`;
 
 addMalumotBtn1.addEventListener('click', function (e) {
+
     const addMalumotBlock = document.createElement('div');
     addMalumotBlock.setAttribute('class', 'app-container__input-option')
 
@@ -570,6 +572,7 @@ addMalumotBtn1.addEventListener('click', function (e) {
     addMalumotBlock.append(addMalumotNomiLabel, addMalumotNomi, addMalumotQiymatiabel, addMalumotQiymati);
     firstMethodContainer.append(addMalumotBlock)
     addMalumotBtn1.before(addMalumotBlock);
+    qoshimchaMalumotlar.push(addMalumotQiymati)
 });
 
 
