@@ -786,7 +786,7 @@ addMalumotNomi.setAttribute('type', 'text');
 const addInfoBtn1 = document.createElement("button");
 addInfoBtn1.setAttribute("class", "add_btn");
 addInfoBtn1.setAttribute("id", "add_btn");
-addInfoBtn1.textContent = `Ma'lumot qo'shish`;
+addInfoBtn1.textContent = `Butlovchi uzel va agregat qo'shish`;
 const addMalumotQiymatiabel = document.createElement('label');
 addMalumotQiymatiabel.textContent = `Eskirish darajasi: %`;
 
