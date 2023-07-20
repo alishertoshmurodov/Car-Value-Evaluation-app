@@ -63,7 +63,7 @@ const firstMethod03Box = document.createElement('div');
 firstMethod03Box.setAttribute('class', 'app-container__input-option')
 
 const firstMethod03Label = document.createElement('label');
-firstMethod03Label.textContent = "Asosiy parametirlarning baholash obyektiga tasir kuchini tavsiflovchi daraja ko'rsatkichi (0.6 - 0.8)";
+firstMethod03Label.textContent = "Asosiy parametirlarning baholash ob'yektiga tasir kuchini tavsiflovchi daraja ko'rsatkichi (0.6 - 0.8)";
 firstMethod03Label.setAttribute('for', 'baholash-daraja-korsatkichi');
 
 const firstMethod03Input = document.createElement('input');
