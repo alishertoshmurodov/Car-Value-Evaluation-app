@@ -302,6 +302,13 @@ document
     //     jamgarEsk = String(arr[0]) + '.' + String(afterThePoint);
     //   }
 
+    const baaholashQiymatiVar = tiklanishQiymatiVar * (1 - Number(jamgarEsk) / 100);
+    if (String(baaholashQiymatiVar).includes(".")) {
+      const arr = String(baaholashQiymatiVar).split(".");
+      const afterThePoint = String(arr[1]).slice(0, 2);
+      baaholashQiymatiVar = String(arr[0]) + "." + String(afterThePoint);
+    }
+
     let myWindow = window.open("", "PRINT", "");
     jamiEskirishlabel.textContent = `Jamlangan eskirish: ${jamgarEsk}%`;
     jieskirish1.textContent = `Jismoniy eskirish: ${eskirishHisobi}`;
@@ -347,7 +354,7 @@ document
         //tashqi eskirish sababi
         tashqiEskirishSababi: tashqiEskSabInput.value,
         //baholash obyekti
-        baholashQiymat: tiklanishQiymatiVar * (1 - Number(jamgarEsk) / 100),
+        baholashQiymat: baaholashQiymatiVar,
         baholashMaqsadiQiymatTuri: baholashMaqsadiQiymatTuri.value,
       })
     );
