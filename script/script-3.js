@@ -560,7 +560,7 @@ explCarAge.append(explCarAgeLabel, explCarAgeInput);
 const explCarDest = document.createElement('div');
 explCarDest.setAttribute('class', 'app-container__input-option')
 const explCarDestLabel = document.createElement('label');
-explCarDestLabel.textContent = "Ekspluatatsiya";
+explCarDestLabel.textContent = "Baholanayotgan avtotransport vositasining ekspluatatsiya boshidan bosib o'tgan masofasi, ming km";
 explCarDestLabel.setAttribute('for', 'Baholanayotgan-avto-bosgan-masofasi');
 
 const explCarDestInput = document.createElement('input');
