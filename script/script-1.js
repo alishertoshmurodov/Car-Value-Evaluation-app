@@ -33,7 +33,7 @@ calcMethodOption0.textContent = 'Usulni tanlang';
 
 const calcMethodOption1 = document.createElement('option');
 calcMethodOption1.setAttribute('value', '1-usul');
-calcMethodOption1.textContent = '1.Amashtirish usuli';
+calcMethodOption1.textContent = '1.Almashtirish usuli';
 
 const calcMethodOption2 = document.createElement('option');
 calcMethodOption2.setAttribute('value', '2-usul');

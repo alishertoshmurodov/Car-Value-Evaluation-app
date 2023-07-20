@@ -286,6 +286,7 @@ document
     }
     if (calcMethodSelect2.value == "6-usul") {
       eskirishUsuli = "Ekspert-tahliliy";
+      eskirishHisobi = jisEskQiymati.value;
     }
     const jamgarEsk =
       (1 -
